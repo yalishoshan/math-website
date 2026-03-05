@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-frank-ruhl), "Frank Ruhl Libre", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* KaTeX overrides for RTL */
+.katex-display {
+  direction: ltr;
+  text-align: center;
+}
+
+.katex {
+  direction: ltr;
+  display: inline-block;
+}
+
+/* Custom formula box */
+.formula-block {
+  direction: ltr;
+  text-align: center;
+  overflow-x: auto;
+  padding: 0.75rem 1rem;
+}
+
+/* Step list RTL */
+.step-item {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+  nav { display: none; }
+  .no-print { display: none; }
+}

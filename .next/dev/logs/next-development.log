@@ -1,0 +1,99 @@
+[00:00:03.282] Server  LOG     ✓ Ready in 2.4s
+[00:00:37.234] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:49.225] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:02:11.448] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:12.289] Server  LOG     ○ Compiling /topic/motion ...
+[00:02:15.566] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:53.318] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:09:04.166] Server  LOG     ✓ Compiled in 271ms
+[00:09:04.178] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:05.760] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:18.484] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:41:04.630] Server  LOG     ✓ Compiled in 436ms
+[00:42:07.008] Server  LOG     ✓ Compiled in 254ms
+[00:44:45.140] Server  LOG     ✓ Compiled in 138ms
+[00:44:45.300] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:44:46.777] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:45:02.067] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:46:38.674] Server  LOG     ✓ Compiled in 49ms
+[00:46:42.378] Server  LOG     ✓ Compiled in 61ms
+[00:46:46.303] Server  LOG     ✓ Compiled in 131ms
+[00:54:57.201] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:01:51.111] Server  LOG     ✓ Compiled in 400ms
+[01:01:56.165] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:02:31.614] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:48:22.536] Server  LOG     ✓ Compiled in 158ms
+[01:49:24.842] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:57:16.114] Server  LOG     ✓ Compiled in 208ms
+[02:06:40.808] Server  LOG     ✓ Compiled in 225ms
+[02:07:51.747] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "נ" (1504) [unknownSymbol]
+[02:07:51.747] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ק" (1511) [unknownSymbol]
+[02:07:51.747] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ו" (1493) [unknownSymbol]
+[02:07:51.747] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ד" (1491) [unknownSymbol]
+[02:07:51.747] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ת" (1514) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ק" (1511) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "י" (1497) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "צ" (1510) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ו" (1493) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ן" (1503) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ח" (1495) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ש" (1513) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ו" (1493) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ד" (1491) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ה" (1492) [unknownSymbol]
+[02:07:51.748] Browser WARN    No character metrics for 'נ' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ק' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ו' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ד' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ת' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ק' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'י' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'צ' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ו' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ן' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ח' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ש' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ו' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ד' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ה' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "נ" (1504) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ק" (1511) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ו" (1493) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ד" (1491) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ת" (1514) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ק" (1511) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "י" (1497) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "צ" (1510) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ו" (1493) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ן" (1503) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ח" (1495) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ש" (1513) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ו" (1493) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ד" (1491) [unknownSymbol]
+[02:07:51.748] Browser WARN    LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "ה" (1492) [unknownSymbol]
+[02:07:51.748] Browser WARN    No character metrics for 'נ' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ק' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ו' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ד' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ת' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ק' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'י' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'צ' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ו' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ן' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ח' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ש' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ו' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ד' in style 'Main-Regular' and mode 'text'
+[02:07:51.748] Browser WARN    No character metrics for 'ה' in style 'Main-Regular' and mode 'text'
+[02:23:34.654] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:23:44.707] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[02:32:05.832] Server  LOG     ✓ Compiled in 162ms
+[02:32:11.193] Server  LOG     ✓ Compiled in 276ms
+[02:32:20.860] Server  LOG     ✓ Compiled in 84ms
+[02:32:26.537] Server  LOG     ✓ Compiled in 50ms
+[02:32:30.243] Server  LOG     ✓ Compiled in 67ms
+[02:32:55.931] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:33:01.215] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[21:06:17.835] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[21:06:30.127] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
