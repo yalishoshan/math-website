@@ -90,7 +90,7 @@ export default function HomePage() {
             {/* Label with lines */}
             <div className="flex items-center gap-4 mb-10 w-full max-w-xs">
               <div className="flex-1 h-px bg-slate-300" />
-              <p className="text-black font-semibold text-xs tracking-[0.25em] uppercase whitespace-nowrap">
+              <p className="text-black font-semibold text-sm tracking-[0.2em] uppercase whitespace-nowrap">
                 כיתה י״א · 5 יחידות לימוד
               </p>
               <div className="flex-1 h-px bg-slate-300" />
@@ -117,7 +117,7 @@ export default function HomePage() {
             {/* CTA */}
             <Link
               href="/test"
-              className="mt-8 inline-flex items-center gap-2 bg-black text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-slate-800 transition-colors"
+              className="mt-8 inline-flex items-center gap-2 bg-blue-600 text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors"
               dir="rtl"
             >
               התחל מבחן מלא ←

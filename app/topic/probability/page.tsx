@@ -30,31 +30,137 @@ export default function ProbabilityPage() {
           title: "הסתברות קלאסית",
           latex: "P(A) = \\frac{n(A)}{n(S)}",
           explanation: "מספר מקרים רצויים חלקי מספר מקרים אפשריים – תקף כשכל תוצאה שקולה",
+          svgContent: (
+            // Sample space S rectangle: 3 filled dots inside region A, 5 open dots outside
+            <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+              <rect x="4" y="4" width="112" height="52" rx="6" fill="none" stroke="currentColor" strokeWidth="1.2"/>
+              <text x="8" y="13" fontSize="6" fill="currentColor" fontStyle="italic">S</text>
+              {/* A region – dashed ellipse */}
+              <ellipse cx="40" cy="32" rx="26" ry="22" fill="none" stroke="currentColor" strokeWidth="0.9" strokeDasharray="3 2"/>
+              <text x="20" y="13" fontSize="7" fill="currentColor" fontStyle="italic">A</text>
+              {/* favorable outcomes (filled) */}
+              <circle cx="30" cy="26" r="3.5" fill="currentColor"/>
+              <circle cx="44" cy="24" r="3.5" fill="currentColor"/>
+              <circle cx="36" cy="40" r="3.5" fill="currentColor"/>
+              {/* unfavorable outcomes (open) */}
+              <circle cx="75" cy="18" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.3"/>
+              <circle cx="90" cy="24" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.3"/>
+              <circle cx="100" cy="14" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.3"/>
+              <circle cx="82" cy="38" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.3"/>
+              <circle cx="100" cy="42" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.3"/>
+            </svg>
+          ),
         },
         {
           title: "הסתברות משלימה",
           latex: "P(\\bar{A}) = 1 - P(A)",
           explanation: "הסתברות שהמאורע לא יתרחש. שימושי במיוחד ב\"לפחות אחד\"",
+          svgContent: (
+            // Bar from 0 to 1: filled portion = P(A), remainder = P(Ā)
+            <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+              <text x="60" y="13" fontSize="6" fill="currentColor" textAnchor="middle">P(A) + P(Ā) = 1</text>
+              <rect x="10" y="20" width="100" height="18" rx="3" fill="none" stroke="currentColor" strokeWidth="1.3"/>
+              {/* P(A) – filled (~35%) */}
+              <rect x="10" y="20" width="35" height="18" rx="2" fill="currentColor"/>
+              <text x="27" y="32" fontSize="6.5" fill="white" textAnchor="middle" fontWeight="bold">P(A)</text>
+              <text x="77" y="32" fontSize="6.5" fill="currentColor" textAnchor="middle">P(Ā)</text>
+              {/* tick marks */}
+              <line x1="10"  y1="39" x2="10"  y2="44" stroke="currentColor" strokeWidth="1.2"/>
+              <line x1="45"  y1="39" x2="45"  y2="44" stroke="currentColor" strokeWidth="1.2"/>
+              <line x1="110" y1="39" x2="110" y2="44" stroke="currentColor" strokeWidth="1.2"/>
+              <text x="9"   y="52" fontSize="6" fill="currentColor" textAnchor="middle">0</text>
+              <text x="45"  y="52" fontSize="5.5" fill="currentColor" textAnchor="middle">P(A)</text>
+              <text x="110" y="52" fontSize="6" fill="currentColor" textAnchor="middle">1</text>
+            </svg>
+          ),
         },
         {
           title: "כלל החיבור",
           latex: "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
           explanation: "הסתברות ש-A או B יתרחשו. אם A,B זרים: P(A∩B)=0",
+          svgContent: (
+            // Venn diagram: two overlapping circles, both filled (= union A∪B)
+            <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+              <circle cx="46" cy="30" r="22" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="1.4"/>
+              <circle cx="74" cy="30" r="22" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="1.4"/>
+              <text x="27" y="34" fontSize="9" fill="currentColor" fontStyle="italic" fontWeight="bold">A</text>
+              <text x="88" y="34" fontSize="9" fill="currentColor" fontStyle="italic" fontWeight="bold">B</text>
+              <text x="60" y="27" fontSize="5.5" fill="currentColor" textAnchor="middle">A∩B</text>
+              <text x="60" y="55" fontSize="6.5" fill="currentColor" textAnchor="middle">A ∪ B</text>
+            </svg>
+          ),
         },
         {
           title: "כלל הכפל – בלתי תלויים",
           latex: "P(A \\cap B) = P(A) \\cdot P(B)",
           explanation: "כשהתרחשות A לא משפיעה על B. תקף רק למאורעות בלתי-תלויים",
+          svgContent: (
+            // Tree diagram: root → A (highlighted path) → A∩B (filled end node)
+            <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+              <circle cx="10" cy="30" r="2.5" fill="currentColor"/>
+              {/* branch A – highlighted */}
+              <line x1="13" y1="28" x2="48" y2="14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              <text x="24" y="16" fontSize="5.5" fill="currentColor">P(A)</text>
+              <circle cx="48" cy="14" r="2.5" fill="currentColor"/>
+              {/* A → B (highlighted, bold) */}
+              <line x1="51" y1="12" x2="86" y2="5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+              <text x="63" y="5" fontSize="5" fill="currentColor">P(B)</text>
+              <circle cx="86" cy="5" r="3.2" fill="currentColor"/>
+              <text x="91" y="9" fontSize="5.5" fill="currentColor" fontWeight="bold">A∩B</text>
+              {/* A → B̄ (faded) */}
+              <line x1="51" y1="16" x2="86" y2="24" stroke="currentColor" strokeWidth="0.9" strokeDasharray="3 2" strokeLinecap="round"/>
+              <circle cx="86" cy="24" r="2" fill="none" stroke="currentColor" strokeWidth="1"/>
+              {/* branch Ā */}
+              <line x1="13" y1="32" x2="48" y2="46" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              <text x="22" y="46" fontSize="5.5" fill="currentColor">P(Ā)</text>
+              <circle cx="48" cy="46" r="2.5" fill="currentColor"/>
+              {/* Ā → B (faded) */}
+              <line x1="51" y1="44" x2="86" y2="36" stroke="currentColor" strokeWidth="0.9" strokeDasharray="3 2" strokeLinecap="round"/>
+              <circle cx="86" cy="36" r="2" fill="none" stroke="currentColor" strokeWidth="1"/>
+              {/* Ā → B̄ (faded) */}
+              <line x1="51" y1="48" x2="86" y2="55" stroke="currentColor" strokeWidth="0.9" strokeDasharray="3 2" strokeLinecap="round"/>
+              <circle cx="86" cy="55" r="2" fill="none" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          ),
         },
         {
           title: "הסתברות מותנית",
           latex: "P(A|B) = \\frac{P(A \\cap B)}{P(B)}",
           explanation: "הסתברות ל-A בהינתן ש-B כבר התרחש. כלל הכפל הכללי: P(A∩B)=P(B)·P(A|B)",
+          svgContent: (
+            // Venn: A dashed, B bold (= the new reduced universe), intersection labeled P(A|B)
+            <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+              {/* A – dashed (part of it outside B doesn't count) */}
+              <circle cx="46" cy="30" r="22" fill="none" stroke="currentColor" strokeWidth="1.2" strokeDasharray="4 2"/>
+              {/* B – solid thick (the given condition = new sample space) */}
+              <circle cx="74" cy="30" r="22" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="2.2"/>
+              <text x="27" y="34" fontSize="9" fill="currentColor" fontStyle="italic">A</text>
+              <text x="88" y="34" fontSize="9" fill="currentColor" fontStyle="italic" fontWeight="bold">B</text>
+              {/* intersection label */}
+              <text x="60" y="26" fontSize="5.5" fill="currentColor" textAnchor="middle">P(A|B)</text>
+              <text x="60" y="35" fontSize="5" fill="currentColor" textAnchor="middle">= A∩B / B</text>
+              {/* "given B" note */}
+              <text x="60" y="55" fontSize="5.5" fill="currentColor" textAnchor="middle">בהינתן B</text>
+            </svg>
+          ),
         },
         {
           title: "ביטוי קומבינטורי",
           latex: "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
           explanation: "מספר דרכים לבחור k פריטים מתוך n ללא חשיבות לסדר",
+          svgContent: (
+            // n=5 items in a row; k=2 filled (chosen), 3 open (not chosen)
+            <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+              <text x="60" y="9" fontSize="6" fill="currentColor" textAnchor="middle">C(5,2) = 10</text>
+              <circle cx="16" cy="28" r="8" fill="currentColor"/>
+              <circle cx="36" cy="28" r="8" fill="currentColor"/>
+              <circle cx="56" cy="28" r="8" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="76" cy="28" r="8" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="96" cy="28" r="8" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <text x="10" y="50" fontSize="5.5" fill="currentColor">■ נבחר (k=2)</text>
+              <text x="62" y="50" fontSize="5.5" fill="currentColor">□ לא נבחר</text>
+            </svg>
+          ),
         },
       ]}
 

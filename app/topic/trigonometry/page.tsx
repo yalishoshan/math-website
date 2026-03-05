@@ -17,31 +17,156 @@ const keyFormulas = [
     title: "זהות פיתגורס",
     latex: "\\sin^2\\!\\alpha + \\cos^2\\!\\alpha = 1",
     explanation: "הזהות הבסיסית ביותר – מחברת סינוס וקוסינוס",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* unit circle */}
+        <circle cx="60" cy="32" r="22" fill="none" stroke="currentColor" strokeWidth="1.2" />
+        {/* axes */}
+        <line x1="35" y1="32" x2="85" y2="32" stroke="currentColor" strokeWidth="0.8" strokeDasharray="2,2" />
+        <line x1="60" y1="8" x2="60" y2="56" stroke="currentColor" strokeWidth="0.8" strokeDasharray="2,2" />
+        {/* point on circle at ~50° */}
+        <line x1="60" y1="32" x2="74" y2="18" stroke="currentColor" strokeWidth="1.4" />
+        {/* sin leg (vertical) */}
+        <line x1="74" y1="18" x2="74" y2="32" stroke="#3b82f6" strokeWidth="1.6" />
+        {/* cos leg (horizontal) */}
+        <line x1="60" y1="32" x2="74" y2="32" stroke="#ef4444" strokeWidth="1.6" />
+        {/* angle arc */}
+        <path d="M68,32 A8,8 0 0,0 63.5,25.5" fill="none" stroke="currentColor" strokeWidth="0.9" />
+        {/* dot */}
+        <circle cx="74" cy="18" r="2" fill="currentColor" />
+        {/* labels */}
+        <text x="77" y="26" fontSize="7" fill="#3b82f6" fontWeight="bold">sin</text>
+        <text x="66" y="39" fontSize="7" fill="#ef4444" fontWeight="bold">cos</text>
+        <text x="64" y="30" fontSize="6" fill="currentColor">α</text>
+        <text x="38" y="10" fontSize="7" fill="currentColor">sin²+cos²=1</text>
+      </svg>
+    ),
   },
   {
     title: "משפט הסינוסים",
     latex: "\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C} = 2R",
     explanation: "R = רדיוס המעגל החוסם. משמש כשנתונה צלע וזווית מולה",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* circumscribed circle */}
+        <circle cx="60" cy="32" r="24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeDasharray="3,2" opacity="0.5" />
+        {/* triangle A=(40,12) B=(84,50) C=(24,50) */}
+        <polygon points="40,10 86,50 18,50" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        {/* side labels */}
+        <text x="58" y="56" fontSize="7" fill="currentColor" textAnchor="middle">a</text>
+        <text x="65" y="28" fontSize="7" fill="currentColor">b</text>
+        <text x="24" y="28" fontSize="7" fill="currentColor">c</text>
+        {/* vertex labels */}
+        <text x="36" y="8" fontSize="7" fill="currentColor" fontWeight="bold">A</text>
+        <text x="87" y="54" fontSize="7" fill="currentColor" fontWeight="bold">B</text>
+        <text x="11" y="54" fontSize="7" fill="currentColor" fontWeight="bold">C</text>
+        {/* center dot + R line */}
+        <circle cx="60" cy="32" r="1.5" fill="currentColor" opacity="0.4" />
+        <line x1="60" y1="32" x2="86" y2="50" stroke="currentColor" strokeWidth="0.9" strokeDasharray="2,2" opacity="0.5" />
+        <text x="72" y="38" fontSize="6" fill="currentColor" opacity="0.7">R</text>
+      </svg>
+    ),
   },
   {
     title: "משפט הקוסינוסים",
     latex: "c^2 = a^2 + b^2 - 2ab\\cos C",
     explanation: "C היא הזווית בין a ו-b. לחישוב: cos C = (a²+b²−c²)/(2ab)",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* triangle C=(18,52) A=(100,52) B=(38,10) */}
+        <polygon points="18,52 100,52 38,10" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        {/* angle arc at C */}
+        <path d="M30,52 A12,12 0 0,1 24.5,42" fill="none" stroke="currentColor" strokeWidth="1" />
+        {/* side labels */}
+        <text x="56" y="59" fontSize="7" fill="currentColor" textAnchor="middle">a (מול A)</text>
+        <text x="68" y="30" fontSize="7" fill="currentColor">b</text>
+        <text x="22" y="30" fontSize="7" fill="currentColor">c</text>
+        {/* vertex labels */}
+        <text x="96" y="59" fontSize="7" fill="currentColor" fontWeight="bold">A</text>
+        <text x="34" y="8" fontSize="7" fill="currentColor" fontWeight="bold">B</text>
+        <text x="8" y="56" fontSize="7" fill="currentColor" fontWeight="bold">C</text>
+        <text x="28" y="47" fontSize="6" fill="currentColor">C</text>
+      </svg>
+    ),
   },
   {
     title: "שטח משולש",
     latex: "S = \\tfrac{1}{2}\\,ab\\sin C",
     explanation: "שתי צלעות והזווית הכלואה ביניהן",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* filled triangle */}
+        <polygon points="20,54 100,54 55,10" fill="currentColor" fillOpacity="0.08" stroke="currentColor" strokeWidth="1.5" />
+        {/* altitude dashed */}
+        <line x1="55" y1="10" x2="55" y2="54" stroke="currentColor" strokeWidth="0.9" strokeDasharray="2.5,2" />
+        {/* right-angle mark */}
+        <rect x="55" y="48" width="5" height="5" fill="none" stroke="currentColor" strokeWidth="0.9" />
+        {/* angle arc at left vertex */}
+        <path d="M33,54 A14,14 0 0,1 27,44" fill="none" stroke="#3b82f6" strokeWidth="1.1" />
+        {/* side labels */}
+        <text x="34" y="30" fontSize="7" fill="currentColor">a</text>
+        <text x="76" y="30" fontSize="7" fill="currentColor">b</text>
+        <text x="57" y="36" fontSize="7" fill="currentColor">h</text>
+        {/* C label */}
+        <text x="27" y="50" fontSize="6.5" fill="#3b82f6" fontWeight="bold">C</text>
+        {/* S = ½ab·sinC hint */}
+        <text x="52" y="7" fontSize="5.5" fill="currentColor" textAnchor="middle">S = ½·a·b·sin C</text>
+      </svg>
+    ),
   },
   {
     title: "סינוס זווית כפולה",
     latex: "\\sin 2\\alpha = 2\\sin\\alpha\\cos\\alpha",
     explanation: "נגזר מנוסחת הסכום (α = β)",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="8" y1="32" x2="112" y2="32" stroke="currentColor" strokeWidth="0.8" />
+        <line x1="8" y1="8" x2="8" y2="56" stroke="currentColor" strokeWidth="0.8" />
+        {/* sin(α) half-period wave (shorter) */}
+        <path d="M8,32 C20,8 32,8 44,32 C56,56 68,56 80,32" fill="none" stroke="#3b82f6" strokeWidth="1.4" strokeDasharray="3,2" />
+        {/* sin(2α) full-period wave (double freq) */}
+        <path d="M8,32 C14,8 20,8 26,32 C32,56 38,56 44,32 C50,8 56,8 62,32 C68,56 74,56 80,32" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        {/* labels */}
+        <text x="84" y="30" fontSize="6.5" fill="currentColor" fontWeight="bold">sin 2α</text>
+        <text x="84" y="42" fontSize="6.5" fill="#3b82f6">sin α</text>
+        {/* period arrow */}
+        <text x="10" y="8" fontSize="5.5" fill="currentColor">מחזור מחצה</text>
+      </svg>
+    ),
   },
   {
     title: "קוסינוס זווית כפולה",
     latex: "\\cos 2\\alpha = \\cos^2\\!\\alpha - \\sin^2\\!\\alpha",
     explanation: "גרסאות: 1 − 2sin²α  /  2cos²α − 1",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* unit circle */}
+        <circle cx="38" cy="32" r="20" fill="none" stroke="currentColor" strokeWidth="1" />
+        {/* axes */}
+        <line x1="16" y1="32" x2="60" y2="32" stroke="currentColor" strokeWidth="0.7" strokeDasharray="2,2" />
+        <line x1="38" y1="10" x2="38" y2="54" stroke="currentColor" strokeWidth="0.7" strokeDasharray="2,2" />
+        {/* radius to point at ~40° */}
+        <line x1="38" y1="32" x2="53" y2="19" stroke="currentColor" strokeWidth="1.4" />
+        {/* cos² block */}
+        <rect x="38" y="19" width="15" height="13" fill="#ef4444" fillOpacity="0.15" stroke="#ef4444" strokeWidth="0.8" />
+        {/* sin² block */}
+        <rect x="53" y="19" width="0" height="13" fill="none" />
+        {/* vertical & horizontal legs */}
+        <line x1="53" y1="19" x2="53" y2="32" stroke="#3b82f6" strokeWidth="1.4" />
+        <line x1="38" y1="32" x2="53" y2="32" stroke="#ef4444" strokeWidth="1.4" />
+        <circle cx="53" cy="19" r="2" fill="currentColor" />
+        {/* labels */}
+        <text x="42" y="29" fontSize="6" fill="#ef4444" fontWeight="bold">cos</text>
+        <text x="54" y="27" fontSize="6" fill="#3b82f6" fontWeight="bold">sin</text>
+        <text x="36" y="16" fontSize="5.5" fill="currentColor">α</text>
+        {/* right panel: three versions */}
+        <text x="68" y="18" fontSize="6" fill="currentColor">cos²α − sin²α</text>
+        <text x="68" y="28" fontSize="6" fill="currentColor">1 − 2sin²α</text>
+        <text x="68" y="38" fontSize="6" fill="currentColor">2cos²α − 1</text>
+        <text x="68" y="10" fontSize="6" fill="currentColor" fontWeight="bold">cos 2α =</text>
+      </svg>
+    ),
   },
 ];
 
@@ -351,7 +476,7 @@ export default function TrigonometryPage() {
           <SectionHead title="נוסחות מפתח" sub="הנוסחאות החיוניות לחישוב" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {keyFormulas.map((f, i) => (
-              <FormulaCard key={i} title={f.title} latex={f.latex} explanation={f.explanation} index={i} />
+              <FormulaCard key={i} title={f.title} latex={f.latex} explanation={f.explanation} index={i} svgContent={f.svgContent} />
             ))}
           </div>
         </section>
@@ -551,11 +676,11 @@ export default function TrigonometryPage() {
             {prev ? (
               <Link
                 href={`/topic/${prev.id}`}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white"
               >
                 <span>▶</span>
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא קודם</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא קודם</span>
                   {prev.title}
                 </span>
               </Link>
@@ -565,17 +690,14 @@ export default function TrigonometryPage() {
               </Link>
             )}
           </div>
-          <Link href="/" className="px-3 py-2 rounded-lg text-xs text-black hover:bg-slate-100 transition-all font-medium">
-            כל הנושאים
-          </Link>
           <div>
             {next ? (
               <Link
                 href={`/topic/${next.id}`}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white"
               >
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא הבא</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא הבא</span>
                   {next.title}
                 </span>
                 <span>◀</span>

@@ -21,41 +21,205 @@ const keyFormulas = [
     title: "(√x)′",
     latex: "(\\sqrt{x})' = \\dfrac{1}{2\\sqrt{x}}",
     explanation: "מוגדרת רק ל-x > 0",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="10" y1="54" x2="110" y2="54" stroke="currentColor" strokeWidth="0.9" />
+        <line x1="10" y1="54" x2="10" y2="6" stroke="currentColor" strokeWidth="0.9" />
+        {/* √x curve */}
+        <path d="M10,54 Q30,30 60,22 Q90,14 110,10" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* tangent line at x=25 (approx point (25,42)→slope small) */}
+        <line x1="18" y1="46" x2="46" y2="36" stroke="#3b82f6" strokeWidth="1.2" strokeDasharray="2.5,2" />
+        {/* point on curve */}
+        <circle cx="30" cy="41" r="2.2" fill="currentColor" />
+        {/* labels */}
+        <text x="85" y="12" fontSize="7.5" fill="currentColor" fontWeight="bold">y=√x</text>
+        <text x="48" y="33" fontSize="6.5" fill="#3b82f6">slope=1/(2√x)</text>
+        <text x="11" y="52" fontSize="6" fill="currentColor">0</text>
+        <text x="107" y="58" fontSize="6.5" fill="currentColor">x</text>
+      </svg>
+    ),
   },
   {
     title: "(√u)′ – שרשרת",
     latex: "(\\sqrt{u})' = \\dfrac{u'}{2\\sqrt{u}}",
     explanation: "u = u(x), מוגדרת כאשר u(x) > 0",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* chain rule diagram: f(g(x)) */}
+        {/* outer box */}
+        <rect x="8" y="22" width="30" height="16" rx="3" fill="none" stroke="currentColor" strokeWidth="1.2" />
+        <text x="23" y="33" fontSize="7" fill="currentColor" textAnchor="middle">√(·)</text>
+        {/* inner box */}
+        <rect x="60" y="22" width="24" height="16" rx="3" fill="none" stroke="currentColor" strokeWidth="1.2" />
+        <text x="72" y="33" fontSize="7" fill="currentColor" textAnchor="middle">u(x)</text>
+        {/* arrow outer ← inner */}
+        <line x1="60" y1="30" x2="38" y2="30" stroke="currentColor" strokeWidth="1" markerEnd="url(#arr)" />
+        <polygon points="38,27 38,33 32,30" fill="currentColor" />
+        {/* x input arrow */}
+        <line x1="95" y1="30" x2="84" y2="30" stroke="currentColor" strokeWidth="1" />
+        <polygon points="84,27 84,33 78,30" fill="currentColor" />
+        <text x="97" y="33" fontSize="7" fill="currentColor">x</text>
+        {/* result label */}
+        <text x="8" y="52" fontSize="6.5" fill="currentColor">[√u]′ =</text>
+        <text x="36" y="52" fontSize="6.5" fill="#3b82f6" fontWeight="bold">u′</text>
+        <text x="44" y="52" fontSize="6.5" fill="currentColor"> / 2√u</text>
+        {/* title */}
+        <text x="60" y="13" fontSize="6" fill="currentColor" textAnchor="middle">כלל שרשרת</text>
+      </svg>
+    ),
   },
   {
     title: "∫√x dx",
     latex: "\\int \\sqrt{x}\\, dx = \\tfrac{2}{3}x^{3/2} + C",
     explanation: "כתוב √x = x^(1/2) והשתמש בנוסחת החזקה",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="10" y1="54" x2="100" y2="54" stroke="currentColor" strokeWidth="0.9" />
+        <line x1="10" y1="54" x2="10" y2="8" stroke="currentColor" strokeWidth="0.9" />
+        {/* shaded area under √x from 0 to ~70 */}
+        <path d="M10,54 Q30,38 55,28 Q75,20 90,16 L90,54 Z" fill="currentColor" fillOpacity="0.12" />
+        {/* √x curve */}
+        <path d="M10,54 Q30,38 55,28 Q75,20 90,16" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* a and b markers */}
+        <line x1="10" y1="54" x2="10" y2="58" stroke="currentColor" strokeWidth="0.9" />
+        <line x1="90" y1="54" x2="90" y2="58" stroke="currentColor" strokeWidth="0.9" />
+        <text x="7" y="62" fontSize="6.5" fill="currentColor">a</text>
+        <text x="88" y="62" fontSize="6.5" fill="currentColor">b</text>
+        {/* label */}
+        <text x="38" y="48" fontSize="6.5" fill="currentColor">S = ²⁄₃·b^(³⁄₂)</text>
+        <text x="72" y="10" fontSize="7" fill="currentColor">y=√x</text>
+      </svg>
+    ),
   },
   {
     title: "∫1/√x dx",
     latex: "\\int \\frac{1}{\\sqrt{x}}\\, dx = 2\\sqrt{x} + C",
     explanation: "כתוב 1/√x = x^(−1/2) והשתמש בנוסחת החזקה",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="10" y1="54" x2="110" y2="54" stroke="currentColor" strokeWidth="0.9" />
+        <line x1="10" y1="8" x2="10" y2="54" stroke="currentColor" strokeWidth="0.9" />
+        {/* 1/√x curve – starts high near 0, decreases */}
+        <path d="M12,8 Q16,12 22,18 Q35,26 55,34 Q75,40 105,46" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* shaded area */}
+        <path d="M18,14 Q26,20 38,27 Q55,34 80,42 L80,54 L18,54 Z" fill="currentColor" fillOpacity="0.1" />
+        {/* vertical asymptote hint */}
+        <line x1="10" y1="8" x2="10" y2="54" stroke="currentColor" strokeWidth="0.7" strokeDasharray="2,2" opacity="0.4" />
+        <text x="70" y="42" fontSize="7" fill="currentColor">y=1/√x</text>
+        <text x="28" y="52" fontSize="6.5" fill="currentColor">∫ = 2√x + C</text>
+      </svg>
+    ),
   },
   {
     title: "∫f′(x)/f(x) dx",
     latex: "\\int \\frac{f'(x)}{f(x)}\\, dx = \\ln|f(x)| + C",
     explanation: "זיהוי: המונה הוא נגזרת המכנה (או כפולה שלה)",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* recognition diagram */}
+        {/* fraction bar */}
+        <line x1="30" y1="32" x2="90" y2="32" stroke="currentColor" strokeWidth="1" />
+        {/* numerator box (f') */}
+        <rect x="48" y="18" width="24" height="12" rx="2" fill="#3b82f6" fillOpacity="0.15" stroke="#3b82f6" strokeWidth="1" />
+        <text x="60" y="28" fontSize="7" fill="#3b82f6" textAnchor="middle" fontWeight="bold">f ′(x)</text>
+        {/* denominator box (f) */}
+        <rect x="48" y="34" width="24" height="12" rx="2" fill="#ef4444" fillOpacity="0.15" stroke="#ef4444" strokeWidth="1" />
+        <text x="60" y="43.5" fontSize="7" fill="#ef4444" textAnchor="middle" fontWeight="bold">f (x)</text>
+        {/* arrow to result */}
+        <line x1="78" y1="30" x2="94" y2="30" stroke="currentColor" strokeWidth="1" />
+        <polygon points="94,27 94,33 100,30" fill="currentColor" />
+        <text x="102" y="28" fontSize="6.5" fill="currentColor">ln</text>
+        <text x="102" y="36" fontSize="6.5" fill="currentColor">|f|</text>
+        {/* label */}
+        <text x="8" y="12" fontSize="6" fill="currentColor">זיהוי מבנה:</text>
+        <text x="8" y="55" fontSize="6" fill="currentColor">מונה = נגזרת מכנה</text>
+      </svg>
+    ),
   },
   {
     title: "אינטגרציה בחלקים",
     latex: "\\int u\\, dv = u \\cdot v - \\int v\\, du",
     explanation: "LIATE – בחר u: לוגריתם > פולינום > טריגו > אקספוננט",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* LIATE priority ladder */}
+        {[
+          { label: "L – ln", y: 12, fill: "#1d4ed8" },
+          { label: "I – arcsin", y: 22, fill: "#2563eb" },
+          { label: "A – x²", y: 32, fill: "#3b82f6" },
+          { label: "T – sin", y: 42, fill: "#60a5fa" },
+          { label: "E – eˣ", y: 52, fill: "#93c5fd" },
+        ].map(({ label, y, fill }) => (
+          <g key={label}>
+            <rect x="8" y={y - 8} width="60" height="9" rx="1.5" fill={fill} fillOpacity="0.18" stroke={fill} strokeWidth="0.7" />
+            <text x="12" y={y} fontSize="6.5" fill={fill} fontWeight="bold">{label}</text>
+          </g>
+        ))}
+        {/* arrow down = u priority */}
+        <line x1="72" y1="10" x2="72" y2="52" stroke="currentColor" strokeWidth="1" />
+        <polygon points="69,52 75,52 72,57" fill="currentColor" />
+        <text x="74" y="20" fontSize="5.5" fill="currentColor">עדיפות</text>
+        <text x="74" y="27" fontSize="5.5" fill="currentColor">ל-u ←</text>
+        {/* formula reminder */}
+        <text x="74" y="44" fontSize="5.5" fill="currentColor">uv−∫v du</text>
+      </svg>
+    ),
   },
   {
     title: "משפט היסוד",
     latex: "\\int_a^b f(x)\\, dx = F(b) - F(a)",
     explanation: "F היא פונקציה קדומה של f",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="10" y1="52" x2="110" y2="52" stroke="currentColor" strokeWidth="0.9" />
+        <line x1="10" y1="52" x2="10" y2="8" stroke="currentColor" strokeWidth="0.9" />
+        {/* arbitrary curve */}
+        <path d="M15,46 C25,30 40,20 60,18 C75,16 90,22 105,20" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* shaded area between a and b */}
+        <path d="M35,52 L35,36 C45,28 55,22 70,20 L70,52 Z" fill="currentColor" fillOpacity="0.15" />
+        {/* a and b verticals */}
+        <line x1="35" y1="36" x2="35" y2="52" stroke="currentColor" strokeWidth="1" strokeDasharray="2,2" />
+        <line x1="70" y1="20" x2="70" y2="52" stroke="currentColor" strokeWidth="1" strokeDasharray="2,2" />
+        <text x="32" y="57" fontSize="6.5" fill="currentColor">a</text>
+        <text x="68" y="57" fontSize="6.5" fill="currentColor">b</text>
+        {/* F(b)-F(a) label */}
+        <text x="36" y="44" fontSize="6" fill="currentColor">F(b)−F(a)</text>
+        <text x="80" y="14" fontSize="6.5" fill="currentColor">y=f(x)</text>
+      </svg>
+    ),
   },
   {
     title: "נפח גוף סיבוב",
     latex: "V = \\pi \\int_a^b [f(x)]^2\\, dx",
     explanation: "סיבוב הגרף סביב ציר x. רבע את הפונקציה, לא את האינטגרל!",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* x-axis */}
+        <line x1="8" y1="30" x2="112" y2="30" stroke="currentColor" strokeWidth="0.9" />
+        {/* top half of revolution solid (ellipses + curve) */}
+        {/* left cap ellipse */}
+        <ellipse cx="30" cy="30" rx="4" ry="14" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="2,2" />
+        {/* right cap ellipse */}
+        <ellipse cx="90" cy="30" rx="4" ry="10" fill="none" stroke="currentColor" strokeWidth="1.2" />
+        {/* top contour (f(x) curve) */}
+        <path d="M30,16 Q55,10 90,20" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* bottom contour (mirrored) */}
+        <path d="M30,44 Q55,50 90,40" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* shaded fill of solid */}
+        <path d="M30,16 Q55,10 90,20 L90,40 Q55,50 30,44 Z" fill="currentColor" fillOpacity="0.1" />
+        {/* radius line */}
+        <line x1="60" y1="30" x2="60" y2="14" stroke="#3b82f6" strokeWidth="1.2" strokeDasharray="2,1.5" />
+        <text x="62" y="23" fontSize="6" fill="#3b82f6">f(x)</text>
+        {/* labels */}
+        <text x="27" y="57" fontSize="6.5" fill="currentColor">a</text>
+        <text x="88" y="57" fontSize="6.5" fill="currentColor">b</text>
+        <text x="40" y="10" fontSize="6" fill="currentColor">V = π∫[f(x)]²dx</text>
+      </svg>
+    ),
   },
 ];
 
@@ -352,7 +516,7 @@ export default function RootFunctionsPage() {
           <SectionHead title="נוסחות מפתח" sub="נגזרות, אינטגרלים ומשפטים חשובים" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {keyFormulas.map((f, i) => (
-              <FormulaCard key={i} title={f.title} latex={f.latex} explanation={f.explanation} index={i} />
+              <FormulaCard key={i} title={f.title} latex={f.latex} explanation={f.explanation} index={i} svgContent={f.svgContent} />
             ))}
           </div>
         </section>
@@ -775,11 +939,11 @@ export default function RootFunctionsPage() {
             {prev ? (
               <Link
                 href={`/topic/${prev.id}`}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white"
               >
                 <span>▶</span>
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא קודם</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא קודם</span>
                   {prev.title}
                 </span>
               </Link>
@@ -789,17 +953,14 @@ export default function RootFunctionsPage() {
               </Link>
             )}
           </div>
-          <Link href="/" className="px-3 py-2 rounded-lg text-xs text-black hover:bg-slate-100 transition-all font-medium">
-            כל הנושאים
-          </Link>
           <div>
             {next ? (
               <Link
                 href={`/topic/${next.id}`}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white"
               >
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא הבא</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא הבא</span>
                   {next.title}
                 </span>
                 <span>◀</span>

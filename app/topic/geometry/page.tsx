@@ -267,12 +267,132 @@ const sections: Section[] = [
 ];
 
 const keyFormulas = [
-  { title: "משפט פיתגורס *", latex: "a^2 + b^2 = c^2", explanation: "במשולש ישר זווית: סכום ריבועי הניצבים = ריבוע היתר" },
-  { title: "שטח משולש עם סינוס", latex: "S = \\tfrac{1}{2}ab\\sin C", explanation: "שתי צלעות והזווית הכלואה ביניהן" },
-  { title: "גובה על היתר", latex: "h^2 = p \\cdot q \\quad a^2 = c\\cdot p \\quad b^2 = c\\cdot q", explanation: "h = גובה, p,q = היטלים, a,b = ניצבים, c = יתר" },
-  { title: "יחס דמיון → שטח", latex: "\\frac{S_1}{S_2} = k^2", explanation: "אם יחס הדמיון k, יחס השטחים k²" },
-  { title: "שטח וקשת מעגל", latex: "S_{sector}=\\frac{\\alpha}{360}\\pi r^2 \\quad l=\\frac{\\alpha}{360}\\cdot 2\\pi r", explanation: "α = זווית מרכזית בדרגות" },
-  { title: "קטע אמצעים / תאלס *", latex: "MN = \\tfrac{1}{2}BC \\quad \\frac{AM}{MB}=\\frac{AN}{NC}", explanation: "קטע אמצעים מקביל לצלע ושווה למחציתה; תאלס – קטעים פרופורציוניים" },
+  {
+    title: "משפט פיתגורס *",
+    latex: "a^2 + b^2 = c^2",
+    explanation: "במשולש ישר זווית: סכום ריבועי הניצבים = ריבוע היתר",
+    svgContent: (
+      // Right triangle: legs a (vertical), b (horizontal), hypotenuse c; right-angle mark at corner
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        <polygon points="15,54 88,54 15,10" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+        {/* right-angle mark */}
+        <polyline points="15,44 24,44 24,54" fill="none" stroke="currentColor" strokeWidth="1.2"/>
+        <text x="5"  y="34" fontSize="9" fill="currentColor" fontStyle="italic">a</text>
+        <text x="47" y="59" fontSize="9" fill="currentColor" fontStyle="italic">b</text>
+        <text x="52" y="27" fontSize="9" fill="currentColor" fontStyle="italic">c</text>
+      </svg>
+    ),
+  },
+  {
+    title: "שטח משולש עם סינוס",
+    latex: "S = \\tfrac{1}{2}ab\\sin C",
+    explanation: "שתי צלעות והזווית הכלואה ביניהן",
+    svgContent: (
+      // Triangle with angle C at bottom-left; sides a (left) and b (bottom) labeled; area formula hint
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        <polygon points="14,54 100,54 48,8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+        {/* angle-C arc at bottom-left vertex */}
+        <path d="M27,54 A14,14 0 0,0 20,41" fill="none" stroke="currentColor" strokeWidth="1.1"/>
+        <text x="5"  y="57" fontSize="8" fill="currentColor" fontStyle="italic">C</text>
+        <text x="26" y="28" fontSize="8" fill="currentColor" fontStyle="italic">a</text>
+        <text x="53" y="59" fontSize="8" fill="currentColor" fontStyle="italic">b</text>
+        <text x="70" y="38" fontSize="5.5" fill="currentColor">S = ½ab·sinC</text>
+      </svg>
+    ),
+  },
+  {
+    title: "גובה על היתר",
+    latex: "h^2 = p \\cdot q \\quad a^2 = c\\cdot p \\quad b^2 = c\\cdot q",
+    explanation: "h = גובה, p,q = היטלים, a,b = ניצבים, c = יתר",
+    svgContent: (
+      // Right triangle with right angle at C=(28,16); altitude from C to foot D=(28,54) on hypotenuse AB
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        <polygon points="10,54 108,54 28,16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+        {/* altitude (dashed) */}
+        <line x1="28" y1="16" x2="28" y2="54" stroke="currentColor" strokeWidth="1.2" strokeDasharray="3 2"/>
+        {/* right-angle mark at foot D */}
+        <rect x="28" y="45" width="7" height="7" fill="none" stroke="currentColor" strokeWidth="1.1"/>
+        {/* right-angle label at C */}
+        <text x="30" y="22" fontSize="5" fill="currentColor">90°</text>
+        {/* segment labels */}
+        <text x="17" y="59" fontSize="6.5" fill="currentColor" fontStyle="italic">p</text>
+        <text x="63" y="59" fontSize="6.5" fill="currentColor" fontStyle="italic">q</text>
+        <text x="31" y="37" fontSize="7"   fill="currentColor" fontStyle="italic">h</text>
+        <text x="8"  y="33" fontSize="6.5" fill="currentColor" fontStyle="italic">a</text>
+        <text x="70" y="28" fontSize="6.5" fill="currentColor" fontStyle="italic">b</text>
+      </svg>
+    ),
+  },
+  {
+    title: "יחס דמיון → שטח",
+    latex: "\\frac{S_1}{S_2} = k^2",
+    explanation: "אם יחס הדמיון k, יחס השטחים k²",
+    svgContent: (
+      // Two similar triangles: large (left) and small (right); ratio k between them
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* large triangle */}
+        <polygon points="8,54 60,54 28,10" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+        <text x="30" y="47" fontSize="7" fill="currentColor" textAnchor="middle">S₁</text>
+        {/* small similar triangle */}
+        <polygon points="70,54 102,54 82,27" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+        <text x="85" y="50" fontSize="7" fill="currentColor" textAnchor="middle">S₂</text>
+        {/* ratio label between them */}
+        <text x="63" y="20" fontSize="6"   fill="currentColor">k</text>
+        <text x="63" y="30" fontSize="5.5" fill="currentColor">→ k²</text>
+      </svg>
+    ),
+  },
+  {
+    title: "שטח וקשת מעגל",
+    latex: "S_{sector}=\\frac{\\alpha}{360}\\pi r^2 \\quad l=\\frac{\\alpha}{360}\\cdot 2\\pi r",
+    explanation: "α = זווית מרכזית בדרגות",
+    svgContent: (
+      // Circle with shaded sector; labels r (radius), α (central angle), l (arc length)
+      // Sector: center=(50,28), r=22; 0° → (72,28); 78° → (50+22cos78°,28+22sin78°)≈(55,49)
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        <circle cx="50" cy="28" r="22" fill="none" stroke="currentColor" strokeWidth="1.3"/>
+        {/* shaded sector (~78°) */}
+        <path d="M50,28 L72,28 A22,22 0 0,1 55,49 Z" fill="currentColor" fillOpacity="0.18" stroke="currentColor" strokeWidth="1.3"/>
+        {/* radius label */}
+        <text x="57" y="25" fontSize="6.5" fill="currentColor" fontStyle="italic">r</text>
+        {/* angle α inside sector */}
+        <text x="65" y="40" fontSize="8" fill="currentColor" fontStyle="italic">α</text>
+        {/* arc label l near arc endpoint */}
+        <text x="56" y="56" fontSize="6.5" fill="currentColor" fontStyle="italic">l</text>
+        {/* helper labels */}
+        <text x="80" y="20" fontSize="5.5" fill="currentColor">גזרה</text>
+        <text x="80" y="29" fontSize="5.5" fill="currentColor">קשת = l</text>
+      </svg>
+    ),
+  },
+  {
+    title: "קטע אמצעים / תאלס *",
+    latex: "MN = \\tfrac{1}{2}BC \\quad \\frac{AM}{MB}=\\frac{AN}{NC}",
+    explanation: "קטע אמצעים מקביל לצלע ושווה למחציתה; תאלס – קטעים פרופורציוניים",
+    svgContent: (
+      // Triangle ABC; M=midpoint(AB), N=midpoint(AC); MN ∥ BC with parallel tick marks
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        <polygon points="60,6 10,56 110,56" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+        {/* midline MN: M=(35,31), N=(85,31) */}
+        <line x1="35" y1="31" x2="85" y2="31" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+        <circle cx="35" cy="31" r="2.5" fill="currentColor"/>
+        <circle cx="85" cy="31" r="2.5" fill="currentColor"/>
+        {/* parallel tick marks on MN */}
+        <line x1="59" y1="28" x2="59" y2="34" stroke="currentColor" strokeWidth="1.2"/>
+        <line x1="62" y1="28" x2="62" y2="34" stroke="currentColor" strokeWidth="1.2"/>
+        {/* parallel tick marks on BC */}
+        <line x1="59" y1="53" x2="59" y2="59" stroke="currentColor" strokeWidth="1.2"/>
+        <line x1="62" y1="53" x2="62" y2="59" stroke="currentColor" strokeWidth="1.2"/>
+        {/* labels */}
+        <text x="57" y="4"   fontSize="6.5" fill="currentColor">A</text>
+        <text x="4"  y="58"  fontSize="6.5" fill="currentColor">B</text>
+        <text x="112" y="58" fontSize="6.5" fill="currentColor">C</text>
+        <text x="25" y="29"  fontSize="6"   fill="currentColor">M</text>
+        <text x="88" y="29"  fontSize="6"   fill="currentColor">N</text>
+        <text x="87" y="44"  fontSize="5.5" fill="currentColor">MN=½BC</text>
+      </svg>
+    ),
+  },
 ];
 
 const tips = [
@@ -340,7 +460,7 @@ export default function GeometryPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {keyFormulas.map((f, i) => (
-              <FormulaCard key={i} title={f.title} latex={f.latex} explanation={f.explanation} index={i} />
+              <FormulaCard key={i} title={f.title} latex={f.latex} explanation={f.explanation} index={i} svgContent={f.svgContent} />
             ))}
           </div>
         </section>
@@ -460,10 +580,10 @@ export default function GeometryPage() {
         <nav className="flex justify-between items-center pt-6">
           <div>
             {prev ? (
-              <Link href={`/topic/${prev.id}`} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black">
+              <Link href={`/topic/${prev.id}`} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white">
                 <span>▶</span>
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא קודם</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא קודם</span>
                   {prev.title}
                 </span>
               </Link>
@@ -471,12 +591,11 @@ export default function GeometryPage() {
               <Link href="/" className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 transition-all text-sm font-medium text-black">← חזרה לדף הבית</Link>
             )}
           </div>
-          <Link href="/" className="px-3 py-2 rounded-lg text-xs text-black hover:bg-slate-100 transition-all font-medium">כל הנושאים</Link>
           <div>
             {next ? (
-              <Link href={`/topic/${next.id}`} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black">
+              <Link href={`/topic/${next.id}`} className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white">
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא הבא</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא הבא</span>
                   {next.title}
                 </span>
                 <span>◀</span>

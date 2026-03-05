@@ -372,11 +372,11 @@ export default function TopicPageLayout({
             {prevTopic ? (
               <Link
                 href={`/topic/${prevTopic.id}`}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white"
               >
                 <span>▶</span>
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא קודם</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא קודם</span>
                   {prevTopic.title}
                 </span>
               </Link>
@@ -390,21 +390,14 @@ export default function TopicPageLayout({
             )}
           </div>
 
-          <Link
-            href="/"
-            className="px-3 py-2 rounded-lg text-xs text-black hover:bg-slate-100 transition-all font-medium"
-          >
-            כל הנושאים
-          </Link>
-
           <div>
             {nextTopic ? (
               <Link
                 href={`/topic/${nextTopic.id}`}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white"
               >
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא הבא</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא הבא</span>
                   {nextTopic.title}
                 </span>
                 <span>◀</span>

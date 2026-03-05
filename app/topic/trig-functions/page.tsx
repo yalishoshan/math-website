@@ -13,12 +13,154 @@ export const metadata = {
 /* ─── KaTeX Formula Cards ─────────────────────────────────── */
 
 const keyFormulas = [
-  { title: "(sin x)′",  latex: "(\\sin x)' = \\cos x",                       explanation: "נגזרת סינוס" },
-  { title: "(cos x)′",  latex: "(\\cos x)' = -\\sin x",                      explanation: "נגזרת קוסינוס" },
-  { title: "(sin u)′",  latex: "(\\sin u)' = \\cos u \\cdot u'",              explanation: "כלל שרשרת – u = u(x)" },
-  { title: "(cos u)′",  latex: "(\\cos u)' = -\\sin u \\cdot u'",             explanation: "כלל שרשרת – u = u(x)" },
-  { title: "∫sin(x)dx", latex: "\\int \\sin x\\, dx = -\\cos x + C",         explanation: "אינטגרל בסיסי של סינוס" },
-  { title: "∫cos(x)dx", latex: "\\int \\cos x\\, dx = \\sin x + C",          explanation: "אינטגרל בסיסי של קוסינוס" },
+  {
+    title: "(sin x)′",
+    latex: "(\\sin x)' = \\cos x",
+    explanation: "נגזרת סינוס",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="8" y1="30" x2="112" y2="30" stroke="currentColor" strokeWidth="0.8" />
+        <line x1="8" y1="8" x2="8" y2="54" stroke="currentColor" strokeWidth="0.8" />
+        {/* sin(x) curve – one full period */}
+        <path d="M8,30 C18,8 28,8 38,30 C48,52 58,52 68,30 C78,8 88,8 98,30 C103,41 108,47 112,50"
+          fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* cos(x) = derivative – shifted π/2 left = cos starts at 1 */}
+        <path d="M8,10 C13,10 18,20 28,30 C38,40 48,50 58,50 C68,50 78,40 88,30 C98,20 103,14 112,12"
+          fill="none" stroke="#3b82f6" strokeWidth="1.4" strokeDasharray="3,2" />
+        {/* labels */}
+        <text x="70" y="8" fontSize="7" fill="currentColor" fontWeight="bold">sin x</text>
+        <text x="70" y="18" fontSize="7" fill="#3b82f6">cos x = (sin x)′</text>
+      </svg>
+    ),
+  },
+  {
+    title: "(cos x)′",
+    latex: "(\\cos x)' = -\\sin x",
+    explanation: "נגזרת קוסינוס",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="8" y1="30" x2="112" y2="30" stroke="currentColor" strokeWidth="0.8" />
+        <line x1="8" y1="8" x2="8" y2="54" stroke="currentColor" strokeWidth="0.8" />
+        {/* cos(x) – starts at top */}
+        <path d="M8,10 C13,10 18,20 28,30 C38,40 48,50 58,50 C68,50 78,40 88,30 C98,20 103,14 112,12"
+          fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* −sin(x) = derivative of cos – flipped sin */}
+        <path d="M8,30 C18,52 28,52 38,30 C48,8 58,8 68,30 C78,52 88,52 98,30 C103,19 108,13 112,10"
+          fill="none" stroke="#ef4444" strokeWidth="1.4" strokeDasharray="3,2" />
+        {/* labels */}
+        <text x="70" y="8" fontSize="7" fill="currentColor" fontWeight="bold">cos x</text>
+        <text x="55" y="56" fontSize="7" fill="#ef4444">−sin x = (cos x)′</text>
+      </svg>
+    ),
+  },
+  {
+    title: "(sin u)′",
+    latex: "(\\sin u)' = \\cos u \\cdot u'",
+    explanation: "כלל שרשרת – u = u(x)",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* chain rule boxes */}
+        {/* outer: sin(·) */}
+        <rect x="6" y="20" width="28" height="14" rx="3" fill="none" stroke="currentColor" strokeWidth="1.2" />
+        <text x="20" y="30" fontSize="7" fill="currentColor" textAnchor="middle">sin(·)</text>
+        {/* inner: u(x) */}
+        <rect x="56" y="20" width="26" height="14" rx="3" fill="none" stroke="currentColor" strokeWidth="1.2" />
+        <text x="69" y="30" fontSize="7" fill="currentColor" textAnchor="middle">u(x)</text>
+        {/* arrow inner → outer */}
+        <line x1="56" y1="27" x2="34" y2="27" stroke="currentColor" strokeWidth="1" />
+        <polygon points="34,24 34,30 28,27" fill="currentColor" />
+        {/* x → inner */}
+        <line x1="92" y1="27" x2="82" y2="27" stroke="currentColor" strokeWidth="1" />
+        <polygon points="82,24 82,30 76,27" fill="currentColor" />
+        <text x="94" y="30" fontSize="7" fill="currentColor">x</text>
+        {/* result */}
+        <text x="6" y="50" fontSize="6.5" fill="currentColor">[sin u]′ =</text>
+        <text x="47" y="50" fontSize="6.5" fill="#3b82f6" fontWeight="bold">cos u</text>
+        <text x="65" y="50" fontSize="6.5" fill="currentColor"> · </text>
+        <text x="70" y="50" fontSize="6.5" fill="#ef4444" fontWeight="bold">u′</text>
+        <text x="6" y="10" fontSize="5.5" fill="currentColor">כלל שרשרת: חיצוני × פנימי</text>
+      </svg>
+    ),
+  },
+  {
+    title: "(cos u)′",
+    latex: "(\\cos u)' = -\\sin u \\cdot u'",
+    explanation: "כלל שרשרת – u = u(x)",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* same structure but for cos */}
+        <rect x="6" y="20" width="28" height="14" rx="3" fill="none" stroke="currentColor" strokeWidth="1.2" />
+        <text x="20" y="30" fontSize="7" fill="currentColor" textAnchor="middle">cos(·)</text>
+        <rect x="56" y="20" width="26" height="14" rx="3" fill="none" stroke="currentColor" strokeWidth="1.2" />
+        <text x="69" y="30" fontSize="7" fill="currentColor" textAnchor="middle">u(x)</text>
+        <line x1="56" y1="27" x2="34" y2="27" stroke="currentColor" strokeWidth="1" />
+        <polygon points="34,24 34,30 28,27" fill="currentColor" />
+        <line x1="92" y1="27" x2="82" y2="27" stroke="currentColor" strokeWidth="1" />
+        <polygon points="82,24 82,30 76,27" fill="currentColor" />
+        <text x="94" y="30" fontSize="7" fill="currentColor">x</text>
+        {/* result – note the minus */}
+        <text x="6" y="50" fontSize="6.5" fill="currentColor">[cos u]′ =</text>
+        <text x="47" y="50" fontSize="6.5" fill="#ef4444" fontWeight="bold">−sin u</text>
+        <text x="74" y="50" fontSize="6.5" fill="currentColor"> · </text>
+        <text x="79" y="50" fontSize="6.5" fill="#3b82f6" fontWeight="bold">u′</text>
+        {/* minus sign emphasis */}
+        <text x="6" y="10" fontSize="5.5" fill="#ef4444">שים לב לסימן המינוס!</text>
+      </svg>
+    ),
+  },
+  {
+    title: "∫sin(x)dx",
+    latex: "\\int \\sin x\\, dx = -\\cos x + C",
+    explanation: "אינטגרל בסיסי של סינוס",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="8" y1="30" x2="112" y2="30" stroke="currentColor" strokeWidth="0.8" />
+        <line x1="8" y1="8" x2="8" y2="54" stroke="currentColor" strokeWidth="0.8" />
+        {/* sin curve */}
+        <path d="M8,30 C18,8 28,8 38,30 C48,52 58,52 68,30 C78,8 88,8 98,30"
+          fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* shaded area under first arch (positive) */}
+        <path d="M8,30 C18,8 28,8 38,30 Z" fill="currentColor" fillOpacity="0.15" />
+        <path d="M8,30 C18,8 28,8 38,30" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* shaded area above second arch (negative → absolute value) */}
+        <path d="M38,30 C48,52 58,52 68,30 Z" fill="#ef4444" fillOpacity="0.1" />
+        {/* labels */}
+        <text x="16" y="26" fontSize="6" fill="currentColor">+2</text>
+        <text x="46" y="44" fontSize="6" fill="#ef4444">−2</text>
+        <text x="60" y="10" fontSize="6.5" fill="currentColor">∫sin x dx = −cos x + C</text>
+        <text x="60" y="19" fontSize="5.5" fill="currentColor">∫[0→π] sin x = 2</text>
+      </svg>
+    ),
+  },
+  {
+    title: "∫cos(x)dx",
+    latex: "\\int \\cos x\\, dx = \\sin x + C",
+    explanation: "אינטגרל בסיסי של קוסינוס",
+    svgContent: (
+      <svg viewBox="0 0 120 60" className="w-full max-w-[180px] h-auto text-slate-700">
+        {/* axes */}
+        <line x1="8" y1="30" x2="112" y2="30" stroke="currentColor" strokeWidth="0.8" />
+        <line x1="8" y1="8" x2="8" y2="54" stroke="currentColor" strokeWidth="0.8" />
+        {/* cos curve – starts at max */}
+        <path d="M8,10 C13,10 18,20 28,30 C38,40 48,50 58,50 C68,50 78,40 88,30 C98,20 103,14 112,12"
+          fill="none" stroke="currentColor" strokeWidth="1.8" />
+        {/* shaded positive area from 0 to π/2 */}
+        <path d="M8,10 C13,10 18,20 28,30 L28,30 L8,30 Z" fill="currentColor" fillOpacity="0.15" />
+        {/* shaded negative area from π/2 to π */}
+        <path d="M28,30 C38,40 48,50 58,50 L58,30 L28,30 Z" fill="#ef4444" fillOpacity="0.1" />
+        {/* markers */}
+        <line x1="28" y1="28" x2="28" y2="32" stroke="currentColor" strokeWidth="0.9" />
+        <line x1="58" y1="28" x2="58" y2="32" stroke="currentColor" strokeWidth="0.9" />
+        <text x="24" y="38" fontSize="5.5" fill="currentColor">π/2</text>
+        <text x="54" y="38" fontSize="5.5" fill="currentColor">π</text>
+        <text x="55" y="10" fontSize="6.5" fill="currentColor">∫cos x dx = sin x + C</text>
+        <text x="55" y="19" fontSize="5.5" fill="currentColor">∫[0→π/2] cos x = 1</text>
+      </svg>
+    ),
+  },
 ];
 
 /* ─── Types ─────────────────────────────────────────────── */
@@ -299,7 +441,7 @@ export default function TrigFunctionsPage() {
           <SectionHead title="נוסחות מפתח" sub="נגזרות ואינטגרלים בסיסיים" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {keyFormulas.map((f, i) => (
-              <FormulaCard key={i} title={f.title} latex={f.latex} explanation={f.explanation} index={i} />
+              <FormulaCard key={i} title={f.title} latex={f.latex} explanation={f.explanation} index={i} svgContent={f.svgContent} />
             ))}
           </div>
         </section>
@@ -566,11 +708,11 @@ export default function TrigFunctionsPage() {
             {prev ? (
               <Link
                 href={`/topic/${prev.id}`}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white"
               >
                 <span>▶</span>
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא קודם</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא קודם</span>
                   {prev.title}
                 </span>
               </Link>
@@ -580,17 +722,14 @@ export default function TrigFunctionsPage() {
               </Link>
             )}
           </div>
-          <Link href="/" className="px-3 py-2 rounded-lg text-xs text-black hover:bg-slate-100 transition-all font-medium">
-            כל הנושאים
-          </Link>
           <div>
             {next ? (
               <Link
                 href={`/topic/${next.id}`}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white hover:bg-slate-100 hover:shadow-sm transition-all text-sm font-medium text-black"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black hover:bg-slate-800 transition-all text-sm font-medium text-white"
               >
                 <span>
-                  <span className="block text-xs text-slate-400 mb-0.5">נושא הבא</span>
+                  <span className="block text-xs text-white/60 mb-0.5">נושא הבא</span>
                   {next.title}
                 </span>
                 <span>◀</span>
