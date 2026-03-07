@@ -140,7 +140,7 @@ export default async function TopicPage({ params }: Props) {
         </section>
 
         {/* Navigation */}
-        <nav className="flex justify-between items-center pt-6">
+        <nav className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-3 pt-6">
           <div>
             {prevTopic ? (
               <Link

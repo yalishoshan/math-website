@@ -7,42 +7,6 @@
     "[project]/app/test/page": [
       "static/media/da0c36c2f20008af-s.p.02867003.woff2",
       "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/[id]/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/geometry/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/motion/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/optimization/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/probability/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/root-functions/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/sequences/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/trig-functions/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
-    ],
-    "[project]/app/topic/trigonometry/page": [
-      "static/media/da0c36c2f20008af-s.p.02867003.woff2",
-      "static/media/910852303c6b2343-s.p.d37298f4.woff2"
     ]
   },
   "appUsingSizeAdjust": true,

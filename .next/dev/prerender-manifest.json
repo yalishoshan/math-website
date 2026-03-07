@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/topic/motion":{},"/topic/sequences":{},"/topic/probability":{},"/topic/geometry":{},"/topic/trigonometry":{},"/topic/trig-functions":{},"/topic/root-functions":{},"/topic/optimization":{}},"dynamicRoutes":{"/topic/[id]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/topic/[id]","routeRegex":"^\\/topic\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"1deb6e8aa7c32baef369fece3a2c80bd","previewModeSigningKey":"f67bec7079047774e6af3826808c8cd6c6d0b520df7ba3ecfe58c81722e5bba3","previewModeEncryptionKey":"9663cd3d76f8e301ce91b1f440353c41e5901ab47dc044824339d97edb5dc4f1"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "0266d51aebb031ddf0c6387e2520fdd3",
+    "previewModeSigningKey": "3c9cb662936e865f1c48573a305a3385d45c772bf34caa3dbd41c00ec74b6dfe",
+    "previewModeEncryptionKey": "d08039bc107f313ed55ffb67b16742614174a330a2fa0b9ac752a3db34ef1541"
+  }
+}

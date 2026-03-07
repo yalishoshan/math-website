@@ -47,7 +47,8 @@ export default function Navbar({ activeTopicId }: NavbarProps) {
       </div>
 
       {/* Mobile topic scroll */}
-      <div className="lg:hidden border-t border-white/20 overflow-x-auto">
+      <div className="lg:hidden border-t border-white/20 overflow-x-auto relative">
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-black to-transparent z-10" />
         <div className="flex gap-1 px-4 py-2">
           <Link
             href="/test"

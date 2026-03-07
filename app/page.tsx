@@ -106,12 +106,12 @@ export default function HomePage() {
             </h1>
 
             {/* Subtitle with lines */}
-            <div className="flex items-center gap-4 mt-10 w-full max-w-md">
-              <div className="flex-1 h-px bg-slate-300" />
-              <p className="text-black text-sm md:text-base whitespace-nowrap" dir="rtl">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-10 w-full max-w-md">
+              <div className="hidden sm:block flex-1 h-px bg-slate-300" />
+              <p className="text-black text-sm md:text-base text-center" dir="rtl">
                 כל הנושאים, הנוסחאות והדוגמאות הפתורות במקום אחד
               </p>
-              <div className="flex-1 h-px bg-slate-300" />
+              <div className="hidden sm:block flex-1 h-px bg-slate-300" />
             </div>
 
             {/* CTA */}
@@ -175,9 +175,9 @@ export default function HomePage() {
             <circle cx="350" cy="22" r="3" fill="#0d9488" opacity="0.15" />
           </svg>
           <div className="relative text-right leading-none">
-            <div className="text-5xl md:text-6xl font-black tracking-tight text-black">פתח את</div>
-            <div className="text-6xl md:text-8xl font-black tracking-tight text-black mt-1">המוח</div>
-            <div className="text-7xl md:text-9xl font-black tracking-tighter text-black mt-1">שלך</div>
+            <div className="text-4xl md:text-6xl font-black tracking-tight text-black">פתח את</div>
+            <div className="text-5xl md:text-8xl font-black tracking-tight text-black mt-1">המוח</div>
+            <div className="text-6xl md:text-9xl font-black tracking-tighter text-black mt-1">שלך</div>
             <p className="text-slate-500 text-sm md:text-base font-normal mt-5 leading-relaxed max-w-xs">
               כשנתקלים בשאלה קשה — נסו לפתור אותה בשתי דרכים שונות. הדרך השנייה תפתח הבנה חדשה.
             </p>
@@ -201,8 +201,8 @@ export default function HomePage() {
             <text x="348"  y="59"  fill="#6366f1" fontSize="11" fontFamily="serif" fontStyle="italic" opacity="0.15">r=1</text>
           </svg>
           <div className="relative text-right leading-none">
-            <div className="text-6xl md:text-8xl font-black tracking-tight text-black">ללמוד</div>
-            <div className="text-7xl md:text-9xl font-black tracking-tighter text-black mt-2">מעשייה</div>
+            <div className="text-5xl md:text-8xl font-black tracking-tight text-black">ללמוד</div>
+            <div className="text-6xl md:text-9xl font-black tracking-tighter text-black mt-2">מעשייה</div>
             <p className="text-slate-500 text-sm md:text-base font-normal mt-5 leading-relaxed max-w-xs">
               פתרון עשרה תרגילים שווה יותר מקריאת מאה עמודי סיכום. המוח לומד מתוך עשייה, לא מתוך קריאה.
             </p>
@@ -276,9 +276,9 @@ export default function HomePage() {
             <path d="M 340 230 L 390 230 L 390 180 Z" stroke="#6366f1" strokeWidth="1.2" opacity="0.12" fill="none" />
           </svg>
           <div className="relative text-right leading-none">
-            <div className="text-7xl md:text-9xl font-black tracking-tighter text-black">הצלחה</div>
-            <div className="text-5xl md:text-7xl font-black tracking-tight text-black mt-2">מתחילה</div>
-            <div className="text-4xl md:text-6xl font-black tracking-tight text-black mt-1">בלימוד</div>
+            <div className="text-6xl md:text-9xl font-black tracking-tighter text-black">הצלחה</div>
+            <div className="text-4xl md:text-7xl font-black tracking-tight text-black mt-2">מתחילה</div>
+            <div className="text-3xl md:text-6xl font-black tracking-tight text-black mt-1">בלימוד</div>
             <p className="text-slate-500 text-sm md:text-base font-normal mt-5 leading-relaxed max-w-xs">
               30 דקות לימוד יומיות לאורך חודש שוות יותר מ־8 שעות לפני הבחינה. הרגלים קטנים בונים ידע אמיתי.
             </p>

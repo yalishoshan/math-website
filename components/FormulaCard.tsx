@@ -39,7 +39,7 @@ export default function FormulaCard({
       </div>
       <div className="p-4">
         <div
-          className="formula-block bg-slate-50/80 rounded-lg my-1 px-3 py-3"
+          className="formula-block bg-slate-50/80 rounded-lg my-1 px-3 py-3 overflow-x-auto"
           dangerouslySetInnerHTML={{ __html: rendered }}
         />
         <div className="mt-4 flex justify-center">

@@ -8,7 +8,12 @@ import { testQuestions } from "@/data/testQuestions";
 
 type Phase = "intro" | "test" | "solutions";
 
-const TOTAL_SECONDS = 3 * 60 * 60;
+const TIME_OPTIONS = [
+  { label: "3 שעות", seconds: 3 * 60 * 60 },
+  { label: "2 שעות", seconds: 2 * 60 * 60 },
+  { label: "שעה", seconds: 60 * 60 },
+  { label: "ללא ספירה", seconds: 0 },
+];
 
 function formatTime(s: number): string {
   const h = Math.floor(s / 3600);
@@ -43,10 +48,18 @@ function NavBar() {
 
 export default function TestClient() {
   const [phase, setPhase] = useState<Phase>("intro");
-  const [timeLeft, setTimeLeft] = useState(TOTAL_SECONDS);
+  const [timeLeft, setTimeLeft] = useState(3 * 60 * 60);
   const [timerActive, setTimerActive] = useState(false);
-  // key = `${questionId}-${label}`, value = open/closed
   const [openSolutions, setOpenSolutions] = useState<Set<string>>(new Set());
+
+  // Settings
+  const [selectedIds, setSelectedIds] = useState<Set<number>>(
+    new Set(testQuestions.map((q) => q.id))
+  );
+  const [timeLimitSeconds, setTimeLimitSeconds] = useState(3 * 60 * 60);
+  const [practiceMode, setPracticeMode] = useState(false);
+
+  const filteredQuestions = testQuestions.filter((q) => selectedIds.has(q.id));
 
   const endTest = useCallback(() => {
     setTimerActive(false);
@@ -64,15 +77,15 @@ export default function TestClient() {
   }, [timeLeft, timerActive, endTest]);
 
   function startTest() {
-    setTimeLeft(TOTAL_SECONDS);
-    setTimerActive(true);
+    setTimeLeft(timeLimitSeconds);
+    setTimerActive(timeLimitSeconds > 0);
     setOpenSolutions(new Set());
     setPhase("test");
   }
 
   function restart() {
     setPhase("intro");
-    setTimeLeft(TOTAL_SECONDS);
+    setTimeLeft(timeLimitSeconds);
     setTimerActive(false);
     setOpenSolutions(new Set());
   }
@@ -88,13 +101,23 @@ export default function TestClient() {
 
   function revealAll() {
     const all = new Set<string>();
-    testQuestions.forEach((q) =>
+    filteredQuestions.forEach((q) =>
       q.subquestions.forEach((sub) => all.add(`${q.id}-${sub.label}`))
     );
     setOpenSolutions(all);
   }
 
-  const isLowTime = timeLeft < 10 * 60;
+  function toggleQuestion(id: number) {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  const isLowTime = timeLimitSeconds > 0 && timeLeft < 10 * 60;
+  const canStart = selectedIds.size > 0;
 
   // ══════════════════════════════════════════════════════════════════════════
   // INTRO
@@ -102,16 +125,11 @@ export default function TestClient() {
   if (phase === "intro") {
     return (
       <div className="min-h-screen bg-white flex flex-col" dir="rtl">
-
         <Navbar />
-
-        {/* Main — vertical layout */}
         <div className="flex-1 flex flex-col">
 
-          {/* Top — big headline with background photo */}
+          {/* Top headline */}
           <div className="flex-1 flex flex-col justify-center items-center text-center px-8 md:px-16 py-10 border-b-2 border-black relative overflow-hidden">
-
-            {/* Side photos — clipped to top section */}
             <div className="absolute inset-y-0 left-0 w-56 xl:w-72 hidden lg:block">
               <Image
                 src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600&q=80"
@@ -132,8 +150,6 @@ export default function TestClient() {
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white" />
             </div>
-
-            {/* Background math photo */}
             <Image
               src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=1600&q=80"
               alt=""
@@ -142,10 +158,8 @@ export default function TestClient() {
               sizes="100vw"
               priority
             />
-            {/* Soft white vignette so edges fade */}
             <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/80" />
 
-            {/* Content sits above photo */}
             <div className="relative flex items-center gap-4 w-full mb-4">
               <div className="flex-1 h-px bg-black/30" />
               <p className="text-black text-sm font-semibold tracking-widest uppercase whitespace-nowrap">
@@ -161,28 +175,119 @@ export default function TestClient() {
             </p>
           </div>
 
-          {/* Bottom — exam structure + button */}
+          {/* Settings + button */}
           <div className="flex-1 flex flex-col justify-between items-center px-8 md:px-16 py-10">
+            <div className="w-full max-w-2xl space-y-8">
 
-            {/* Exam structure */}
-            <div className="space-y-3 w-full max-w-2xl">
-              <p className="text-black text-sm md:text-base leading-relaxed">
-                <span className="font-bold">מבנה השאלון ומפתח ההערכה:</span> בשאלון זה שלושה פרקים, ובהם שמונה שאלות.
-              </p>
-              <div className="space-y-1.5 pr-4 border-r-2 border-black">
-                <p className="text-black text-sm md:text-base"><span className="font-bold">פרק ראשון</span> – אלגברה והסתברות</p>
-                <p className="text-black text-sm md:text-base"><span className="font-bold">פרק שני</span> – גאומטרייה וטריגונומטרייה במישור</p>
-                <p className="text-black text-sm md:text-base leading-relaxed"><span className="font-bold">פרק שלישי</span> – חשבון דיפרנציאלי ואינטגרלי של פולינומים, של פונקציות שורש, של פונקציות רציונליות ושל פונקציות טריגונומטריות</p>
+              {/* Exam structure */}
+              <div className="space-y-3">
+                <p className="text-black text-sm md:text-base leading-relaxed">
+                  <span className="font-bold">מבנה השאלון ומפתח ההערכה:</span> בשאלון זה שלושה פרקים, ובהם שמונה שאלות.
+                </p>
+                <div className="space-y-1.5 pr-4 border-r-2 border-black">
+                  <p className="text-black text-sm md:text-base"><span className="font-bold">פרק ראשון</span> – אלגברה והסתברות</p>
+                  <p className="text-black text-sm md:text-base"><span className="font-bold">פרק שני</span> – גאומטרייה וטריגונומטרייה במישור</p>
+                  <p className="text-black text-sm md:text-base leading-relaxed"><span className="font-bold">פרק שלישי</span> – חשבון דיפרנציאלי ואינטגרלי של פולינומים, של פונקציות שורש, של פונקציות רציונליות ושל פונקציות טריגונומטריות</p>
+                </div>
+                <p className="text-black text-sm md:text-base font-bold">
+                  יש לענות על חמש שאלות, לפחות על שאלה אחת מכל פרק – 5×20 = 100 נקודות.
+                </p>
               </div>
-              <p className="text-black text-sm md:text-base font-bold">
-                יש לענות על חמש שאלות, לפחות על שאלה אחת מכל פרק – 5×20 = 100 נקודות.
-              </p>
+
+              {/* Settings panel */}
+              <div className="border border-slate-200 rounded-2xl divide-y divide-slate-100">
+
+                {/* Question selection */}
+                <div className="p-5">
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="font-bold text-black text-sm">בחר שאלות</p>
+                    <div className="flex gap-3 text-xs text-black/50">
+                      <button
+                        onClick={() => setSelectedIds(new Set(testQuestions.map((q) => q.id)))}
+                        className="hover:text-black transition-colors underline underline-offset-2"
+                      >
+                        בחר הכל
+                      </button>
+                      <button
+                        onClick={() => setSelectedIds(new Set())}
+                        className="hover:text-black transition-colors underline underline-offset-2"
+                      >
+                        בטל הכל
+                      </button>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    {testQuestions.map((q, i) => {
+                      const checked = selectedIds.has(q.id);
+                      return (
+                        <button
+                          key={q.id}
+                          onClick={() => toggleQuestion(q.id)}
+                          className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all text-right ${
+                            checked
+                              ? "bg-black text-white border-black"
+                              : "bg-white text-black border-slate-300 hover:border-slate-400"
+                          }`}
+                        >
+                          <span className={`shrink-0 w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-black ${checked ? "bg-white text-black" : "bg-slate-100 text-black"}`}>
+                            {i + 1}
+                          </span>
+                          <span className="truncate">{q.topic}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {selectedIds.size === 0 && (
+                    <p className="text-red-500 text-xs mt-2">יש לבחור לפחות שאלה אחת</p>
+                  )}
+                </div>
+
+                {/* Time limit */}
+                <div className="p-5">
+                  <p className="font-bold text-black text-sm mb-3">זמן מבחן</p>
+                  <div className="flex flex-wrap gap-2">
+                    {TIME_OPTIONS.map((opt) => (
+                      <button
+                        key={opt.seconds}
+                        onClick={() => setTimeLimitSeconds(opt.seconds)}
+                        className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all ${
+                          timeLimitSeconds === opt.seconds
+                            ? "bg-black text-white border-black"
+                            : "bg-white text-black border-slate-300 hover:border-slate-400"
+                        }`}
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Practice mode */}
+                <div className="p-5">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-bold text-black text-sm">מצב תרגול</p>
+                      <p className="text-xs text-slate-500 mt-0.5">הצג פתרונות תוך כדי המבחן</p>
+                    </div>
+                    <button
+                      onClick={() => setPracticeMode((p) => !p)}
+                      className={`relative w-12 h-6 rounded-full transition-colors ${practiceMode ? "bg-black" : "bg-slate-300"}`}
+                    >
+                      <span
+                        className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-all ${practiceMode ? "right-1" : "left-1"}`}
+                      />
+                    </button>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
-            <div className="w-full max-w-2xl">
+            <div className="w-full max-w-2xl mt-8">
               <button
                 onClick={startTest}
-                className="w-full bg-black text-white font-black text-xl py-6 rounded-2xl hover:bg-slate-800 transition-colors tracking-tight"
+                disabled={!canStart}
+                className="w-full bg-black text-white font-black text-xl py-6 rounded-2xl hover:bg-slate-800 transition-colors tracking-tight disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 התחל מבחן ←
               </button>
@@ -197,7 +302,7 @@ export default function TestClient() {
   }
 
   // ══════════════════════════════════════════════════════════════════════════
-  // TEST — all 8 questions displayed, student solves on paper
+  // TEST
   // ══════════════════════════════════════════════════════════════════════════
   if (phase === "test") {
     return (
@@ -206,13 +311,21 @@ export default function TestClient() {
         <div className="sticky top-0 z-50 bg-black border-b border-white/10">
           <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
             <div className={`flex items-center gap-2 font-mono font-bold text-lg ${isLowTime ? "text-red-400" : "text-white"}`}>
-              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" strokeWidth="2" />
-                <path d="M12 6v6l4 2" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-              {formatTime(timeLeft)}
+              {timeLimitSeconds > 0 ? (
+                <>
+                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" strokeWidth="2" />
+                    <path d="M12 6v6l4 2" strokeWidth="2" strokeLinecap="round" />
+                  </svg>
+                  {formatTime(timeLeft)}
+                </>
+              ) : (
+                <span className="text-white/60 text-sm font-sans">ללא ספירה</span>
+              )}
             </div>
-            <span className="text-white/70 text-sm hidden sm:block">ענה/י על 5 שאלות לבחירתך במחברת</span>
+            <span className="text-white/70 text-sm hidden sm:block">
+              {practiceMode ? "מצב תרגול – ניתן לצפות בפתרונות" : "ענה/י על 5 שאלות לבחירתך במחברת"}
+            </span>
             <button
               onClick={endTest}
               className="bg-white text-black font-bold text-sm px-5 py-2 rounded-lg hover:bg-slate-100 transition-colors"
@@ -229,9 +342,8 @@ export default function TestClient() {
 
         {/* Questions */}
         <div className="max-w-4xl mx-auto px-4 py-10 space-y-8">
-          {testQuestions.map((q, i) => (
+          {filteredQuestions.map((q, i) => (
             <div key={q.id} className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
-              {/* Header */}
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center font-black text-sm shrink-0">
                   {i + 1}
@@ -240,24 +352,47 @@ export default function TestClient() {
                   {q.topic}
                 </span>
               </div>
-
-              {/* Main text */}
               <p className="text-black text-base leading-relaxed whitespace-pre-line mb-6 font-medium">
                 {q.text}
               </p>
-
-              {/* Sub-questions */}
               <div className="space-y-4 border-t border-slate-100 pt-5">
-                {q.subquestions.map((sub) => (
-                  <div key={sub.label} className="flex gap-4">
-                    <span className="shrink-0 mt-0.5 w-7 h-7 rounded-lg bg-black flex items-center justify-center text-xs font-bold text-white">
-                      {sub.label}
-                    </span>
-                    <p className="text-black text-sm leading-relaxed whitespace-pre-line">
-                      {sub.text}
-                    </p>
-                  </div>
-                ))}
+                {q.subquestions.map((sub) => {
+                  const key = `${q.id}-${sub.label}`;
+                  const isOpen = openSolutions.has(key);
+                  return (
+                    <div key={sub.label} className="flex gap-4">
+                      <span className="shrink-0 mt-0.5 w-7 h-7 rounded-lg bg-black flex items-center justify-center text-xs font-bold text-white">
+                        {sub.label}
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-black text-sm leading-relaxed whitespace-pre-line">
+                          {sub.text}
+                        </p>
+                        {practiceMode && (
+                          <div className="mt-2">
+                            <button
+                              onClick={() => toggleSolution(key)}
+                              className={`text-xs font-bold px-3 py-1 rounded-lg border transition-all ${
+                                isOpen
+                                  ? "bg-green-50 border-green-300 text-green-700"
+                                  : "bg-slate-50 border-slate-300 text-black hover:border-slate-400"
+                              }`}
+                            >
+                              {isOpen ? "▲ הסתר פתרון" : "▼ הצג פתרון"}
+                            </button>
+                            {isOpen && (
+                              <div className="mt-2 bg-green-50 border border-green-200 rounded-xl p-4">
+                                <p className="text-green-900 text-sm leading-loose whitespace-pre-line font-mono">
+                                  {sub.solution}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -276,21 +411,19 @@ export default function TestClient() {
   }
 
   // ══════════════════════════════════════════════════════════════════════════
-  // SOLUTIONS — reveal per sub-question
+  // SOLUTIONS
   // ══════════════════════════════════════════════════════════════════════════
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       <NavBar />
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* Header */}
         <div className="bg-black text-white rounded-2xl p-8 mb-4 text-center">
           <p className="text-white/60 text-sm mb-2">מבחן הסתיים</p>
           <h2 className="text-3xl md:text-4xl font-black mb-2">מפתח פתרונות</h2>
           <p className="text-white/70 text-sm">לחץ על "הצג פתרון" בכל סעיף לבדיקה עצמית</p>
         </div>
 
-        {/* Reveal all button */}
         <div className="flex justify-end mb-6">
           <button
             onClick={revealAll}
@@ -300,11 +433,9 @@ export default function TestClient() {
           </button>
         </div>
 
-        {/* Questions + solutions */}
         <div className="space-y-8 mb-10">
-          {testQuestions.map((q, i) => (
+          {filteredQuestions.map((q, i) => (
             <div key={q.id} className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-              {/* Question header */}
               <div className="p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center font-black text-sm shrink-0">
@@ -314,20 +445,17 @@ export default function TestClient() {
                     {q.topic}
                   </span>
                 </div>
-
                 <p className="text-black text-base leading-relaxed whitespace-pre-line font-medium mb-0">
                   {q.text}
                 </p>
               </div>
 
-              {/* Sub-questions */}
               <div className="divide-y divide-slate-100">
                 {q.subquestions.map((sub) => {
                   const key = `${q.id}-${sub.label}`;
                   const isOpen = openSolutions.has(key);
                   return (
                     <div key={sub.label} className="px-6 md:px-8 py-5">
-                      {/* Sub-question text */}
                       <div className="flex gap-4 mb-3">
                         <span className="shrink-0 mt-0.5 w-7 h-7 rounded-lg bg-black flex items-center justify-center text-xs font-bold text-white">
                           {sub.label}
@@ -336,8 +464,6 @@ export default function TestClient() {
                           {sub.text}
                         </p>
                       </div>
-
-                      {/* Toggle button */}
                       <div className="mr-11">
                         <button
                           onClick={() => toggleSolution(key)}
@@ -350,8 +476,6 @@ export default function TestClient() {
                           {isOpen ? "▲ הסתר פתרון" : "▼ הצג פתרון"}
                         </button>
                       </div>
-
-                      {/* Solution */}
                       {isOpen && (
                         <div className="mr-11 mt-3 bg-green-50 border border-green-200 rounded-xl p-4">
                           <p className="text-green-900 text-sm leading-loose whitespace-pre-line font-mono">
@@ -367,7 +491,6 @@ export default function TestClient() {
           ))}
         </div>
 
-        {/* Actions */}
         <div className="flex gap-3 justify-center flex-wrap">
           <button
             onClick={restart}
