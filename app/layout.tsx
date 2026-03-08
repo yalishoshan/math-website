@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Frank_Ruhl_Libre } from "next/font/google";
 import "./globals.css";
 import "katex/dist/katex.min.css";
+import { AuthProvider } from "@/context/AuthContext";
 
 const frankRuhl = Frank_Ruhl_Libre({
   subsets: ["hebrew", "latin"],
@@ -22,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
-      <body className={`${frankRuhl.variable} font-[family-name:var(--font-frank-ruhl)] min-h-screen bg-gray-50`}>{children}</body>
+      <body className={`${frankRuhl.variable} font-[family-name:var(--font-frank-ruhl)] min-h-screen bg-gray-50`}>
+          <AuthProvider>{children}</AuthProvider>
+        </body>
     </html>
   );
 }

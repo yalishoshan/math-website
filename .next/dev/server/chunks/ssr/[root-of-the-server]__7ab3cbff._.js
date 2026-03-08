@@ -1198,6 +1198,8 @@ function TestClient() {
     const [selectedIds, setSelectedIds] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(new Set(__TURBOPACK__imported__module__$5b$project$5d2f$data$2f$testQuestions$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["testQuestions"].map((q)=>q.id)));
     const [timeLimitSeconds, setTimeLimitSeconds] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(3 * 60 * 60);
     const [practiceMode, setPracticeMode] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [studentName, setStudentName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [studentClass, setStudentClass] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const filteredQuestions = __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$testQuestions$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["testQuestions"].filter((q)=>selectedIds.has(q.id));
     const endTest = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
         setTimerActive(false);
@@ -1262,7 +1264,7 @@ function TestClient() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 128,
+                    lineNumber: 130,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1282,20 +1284,20 @@ function TestClient() {
                                             sizes: "(min-width: 1280px) 288px, 224px"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 134,
+                                            lineNumber: 136,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute inset-0 bg-gradient-to-r from-transparent to-white"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 143,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 135,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1309,20 +1311,20 @@ function TestClient() {
                                             sizes: "(min-width: 1280px) 288px, 224px"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 144,
+                                            lineNumber: 146,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute inset-0 bg-gradient-to-l from-transparent to-white"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 151,
+                                            lineNumber: 153,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 143,
+                                    lineNumber: 145,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1334,14 +1336,14 @@ function TestClient() {
                                     priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 153,
+                                    lineNumber: 155,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/80"
                                 }, void 0, false, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 161,
+                                    lineNumber: 163,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1351,7 +1353,7 @@ function TestClient() {
                                             className: "flex-1 h-px bg-black/30"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 164,
+                                            lineNumber: 166,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1359,20 +1361,20 @@ function TestClient() {
                                             children: "מבחן פתוח · כיתה י״א"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 165,
+                                            lineNumber: 167,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex-1 h-px bg-black/30"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 168,
+                                            lineNumber: 170,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 163,
+                                    lineNumber: 165,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1382,12 +1384,12 @@ function TestClient() {
                                         children: "מבחן מלא"
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 173,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 172,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1395,13 +1397,13 @@ function TestClient() {
                                     children: "פתור במחברת — בדוק את עצמך לאחר הגשה"
                                 }, void 0, false, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 173,
+                                    lineNumber: 175,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 132,
+                            lineNumber: 134,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1421,14 +1423,14 @@ function TestClient() {
                                                             children: "מבנה השאלון ומפתח ההערכה:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 185,
+                                                            lineNumber: 187,
                                                             columnNumber: 19
                                                         }, this),
                                                         " בשאלון זה שלושה פרקים, ובהם שמונה שאלות."
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 184,
+                                                    lineNumber: 186,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1442,14 +1444,14 @@ function TestClient() {
                                                                     children: "פרק ראשון"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 188,
+                                                                    lineNumber: 190,
                                                                     columnNumber: 66
                                                                 }, this),
                                                                 " – אלגברה והסתברות"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 188,
+                                                            lineNumber: 190,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1460,14 +1462,14 @@ function TestClient() {
                                                                     children: "פרק שני"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 189,
+                                                                    lineNumber: 191,
                                                                     columnNumber: 66
                                                                 }, this),
                                                                 " – גאומטרייה וטריגונומטרייה במישור"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 189,
+                                                            lineNumber: 191,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1478,20 +1480,20 @@ function TestClient() {
                                                                     children: "פרק שלישי"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 190,
+                                                                    lineNumber: 192,
                                                                     columnNumber: 82
                                                                 }, this),
                                                                 " – חשבון דיפרנציאלי ואינטגרלי של פולינומים, של פונקציות שורש, של פונקציות רציונליות ושל פונקציות טריגונומטריות"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 190,
+                                                            lineNumber: 192,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 187,
+                                                    lineNumber: 189,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1499,18 +1501,102 @@ function TestClient() {
                                                     children: "יש לענות על חמש שאלות, לפחות על שאלה אחת מכל פרק – 5×20 = 100 נקודות."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 192,
+                                                    lineNumber: 194,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 183,
+                                            lineNumber: 185,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "border border-slate-200 rounded-2xl divide-y divide-slate-100",
                                             children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "p-5",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "font-bold text-black text-sm mb-3",
+                                                            children: "פרטי הנבחן"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                            lineNumber: 204,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "grid grid-cols-2 gap-3",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "flex flex-col gap-1",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                            className: "text-xs text-slate-500 font-medium",
+                                                                            children: "שם מלא"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 207,
+                                                                            columnNumber: 23
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                            type: "text",
+                                                                            value: studentName,
+                                                                            onChange: (e)=>setStudentName(e.target.value),
+                                                                            placeholder: "ישראל ישראלי",
+                                                                            className: "border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black transition-colors",
+                                                                            dir: "rtl"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 208,
+                                                                            columnNumber: 23
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 206,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "flex flex-col gap-1",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                            className: "text-xs text-slate-500 font-medium",
+                                                                            children: "כיתה"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 218,
+                                                                            columnNumber: 23
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                            type: "text",
+                                                                            value: studentClass,
+                                                                            onChange: (e)=>setStudentClass(e.target.value),
+                                                                            placeholder: 'י"א 3',
+                                                                            className: "border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black transition-colors",
+                                                                            dir: "rtl"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 219,
+                                                                            columnNumber: 23
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 217,
+                                                                    columnNumber: 21
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                            lineNumber: 205,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 203,
+                                                    columnNumber: 17
+                                                }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "p-5",
                                                     children: [
@@ -1522,7 +1608,7 @@ function TestClient() {
                                                                     children: "בחר שאלות"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 203,
+                                                                    lineNumber: 234,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1534,7 +1620,7 @@ function TestClient() {
                                                                             children: "בחר הכל"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 205,
+                                                                            lineNumber: 236,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1543,19 +1629,19 @@ function TestClient() {
                                                                             children: "בטל הכל"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 211,
+                                                                            lineNumber: 242,
                                                                             columnNumber: 23
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 204,
+                                                                    lineNumber: 235,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 202,
+                                                            lineNumber: 233,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1571,7 +1657,7 @@ function TestClient() {
                                                                             children: i + 1
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 232,
+                                                                            lineNumber: 263,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1579,19 +1665,19 @@ function TestClient() {
                                                                             children: q.topic
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 235,
+                                                                            lineNumber: 266,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, q.id, true, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 223,
+                                                                    lineNumber: 254,
                                                                     columnNumber: 25
                                                                 }, this);
                                                             })
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 219,
+                                                            lineNumber: 250,
                                                             columnNumber: 19
                                                         }, this),
                                                         selectedIds.size === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1599,13 +1685,13 @@ function TestClient() {
                                                             children: "יש לבחור לפחות שאלה אחת"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 241,
+                                                            lineNumber: 272,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 201,
+                                                    lineNumber: 232,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1616,7 +1702,7 @@ function TestClient() {
                                                             children: "זמן מבחן"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 247,
+                                                            lineNumber: 278,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1627,18 +1713,18 @@ function TestClient() {
                                                                     children: opt.label
                                                                 }, opt.seconds, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 250,
+                                                                    lineNumber: 281,
                                                                     columnNumber: 23
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 248,
+                                                            lineNumber: 279,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 246,
+                                                    lineNumber: 277,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1653,7 +1739,7 @@ function TestClient() {
                                                                         children: "מצב תרגול"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                                        lineNumber: 269,
+                                                                        lineNumber: 300,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1661,13 +1747,13 @@ function TestClient() {
                                                                         children: "הצג פתרונות תוך כדי המבחן"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                                        lineNumber: 270,
+                                                                        lineNumber: 301,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 268,
+                                                                lineNumber: 299,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1677,35 +1763,35 @@ function TestClient() {
                                                                     className: `absolute top-1 w-4 h-4 rounded-full bg-white transition-all ${practiceMode ? "right-1" : "left-1"}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 276,
+                                                                    lineNumber: 307,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 272,
+                                                                lineNumber: 303,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 267,
+                                                        lineNumber: 298,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 266,
+                                                    lineNumber: 297,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 198,
+                                            lineNumber: 200,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 182,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1718,7 +1804,7 @@ function TestClient() {
                                             children: "התחל מבחן ←"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 287,
+                                            lineNumber: 318,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1727,31 +1813,31 @@ function TestClient() {
                                             children: "חזרה לדף הבית"
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 294,
+                                            lineNumber: 325,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 286,
+                                    lineNumber: 317,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 179,
+                            lineNumber: 181,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 129,
+                    lineNumber: 131,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/test/TestClient.tsx",
-            lineNumber: 127,
+            lineNumber: 129,
             columnNumber: 7
         }, this);
     }
@@ -1786,7 +1872,7 @@ function TestClient() {
                                                         strokeWidth: "2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 317,
+                                                        lineNumber: 348,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1795,13 +1881,13 @@ function TestClient() {
                                                         strokeLinecap: "round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 318,
+                                                        lineNumber: 349,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 316,
+                                                lineNumber: 347,
                                                 columnNumber: 19
                                             }, this),
                                             formatTime(timeLeft)
@@ -1811,20 +1897,31 @@ function TestClient() {
                                         children: "ללא ספירה"
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 323,
+                                        lineNumber: 354,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 313,
+                                    lineNumber: 344,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "text-white/70 text-sm hidden sm:block",
-                                    children: practiceMode ? "מצב תרגול – ניתן לצפות בפתרונות" : "ענה/י על 5 שאלות לבחירתך במחברת"
-                                }, void 0, false, {
+                                    children: [
+                                        studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-white font-semibold",
+                                            children: studentName
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/test/TestClient.tsx",
+                                            lineNumber: 358,
+                                            columnNumber: 31
+                                        }, this),
+                                        studentName && " · ",
+                                        practiceMode ? "מצב תרגול – ניתן לצפות בפתרונות" : "ענה/י על 5 שאלות לבחירתך במחברת"
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 326,
+                                    lineNumber: 357,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1833,13 +1930,13 @@ function TestClient() {
                                     children: "סיים מבחן"
                                 }, void 0, false, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 329,
+                                    lineNumber: 362,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 312,
+                            lineNumber: 343,
                             columnNumber: 11
                         }, this),
                         isLowTime && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1847,13 +1944,13 @@ function TestClient() {
                             children: "פחות מ-10 דקות נותרו!"
                         }, void 0, false, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 337,
+                            lineNumber: 370,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 311,
+                    lineNumber: 342,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1870,7 +1967,7 @@ function TestClient() {
                                                 children: i + 1
                                             }, void 0, false, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 348,
+                                                lineNumber: 381,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1878,13 +1975,13 @@ function TestClient() {
                                                 children: q.topic
                                             }, void 0, false, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 351,
+                                                lineNumber: 384,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 347,
+                                        lineNumber: 380,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1892,7 +1989,7 @@ function TestClient() {
                                         children: q.text
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 355,
+                                        lineNumber: 388,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1908,7 +2005,7 @@ function TestClient() {
                                                         children: sub.label
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 364,
+                                                        lineNumber: 397,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1919,7 +2016,7 @@ function TestClient() {
                                                                 children: sub.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 368,
+                                                                lineNumber: 401,
                                                                 columnNumber: 25
                                                             }, this),
                                                             practiceMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1931,7 +2028,7 @@ function TestClient() {
                                                                         children: isOpen ? "▲ הסתר פתרון" : "▼ הצג פתרון"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                                        lineNumber: 373,
+                                                                        lineNumber: 406,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1941,42 +2038,42 @@ function TestClient() {
                                                                             children: sub.solution
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 385,
+                                                                            lineNumber: 418,
                                                                             columnNumber: 33
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                                        lineNumber: 384,
+                                                                        lineNumber: 417,
                                                                         columnNumber: 31
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 372,
+                                                                lineNumber: 405,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 367,
+                                                        lineNumber: 400,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, sub.label, true, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 363,
+                                                lineNumber: 396,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 358,
+                                        lineNumber: 391,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, q.id, true, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 346,
+                                lineNumber: 379,
                                 columnNumber: 13
                             }, this)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1987,24 +2084,24 @@ function TestClient() {
                                 children: "סיים וראה פתרונות ←"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 401,
+                                lineNumber: 434,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 400,
+                            lineNumber: 433,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 344,
+                    lineNumber: 377,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/test/TestClient.tsx",
-            lineNumber: 309,
+            lineNumber: 340,
             columnNumber: 7
         }, this);
     }
@@ -2017,7 +2114,7 @@ function TestClient() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(NavBar, {}, void 0, false, {
                 fileName: "[project]/app/test/TestClient.tsx",
-                lineNumber: 418,
+                lineNumber: 451,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2031,7 +2128,7 @@ function TestClient() {
                                 children: "מבחן הסתיים"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 422,
+                                lineNumber: 455,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2039,7 +2136,7 @@ function TestClient() {
                                 children: "מפתח פתרונות"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 423,
+                                lineNumber: 456,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2047,13 +2144,13 @@ function TestClient() {
                                 children: 'לחץ על "הצג פתרון" בכל סעיף לבדיקה עצמית'
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 424,
+                                lineNumber: 457,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/test/TestClient.tsx",
-                        lineNumber: 421,
+                        lineNumber: 454,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2064,12 +2161,12 @@ function TestClient() {
                             children: "הצג את כל הפתרונות"
                         }, void 0, false, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 428,
+                            lineNumber: 461,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/test/TestClient.tsx",
-                        lineNumber: 427,
+                        lineNumber: 460,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2088,7 +2185,7 @@ function TestClient() {
                                                         children: i + 1
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 441,
+                                                        lineNumber: 474,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2096,13 +2193,13 @@ function TestClient() {
                                                         children: q.topic
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 444,
+                                                        lineNumber: 477,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 440,
+                                                lineNumber: 473,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2110,13 +2207,13 @@ function TestClient() {
                                                 children: q.text
                                             }, void 0, false, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 448,
+                                                lineNumber: 481,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 439,
+                                        lineNumber: 472,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2135,7 +2232,7 @@ function TestClient() {
                                                                 children: sub.label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 460,
+                                                                lineNumber: 493,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2143,13 +2240,13 @@ function TestClient() {
                                                                 children: sub.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 463,
+                                                                lineNumber: 496,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 459,
+                                                        lineNumber: 492,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2160,12 +2257,12 @@ function TestClient() {
                                                             children: isOpen ? "▲ הסתר פתרון" : "▼ הצג פתרון"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 468,
+                                                            lineNumber: 501,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 467,
+                                                        lineNumber: 500,
                                                         columnNumber: 23
                                                     }, this),
                                                     isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2175,35 +2272,35 @@ function TestClient() {
                                                             children: sub.solution
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 481,
+                                                            lineNumber: 514,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 480,
+                                                        lineNumber: 513,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, sub.label, true, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 458,
+                                                lineNumber: 491,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 453,
+                                        lineNumber: 486,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, q.id, true, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 438,
+                                lineNumber: 471,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/test/TestClient.tsx",
-                        lineNumber: 436,
+                        lineNumber: 469,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2215,7 +2312,7 @@ function TestClient() {
                                 children: "מבחן חדש"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 495,
+                                lineNumber: 528,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2224,25 +2321,25 @@ function TestClient() {
                                 children: "חזרה לדף הבית"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 501,
+                                lineNumber: 534,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/test/TestClient.tsx",
-                        lineNumber: 494,
+                        lineNumber: 527,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/test/TestClient.tsx",
-                lineNumber: 420,
+                lineNumber: 453,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/test/TestClient.tsx",
-        lineNumber: 417,
+        lineNumber: 450,
         columnNumber: 5
     }, this);
 }
