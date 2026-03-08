@@ -2028,6 +2028,15 @@
     }
   }
 
+  .focus\:border-black:focus {
+    border-color: var(--color-black);
+  }
+
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+
   .disabled\:cursor-not-allowed:disabled {
     cursor: not-allowed;
   }

@@ -58,6 +58,8 @@ export default function TestClient() {
   );
   const [timeLimitSeconds, setTimeLimitSeconds] = useState(3 * 60 * 60);
   const [practiceMode, setPracticeMode] = useState(false);
+  const [studentName, setStudentName] = useState("");
+  const [studentClass, setStudentClass] = useState("");
 
   const filteredQuestions = testQuestions.filter((q) => selectedIds.has(q.id));
 
@@ -117,7 +119,7 @@ export default function TestClient() {
   }
 
   const isLowTime = timeLimitSeconds > 0 && timeLeft < 10 * 60;
-  const canStart = selectedIds.size > 0;
+  const canStart = selectedIds.size > 0 && studentName.trim().length > 0 && studentClass.trim().length > 0;
 
   // ══════════════════════════════════════════════════════════════════════════
   // INTRO
@@ -196,6 +198,35 @@ export default function TestClient() {
 
               {/* Settings panel */}
               <div className="border border-slate-200 rounded-2xl divide-y divide-slate-100">
+
+                {/* Student info */}
+                <div className="p-5">
+                  <p className="font-bold text-black text-sm mb-3">פרטי הנבחן</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="flex flex-col gap-1">
+                      <label className="text-xs text-slate-500 font-medium">שם מלא *</label>
+                      <input
+                        type="text"
+                        value={studentName}
+                        onChange={(e) => setStudentName(e.target.value)}
+                        placeholder="ישראל ישראלי"
+                        className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black transition-colors"
+                        dir="rtl"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <label className="text-xs text-slate-500 font-medium">כיתה *</label>
+                      <input
+                        type="text"
+                        value={studentClass}
+                        onChange={(e) => setStudentClass(e.target.value)}
+                        placeholder='י"א 3'
+                        className="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black transition-colors"
+                        dir="rtl"
+                      />
+                    </div>
+                  </div>
+                </div>
 
                 {/* Question selection */}
                 <div className="p-5">
@@ -324,6 +355,8 @@ export default function TestClient() {
               )}
             </div>
             <span className="text-white/70 text-sm hidden sm:block">
+              {studentName && <span className="text-white font-semibold">{studentName}</span>}
+              {studentName && " · "}
               {practiceMode ? "מצב תרגול – ניתן לצפות בפתרונות" : "ענה/י על 5 שאלות לבחירתך במחברת"}
             </span>
             <button
