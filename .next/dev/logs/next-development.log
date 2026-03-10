@@ -568,3 +568,18 @@ Require stack:
 - C:\Users\HP\math-website\node_modules\next\dist\server\config.js
 - C:\Users\HP\math-website\node_modules\next\dist\server\next.js
 - C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
+[00:45:33.670] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
+- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
+- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
+- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
+- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
+- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
+- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
+- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
+- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
+- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
+- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js

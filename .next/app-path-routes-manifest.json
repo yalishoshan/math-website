@@ -1,0 +1,21 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/ai/chat/route": "/api/ai/chat",
+  "/api/analytics/track/route": "/api/analytics/track",
+  "/api/auth/login/route": "/api/auth/login",
+  "/api/auth/logout/route": "/api/auth/logout",
+  "/api/auth/me/route": "/api/auth/me",
+  "/api/auth/signup/route": "/api/auth/signup",
+  "/page": "/",
+  "/test/page": "/test",
+  "/topic/[id]/page": "/topic/[id]",
+  "/topic/geometry/page": "/topic/geometry",
+  "/topic/motion/page": "/topic/motion",
+  "/topic/optimization/page": "/topic/optimization",
+  "/topic/probability/page": "/topic/probability",
+  "/topic/root-functions/page": "/topic/root-functions",
+  "/topic/sequences/page": "/topic/sequences",
+  "/topic/trig-functions/page": "/topic/trig-functions",
+  "/topic/trigonometry/page": "/topic/trigonometry"
+}

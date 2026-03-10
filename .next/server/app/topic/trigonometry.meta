@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/topic/layout,_N_T_/topic/trigonometry/layout,_N_T_/topic/trigonometry/page,_N_T_/topic/trigonometry"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/topic/trigonometry/__PAGE__",
+    "/topic/trigonometry",
+    "/topic",
+    "/_index",
+    "/_head"
+  ]
+}

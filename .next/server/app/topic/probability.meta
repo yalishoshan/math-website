@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/topic/layout,_N_T_/topic/probability/layout,_N_T_/topic/probability/page,_N_T_/topic/probability"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/topic/probability/__PAGE__",
+    "/topic/probability",
+    "/topic",
+    "/_index",
+    "/_head"
+  ]
+}

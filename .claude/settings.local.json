@@ -29,7 +29,8 @@
       "Bash(cd \"C:\\\\Users\\\\isc\\\\Desktop\\\\bagrut-math\" && npx prisma generate 2>&1 | tail -5)",
       "Bash(cd \"C:\\\\Users\\\\isc\\\\Desktop\\\\bagrut-math\" && npx tsc --noEmit 2>&1 | head -40)",
       "Bash(cd /c/Users/HP/math-website && npx next dev --no-turbopack)",
-      "Bash(cd /c/Users/HP/math-website && npx tsc --noEmit 2>&1 | head -30)"
+      "Bash(cd /c/Users/HP/math-website && npx tsc --noEmit 2>&1 | head -30)",
+      "Bash(cd /c/Users/HP/math-website && npx tsc --noEmit 2>&1 | grep -v \"prisma\")"
     ]
   }
 }
