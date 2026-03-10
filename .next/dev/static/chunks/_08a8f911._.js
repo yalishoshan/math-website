@@ -711,7 +711,7 @@ var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-function AuthModal({ onClose }) {
+function AuthModal({ onClose, dismissible = true }) {
     _s();
     const { login, signup, loginAsGuest } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
     const [tab, setTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("login");
@@ -724,8 +724,9 @@ function AuthModal({ onClose }) {
     const [signupError, setSignupError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AuthModal.useEffect": ()=>{
+            if (!dismissible) return;
             function onKey(e) {
-                if (e.key === "Escape") onClose();
+                if (e.key === "Escape" && onClose) onClose();
             }
             window.addEventListener("keydown", onKey);
             return ({
@@ -733,14 +734,15 @@ function AuthModal({ onClose }) {
             })["AuthModal.useEffect"];
         }
     }["AuthModal.useEffect"], [
-        onClose
+        onClose,
+        dismissible
     ]);
     function handleLogin(e) {
         e.preventDefault();
         setLoginError("");
         const err = login(loginEmail, loginPassword);
         if (err) setLoginError(err);
-        else onClose();
+        else if (onClose) onClose();
     }
     function handleSignup(e) {
         e.preventDefault();
@@ -759,331 +761,429 @@ function AuthModal({ onClose }) {
         }
         const err = signup(signupName.trim(), signupEmail.trim(), signupPassword);
         if (err) setSignupError(err);
-        else onClose();
+        else if (onClose) onClose();
     }
     function handleGuest() {
         loginAsGuest();
-        onClose();
+        if (onClose) onClose();
     }
+    const inputClass = "w-full bg-slate-50 border border-slate-200 focus:border-slate-900 focus:bg-white rounded-xl px-4 py-3 text-sm outline-none transition-all placeholder:text-slate-300";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-[100] flex items-center justify-center p-4",
         dir: "rtl",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 bg-black/60 backdrop-blur-sm",
-                onClick: onClose
+                className: "absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-800/70 backdrop-blur-md",
+                onClick: dismissible ? onClose : undefined
             }, void 0, false, {
                 fileName: "[project]/components/AuthModal.tsx",
-                lineNumber: 48,
+                lineNumber: 52,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-8",
+                className: "relative w-full max-w-sm",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: onClose,
-                        className: "absolute top-4 left-4 text-black/30 hover:text-black transition-colors text-xl font-bold leading-none",
-                        children: "✕"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute -inset-px rounded-3xl bg-gradient-to-br from-white/20 to-white/5 pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/components/AuthModal.tsx",
-                        lineNumber: 50,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex border-b-2 border-black mb-7",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>{
-                                    setTab("login");
-                                    setLoginError("");
-                                },
-                                className: `pb-3 px-1 ml-6 text-sm font-bold transition-colors border-b-2 -mb-[2px] ${tab === "login" ? "border-black text-black" : "border-transparent text-black/30 hover:text-black/60"}`,
-                                children: "כניסה"
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 53,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>{
-                                    setTab("signup");
-                                    setSignupError("");
-                                },
-                                className: `pb-3 px-1 text-sm font-bold transition-colors border-b-2 -mb-[2px] ${tab === "signup" ? "border-black text-black" : "border-transparent text-black/30 hover:text-black/60"}`,
-                                children: "הרשמה"
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 57,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/AuthModal.tsx",
-                        lineNumber: 52,
-                        columnNumber: 9
-                    }, this),
-                    tab === "login" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                        onSubmit: handleLogin,
-                        className: "space-y-4",
+                        className: "relative bg-white rounded-3xl shadow-2xl overflow-hidden",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "space-y-1.5",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "text-xs font-semibold text-black/60",
-                                        children: "כתובת מייל"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 66,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "email",
-                                        value: loginEmail,
-                                        onChange: (e)=>setLoginEmail(e.target.value),
-                                        placeholder: "example@email.com",
-                                        required: true,
-                                        dir: "ltr",
-                                        className: "w-full border-2 border-black/10 focus:border-black rounded-xl px-4 py-3 text-sm outline-none transition-colors placeholder:text-black/20"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 67,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                className: "h-1 w-full bg-gradient-to-r from-slate-900 via-slate-600 to-slate-900"
+                            }, void 0, false, {
                                 fileName: "[project]/components/AuthModal.tsx",
                                 lineNumber: 65,
-                                columnNumber: 13
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "space-y-1.5",
+                                className: "px-8 pt-8 pb-7",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "text-xs font-semibold text-black/60",
-                                        children: "סיסמה"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-7 flex items-start justify-between",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "flex items-center gap-2 mb-2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "text-lg font-black",
+                                                                style: {
+                                                                    fontFamily: "serif",
+                                                                    fontStyle: "italic"
+                                                                },
+                                                                children: "∑"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/AuthModal.tsx",
+                                                                lineNumber: 73,
+                                                                columnNumber: 19
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "text-xs font-bold text-slate-900 tracking-wide",
+                                                                children: "בגרות מתמטיקה 5 יח״ל"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/AuthModal.tsx",
+                                                                lineNumber: 74,
+                                                                columnNumber: 19
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 72,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                        className: "text-2xl font-black text-slate-900 tracking-tighter leading-none",
+                                                        children: tab === "login" ? "ברוך הבא" : "הצטרף עכשיו"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 76,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 71,
+                                                columnNumber: 15
+                                            }, this),
+                                            dismissible && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: onClose,
+                                                className: "w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors flex items-center justify-center text-slate-400 hover:text-slate-700 text-sm font-bold shrink-0",
+                                                children: "✕"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 81,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/AuthModal.tsx",
+                                        lineNumber: 70,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex bg-slate-100 rounded-xl p-1 mb-6",
+                                        children: [
+                                            "login",
+                                            "signup"
+                                        ].map((t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: ()=>{
+                                                    setTab(t);
+                                                    setLoginError("");
+                                                    setSignupError("");
+                                                },
+                                                className: `flex-1 py-2 text-xs font-bold rounded-lg transition-all ${tab === t ? "bg-slate-900 text-white shadow-sm" : "text-slate-500 hover:text-slate-800"}`,
+                                                children: t === "login" ? "כניסה" : "הרשמה"
+                                            }, t, false, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 93,
+                                                columnNumber: 17
+                                            }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 71,
+                                        lineNumber: 91,
+                                        columnNumber: 13
+                                    }, this),
+                                    tab === "login" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                                        onSubmit: handleLogin,
+                                        className: "space-y-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "block text-xs font-semibold text-slate-900 mb-1.5",
+                                                        children: "כתובת מייל"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 111,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "email",
+                                                        value: loginEmail,
+                                                        onChange: (e)=>setLoginEmail(e.target.value),
+                                                        placeholder: "you@gmail.com",
+                                                        required: true,
+                                                        dir: "ltr",
+                                                        className: inputClass
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 112,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 110,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "block text-xs font-semibold text-slate-900 mb-1.5",
+                                                        children: "סיסמה"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 120,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "password",
+                                                        value: loginPassword,
+                                                        onChange: (e)=>setLoginPassword(e.target.value),
+                                                        placeholder: "••••••••",
+                                                        required: true,
+                                                        dir: "ltr",
+                                                        className: inputClass
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 121,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 119,
+                                                columnNumber: 17
+                                            }, this),
+                                            loginError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center gap-2 bg-red-50 border border-red-100 rounded-lg px-3 py-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-red-400 text-xs",
+                                                        children: "⚠"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 130,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-red-500 text-xs font-medium",
+                                                        children: loginError
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 131,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 129,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                type: "submit",
+                                                className: "w-full bg-slate-900 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition-colors text-sm mt-1 tracking-wide",
+                                                children: "כניסה לחשבון ←"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 134,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/AuthModal.tsx",
+                                        lineNumber: 109,
                                         columnNumber: 15
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "password",
-                                        value: loginPassword,
-                                        onChange: (e)=>setLoginPassword(e.target.value),
-                                        placeholder: "••••••",
-                                        required: true,
-                                        dir: "ltr",
-                                        className: "w-full border-2 border-black/10 focus:border-black rounded-xl px-4 py-3 text-sm outline-none transition-colors placeholder:text-black/30"
+                                    tab === "signup" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                                        onSubmit: handleSignup,
+                                        className: "space-y-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "block text-xs font-semibold text-slate-900 mb-1.5",
+                                                        children: "שם מלא"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 147,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "text",
+                                                        value: signupName,
+                                                        onChange: (e)=>setSignupName(e.target.value),
+                                                        placeholder: "ישראל ישראלי",
+                                                        required: true,
+                                                        dir: "rtl",
+                                                        className: inputClass
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 148,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 146,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "block text-xs font-semibold text-slate-900 mb-1.5",
+                                                        children: "כתובת מייל"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 156,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "email",
+                                                        value: signupEmail,
+                                                        onChange: (e)=>setSignupEmail(e.target.value),
+                                                        placeholder: "you@gmail.com",
+                                                        required: true,
+                                                        dir: "ltr",
+                                                        className: inputClass
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 157,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 155,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                        className: "block text-xs font-semibold text-slate-900 mb-1.5",
+                                                        children: "סיסמה"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 165,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                        type: "password",
+                                                        value: signupPassword,
+                                                        onChange: (e)=>setSignupPassword(e.target.value),
+                                                        placeholder: "לפחות 6 תווים",
+                                                        required: true,
+                                                        dir: "ltr",
+                                                        className: inputClass
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 166,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 164,
+                                                columnNumber: 17
+                                            }, this),
+                                            signupError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center gap-2 bg-red-50 border border-red-100 rounded-lg px-3 py-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-red-400 text-xs",
+                                                        children: "⚠"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 175,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-red-500 text-xs font-medium",
+                                                        children: signupError
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/AuthModal.tsx",
+                                                        lineNumber: 176,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 174,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                type: "submit",
+                                                className: "w-full bg-slate-900 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition-colors text-sm mt-1 tracking-wide",
+                                                children: "יצירת חשבון ←"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 179,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/AuthModal.tsx",
+                                        lineNumber: 145,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-3 my-5",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex-1 h-px bg-slate-200"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 190,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[11px] text-slate-900 font-bold",
+                                                children: "או"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 191,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex-1 h-px bg-slate-200"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/AuthModal.tsx",
+                                                lineNumber: 192,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/AuthModal.tsx",
+                                        lineNumber: 189,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: handleGuest,
+                                        className: "w-full border border-slate-300 hover:border-slate-900 hover:bg-slate-50 text-slate-900 font-semibold py-2.5 rounded-xl transition-all text-sm",
+                                        children: "המשך כאורח"
                                     }, void 0, false, {
                                         fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 72,
-                                        columnNumber: 15
+                                        lineNumber: 196,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 70,
-                                columnNumber: 13
-                            }, this),
-                            loginError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-red-500 text-xs font-medium",
-                                children: loginError
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 75,
-                                columnNumber: 28
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                type: "submit",
-                                className: "w-full bg-black text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition-colors text-sm",
-                                children: "כניסה ←"
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 76,
-                                columnNumber: 13
+                                lineNumber: 67,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/AuthModal.tsx",
-                        lineNumber: 64,
-                        columnNumber: 11
-                    }, this),
-                    tab === "signup" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                        onSubmit: handleSignup,
-                        className: "space-y-4",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "space-y-1.5",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "text-xs font-semibold text-black/60",
-                                        children: "שם מלא"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 83,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "text",
-                                        value: signupName,
-                                        onChange: (e)=>setSignupName(e.target.value),
-                                        placeholder: "ישראל ישראלי",
-                                        required: true,
-                                        dir: "rtl",
-                                        className: "w-full border-2 border-black/10 focus:border-black rounded-xl px-4 py-3 text-sm outline-none transition-colors placeholder:text-black/20"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 84,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 82,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "space-y-1.5",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "text-xs font-semibold text-black/60",
-                                        children: "כתובת מייל"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 88,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "email",
-                                        value: signupEmail,
-                                        onChange: (e)=>setSignupEmail(e.target.value),
-                                        placeholder: "example@email.com",
-                                        required: true,
-                                        dir: "ltr",
-                                        className: "w-full border-2 border-black/10 focus:border-black rounded-xl px-4 py-3 text-sm outline-none transition-colors placeholder:text-black/20"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 89,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 87,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "space-y-1.5",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "text-xs font-semibold text-black/60",
-                                        children: "סיסמה"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 93,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "password",
-                                        value: signupPassword,
-                                        onChange: (e)=>setSignupPassword(e.target.value),
-                                        placeholder: "לפחות 6 תווים",
-                                        required: true,
-                                        dir: "ltr",
-                                        className: "w-full border-2 border-black/10 focus:border-black rounded-xl px-4 py-3 text-sm outline-none transition-colors placeholder:text-black/30"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/AuthModal.tsx",
-                                        lineNumber: 94,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 92,
-                                columnNumber: 13
-                            }, this),
-                            signupError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-red-500 text-xs font-medium",
-                                children: signupError
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 97,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                type: "submit",
-                                className: "w-full bg-black text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition-colors text-sm",
-                                children: "הרשמה ←"
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 98,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/AuthModal.tsx",
-                        lineNumber: 81,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-4 my-5",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex-1 h-px bg-black/10"
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 103,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-xs text-black/30 font-medium",
-                                children: "או"
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 104,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex-1 h-px bg-black/10"
-                            }, void 0, false, {
-                                fileName: "[project]/components/AuthModal.tsx",
-                                lineNumber: 105,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/AuthModal.tsx",
-                        lineNumber: 102,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: handleGuest,
-                        className: "w-full border-2 border-black/10 hover:border-black text-black font-bold py-3 rounded-xl transition-colors text-sm",
-                        children: "המשך כאורח ←"
-                    }, void 0, false, {
-                        fileName: "[project]/components/AuthModal.tsx",
-                        lineNumber: 108,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-center text-xs text-black/30 mt-4",
-                        children: "גישת אורח אינה שומרת התקדמות"
-                    }, void 0, false, {
-                        fileName: "[project]/components/AuthModal.tsx",
-                        lineNumber: 111,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/AuthModal.tsx",
-                lineNumber: 49,
+                lineNumber: 58,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/AuthModal.tsx",
-        lineNumber: 47,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }
@@ -1701,7 +1801,8 @@ _c = NavBar;
 function TestClient() {
     _s();
     const { auth } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"])();
-    const [showAuthModal, setShowAuthModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [showGate, setShowGate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const isAuthed = auth?.type === "user";
     const [phase, setPhase] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("intro");
     const [timeLeft, setTimeLeft] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(3 * 60 * 60);
     const [timerActive, setTimerActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -1745,6 +1846,22 @@ function TestClient() {
         timerActive,
         endTest
     ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "TestClient.useEffect": ()=>{
+            if (isAuthed) {
+                setShowGate(false);
+                return;
+            }
+            const timer = setTimeout({
+                "TestClient.useEffect.timer": ()=>setShowGate(true)
+            }["TestClient.useEffect.timer"], 1000);
+            return ({
+                "TestClient.useEffect": ()=>clearTimeout(timer)
+            })["TestClient.useEffect"];
+        }
+    }["TestClient.useEffect"], [
+        isAuthed
+    ]);
     function startTest() {
         setTimeLeft(timeLimitSeconds);
         setTimerActive(timeLimitSeconds > 0);
@@ -1781,695 +1898,608 @@ function TestClient() {
     const isLowTime = timeLimitSeconds > 0 && timeLeft < 10 * 60;
     const canStart = selectedIds.size > 0;
     // ══════════════════════════════════════════════════════════════════════════
-    // AUTH GATE — must be a registered user (not guest)
-    // ══════════════════════════════════════════════════════════════════════════
-    if (auth?.type !== "user") {
-        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-screen bg-white flex flex-col",
-            dir: "rtl",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 134,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex-1 flex flex-col items-center justify-center px-6 py-20 text-center",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-16 h-16 rounded-2xl bg-black flex items-center justify-center mb-6",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                className: "w-8 h-8 text-white",
-                                fill: "none",
-                                stroke: "currentColor",
-                                viewBox: "0 0 24 24",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: 2,
-                                    d: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 138,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 137,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 136,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-3xl md:text-4xl font-black text-black tracking-tighter mb-3",
-                            children: "נדרשת כניסה לחשבון"
-                        }, void 0, false, {
-                            fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 141,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-slate-500 text-base max-w-sm leading-relaxed mb-8",
-                            children: "כדי לגשת למבחן המלא יש להירשם או להתחבר עם חשבון. גישת אורח אינה מאפשרת גישה למבחן."
-                        }, void 0, false, {
-                            fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 144,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col sm:flex-row gap-3 justify-center",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: ()=>setShowAuthModal(true),
-                                    className: "bg-violet-600 hover:bg-violet-500 text-white font-bold px-8 py-3.5 rounded-xl transition-colors text-sm",
-                                    children: "כניסה / הרשמה ←"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 148,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    href: "/",
-                                    className: "border-2 border-black/10 hover:border-black text-black font-bold px-8 py-3.5 rounded-xl transition-colors text-sm",
-                                    children: "חזרה לדף הבית"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 154,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 147,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 135,
-                    columnNumber: 9
-                }, this),
-                showAuthModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AuthModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    onClose: ()=>setShowAuthModal(false)
-                }, void 0, false, {
-                    fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 159,
-                    columnNumber: 27
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/app/test/TestClient.tsx",
-            lineNumber: 133,
-            columnNumber: 7
-        }, this);
-    }
-    // ══════════════════════════════════════════════════════════════════════════
     // INTRO
     // ══════════════════════════════════════════════════════════════════════════
     if (phase === "intro") {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-screen bg-white flex flex-col",
+            className: "min-h-screen bg-white flex flex-col overflow-hidden",
             dir: "rtl",
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 170,
-                    columnNumber: 9
-                }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex-1 flex flex-col",
+                    className: !isAuthed && showGate ? "pointer-events-none select-none" : "",
+                    style: !isAuthed && showGate ? {
+                        filter: "blur(3px)"
+                    } : {},
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex-1 flex flex-col justify-center items-center text-center px-8 md:px-16 py-10 border-b-2 border-black relative overflow-hidden",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "absolute inset-y-0 left-0 w-56 xl:w-72 hidden lg:block",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            src: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600&q=80",
-                                            alt: "",
-                                            fill: true,
-                                            className: "object-cover opacity-80",
-                                            sizes: "(min-width: 1280px) 288px, 224px"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 176,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-gradient-to-r from-transparent to-white"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 183,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 175,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "absolute inset-y-0 right-0 w-56 xl:w-72 hidden lg:block",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            src: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80",
-                                            alt: "",
-                                            fill: true,
-                                            className: "object-cover opacity-80",
-                                            sizes: "(min-width: 1280px) 288px, 224px"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 186,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-gradient-to-l from-transparent to-white"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 193,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 185,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=1600&q=80",
-                                    alt: "",
-                                    fill: true,
-                                    className: "object-cover opacity-10",
-                                    sizes: "100vw",
-                                    priority: true
-                                }, void 0, false, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 195,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/80"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 203,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative flex items-center gap-4 w-full mb-4",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex-1 h-px bg-black/30"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 206,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-black text-sm font-semibold tracking-widest uppercase whitespace-nowrap",
-                                            children: "מבחן פתוח · כיתה י״א"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 207,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex-1 h-px bg-black/30"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 210,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 205,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                    className: "relative leading-none font-black text-black tracking-tighter mb-4",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "block text-[12vw] leading-none",
-                                        children: "מבחן מלא"
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 213,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 212,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "relative text-black text-base md:text-xl leading-relaxed",
-                                    children: "פתור במחברת — בדוק את עצמך לאחר הגשה"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 215,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 174,
-                            columnNumber: 11
+                            lineNumber: 142,
+                            columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex-1 flex flex-col justify-between items-center px-8 md:px-16 py-10",
+                            className: "flex-1 flex flex-col",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full max-w-2xl space-y-8",
+                                    className: "flex-1 flex flex-col justify-center items-center text-center px-8 md:px-16 py-10 border-b-2 border-black relative overflow-hidden",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "space-y-3",
+                                            className: "absolute inset-y-0 left-0 w-56 xl:w-72 hidden lg:block",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-black text-sm md:text-base leading-relaxed",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "font-bold",
-                                                            children: "מבנה השאלון ומפתח ההערכה:"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 227,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        " בשאלון זה שלושה פרקים, ובהם שמונה שאלות."
-                                                    ]
-                                                }, void 0, true, {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    src: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600&q=80",
+                                                    alt: "",
+                                                    fill: true,
+                                                    className: "object-cover opacity-80",
+                                                    sizes: "(min-width: 1280px) 288px, 224px"
+                                                }, void 0, false, {
                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 226,
-                                                    columnNumber: 17
+                                                    lineNumber: 148,
+                                                    columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "space-y-1.5 pr-4 border-r-2 border-black",
+                                                    className: "absolute inset-0 bg-gradient-to-r from-transparent to-white"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 155,
+                                                    columnNumber: 15
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/test/TestClient.tsx",
+                                            lineNumber: 147,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "absolute inset-y-0 right-0 w-56 xl:w-72 hidden lg:block",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    src: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80",
+                                                    alt: "",
+                                                    fill: true,
+                                                    className: "object-cover opacity-80",
+                                                    sizes: "(min-width: 1280px) 288px, 224px"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 158,
+                                                    columnNumber: 15
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "absolute inset-0 bg-gradient-to-l from-transparent to-white"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 165,
+                                                    columnNumber: 15
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/test/TestClient.tsx",
+                                            lineNumber: 157,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            src: "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=1600&q=80",
+                                            alt: "",
+                                            fill: true,
+                                            className: "object-cover opacity-10",
+                                            sizes: "100vw",
+                                            priority: true
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/test/TestClient.tsx",
+                                            lineNumber: 167,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/80"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/test/TestClient.tsx",
+                                            lineNumber: 175,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "relative flex items-center gap-4 w-full mb-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex-1 h-px bg-black/30"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 178,
+                                                    columnNumber: 15
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-black text-sm font-semibold tracking-widest uppercase whitespace-nowrap",
+                                                    children: "מבחן פתוח · כיתה י״א"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 179,
+                                                    columnNumber: 15
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex-1 h-px bg-black/30"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 182,
+                                                    columnNumber: 15
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/test/TestClient.tsx",
+                                            lineNumber: 177,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                            className: "relative leading-none font-black text-black tracking-tighter mb-4",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "block text-[12vw] leading-none",
+                                                children: "מבחן מלא"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/test/TestClient.tsx",
+                                                lineNumber: 185,
+                                                columnNumber: 15
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/test/TestClient.tsx",
+                                            lineNumber: 184,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "relative text-black text-base md:text-xl leading-relaxed",
+                                            children: "פתור במחברת — בדוק את עצמך לאחר הגשה"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/test/TestClient.tsx",
+                                            lineNumber: 187,
+                                            columnNumber: 13
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/test/TestClient.tsx",
+                                    lineNumber: 146,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex-1 flex flex-col justify-between items-center px-8 md:px-16 py-10",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-full max-w-2xl space-y-8",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "space-y-3",
                                                     children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-black text-sm md:text-base",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "font-bold",
-                                                                    children: "פרק ראשון"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 230,
-                                                                    columnNumber: 66
-                                                                }, this),
-                                                                " – אלגברה והסתברות"
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 230,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-black text-sm md:text-base",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "font-bold",
-                                                                    children: "פרק שני"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 231,
-                                                                    columnNumber: 66
-                                                                }, this),
-                                                                " – גאומטרייה וטריגונומטרייה במישור"
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 231,
-                                                            columnNumber: 19
-                                                        }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             className: "text-black text-sm md:text-base leading-relaxed",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     className: "font-bold",
-                                                                    children: "פרק שלישי"
+                                                                    children: "מבנה השאלון ומפתח ההערכה:"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 232,
-                                                                    columnNumber: 82
+                                                                    lineNumber: 199,
+                                                                    columnNumber: 19
                                                                 }, this),
-                                                                " – חשבון דיפרנציאלי ואינטגרלי של פולינומים, של פונקציות שורש, של פונקציות רציונליות ושל פונקציות טריגונומטריות"
+                                                                " בשאלון זה שלושה פרקים, ובהם שמונה שאלות."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 232,
-                                                            columnNumber: 19
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 229,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-black text-sm md:text-base font-bold",
-                                                    children: "יש לענות על חמש שאלות, לפחות על שאלה אחת מכל פרק – 5×20 = 100 נקודות."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 234,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 225,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "border border-slate-200 rounded-2xl divide-y divide-slate-100",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "p-5",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "font-bold text-black text-sm mb-3",
-                                                            children: "פרטי הנבחן"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 244,
-                                                            columnNumber: 19
+                                                            lineNumber: 198,
+                                                            columnNumber: 17
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "grid grid-cols-2 gap-3",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "flex flex-col gap-1",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                            className: "text-xs text-slate-500 font-medium",
-                                                                            children: "שם מלא"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 247,
-                                                                            columnNumber: 23
-                                                                        }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                            type: "text",
-                                                                            value: studentName,
-                                                                            onChange: (e)=>setStudentName(e.target.value),
-                                                                            placeholder: "ישראל ישראלי",
-                                                                            className: "border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black transition-colors",
-                                                                            dir: "rtl"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 248,
-                                                                            columnNumber: 23
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 246,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "flex flex-col gap-1",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                            className: "text-xs text-slate-500 font-medium",
-                                                                            children: "כיתה"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 258,
-                                                                            columnNumber: 23
-                                                                        }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                            type: "text",
-                                                                            value: studentClass,
-                                                                            onChange: (e)=>setStudentClass(e.target.value),
-                                                                            placeholder: 'י"א 3',
-                                                                            className: "border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black transition-colors",
-                                                                            dir: "rtl"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 259,
-                                                                            columnNumber: 23
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 257,
-                                                                    columnNumber: 21
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 245,
-                                                            columnNumber: 19
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 243,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "p-5",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex items-center justify-between mb-3",
+                                                            className: "space-y-1.5 pr-4 border-r-2 border-black",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "font-bold text-black text-sm",
-                                                                    children: "בחר שאלות"
+                                                                    className: "text-black text-sm md:text-base",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "font-bold",
+                                                                            children: "פרק ראשון"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 202,
+                                                                            columnNumber: 66
+                                                                        }, this),
+                                                                        " – אלגברה והסתברות"
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 202,
+                                                                    columnNumber: 19
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "text-black text-sm md:text-base",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "font-bold",
+                                                                            children: "פרק שני"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 203,
+                                                                            columnNumber: 66
+                                                                        }, this),
+                                                                        " – גאומטרייה וטריגונומטרייה במישור"
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 203,
+                                                                    columnNumber: 19
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "text-black text-sm md:text-base leading-relaxed",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "font-bold",
+                                                                            children: "פרק שלישי"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 204,
+                                                                            columnNumber: 82
+                                                                        }, this),
+                                                                        " – חשבון דיפרנציאלי ואינטגרלי של פולינומים, של פונקציות שורש, של פונקציות רציונליות ושל פונקציות טריגונומטריות"
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 204,
+                                                                    columnNumber: 19
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                            lineNumber: 201,
+                                                            columnNumber: 17
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "text-black text-sm md:text-base font-bold",
+                                                            children: "יש לענות על חמש שאלות, לפחות על שאלה אחת מכל פרק – 5×20 = 100 נקודות."
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                            lineNumber: 206,
+                                                            columnNumber: 17
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 197,
+                                                    columnNumber: 15
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "border border-slate-200 rounded-2xl divide-y divide-slate-100",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "p-5",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "font-bold text-black text-sm mb-3",
+                                                                    children: "פרטי הנבחן"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 274,
-                                                                    columnNumber: 21
+                                                                    lineNumber: 216,
+                                                                    columnNumber: 19
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "flex gap-3 text-xs text-black/50",
+                                                                    className: "grid grid-cols-2 gap-3",
                                                                     children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                            onClick: ()=>setSelectedIds(new Set(__TURBOPACK__imported__module__$5b$project$5d2f$data$2f$testQuestions$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["testQuestions"].map((q)=>q.id))),
-                                                                            className: "hover:text-black transition-colors underline underline-offset-2",
-                                                                            children: "בחר הכל"
-                                                                        }, void 0, false, {
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "flex flex-col gap-1",
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                                    className: "text-xs text-slate-500 font-medium",
+                                                                                    children: "שם מלא"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                                    lineNumber: 219,
+                                                                                    columnNumber: 23
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                    type: "text",
+                                                                                    value: studentName,
+                                                                                    onChange: (e)=>setStudentName(e.target.value),
+                                                                                    placeholder: "ישראל ישראלי",
+                                                                                    className: "border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black transition-colors",
+                                                                                    dir: "rtl"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                                    lineNumber: 220,
+                                                                                    columnNumber: 23
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
                                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 276,
-                                                                            columnNumber: 23
+                                                                            lineNumber: 218,
+                                                                            columnNumber: 21
                                                                         }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                            onClick: ()=>setSelectedIds(new Set()),
-                                                                            className: "hover:text-black transition-colors underline underline-offset-2",
-                                                                            children: "בטל הכל"
-                                                                        }, void 0, false, {
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "flex flex-col gap-1",
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                                    className: "text-xs text-slate-500 font-medium",
+                                                                                    children: "כיתה"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                                    lineNumber: 230,
+                                                                                    columnNumber: 23
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                    type: "text",
+                                                                                    value: studentClass,
+                                                                                    onChange: (e)=>setStudentClass(e.target.value),
+                                                                                    placeholder: 'י"א 3',
+                                                                                    className: "border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black transition-colors",
+                                                                                    dir: "rtl"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                                    lineNumber: 231,
+                                                                                    columnNumber: 23
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
                                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 282,
-                                                                            columnNumber: 23
+                                                                            lineNumber: 229,
+                                                                            columnNumber: 21
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 275,
+                                                                    lineNumber: 217,
+                                                                    columnNumber: 19
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                            lineNumber: 215,
+                                                            columnNumber: 17
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "p-5",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "flex items-center justify-between mb-3",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                            className: "font-bold text-black text-sm",
+                                                                            children: "בחר שאלות"
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 246,
+                                                                            columnNumber: 21
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "flex gap-3 text-xs text-black/50",
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                                    onClick: ()=>setSelectedIds(new Set(__TURBOPACK__imported__module__$5b$project$5d2f$data$2f$testQuestions$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["testQuestions"].map((q)=>q.id))),
+                                                                                    className: "hover:text-black transition-colors underline underline-offset-2",
+                                                                                    children: "בחר הכל"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                                    lineNumber: 248,
+                                                                                    columnNumber: 23
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                                    onClick: ()=>setSelectedIds(new Set()),
+                                                                                    className: "hover:text-black transition-colors underline underline-offset-2",
+                                                                                    children: "בטל הכל"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                                    lineNumber: 254,
+                                                                                    columnNumber: 23
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 247,
+                                                                            columnNumber: 21
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 245,
+                                                                    columnNumber: 19
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "grid grid-cols-2 sm:grid-cols-4 gap-2",
+                                                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$testQuestions$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["testQuestions"].map((q, i)=>{
+                                                                        const checked = selectedIds.has(q.id);
+                                                                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                            onClick: ()=>toggleQuestion(q.id),
+                                                                            className: `flex items-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all text-right ${checked ? "bg-black text-white border-black" : "bg-white text-black border-slate-300 hover:border-slate-400"}`,
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                    className: `shrink-0 w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-black ${checked ? "bg-white text-black" : "bg-slate-100 text-black"}`,
+                                                                                    children: i + 1
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                                    lineNumber: 275,
+                                                                                    columnNumber: 27
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                    className: "truncate",
+                                                                                    children: q.topic
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                                    lineNumber: 278,
+                                                                                    columnNumber: 27
+                                                                                }, this)
+                                                                            ]
+                                                                        }, q.id, true, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 266,
+                                                                            columnNumber: 25
+                                                                        }, this);
+                                                                    })
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 262,
+                                                                    columnNumber: 19
+                                                                }, this),
+                                                                selectedIds.size === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "text-red-500 text-xs mt-2",
+                                                                    children: "יש לבחור לפחות שאלה אחת"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 284,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 273,
-                                                            columnNumber: 19
+                                                            lineNumber: 244,
+                                                            columnNumber: 17
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "grid grid-cols-2 sm:grid-cols-4 gap-2",
-                                                            children: __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$testQuestions$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["testQuestions"].map((q, i)=>{
-                                                                const checked = selectedIds.has(q.id);
-                                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                    onClick: ()=>toggleQuestion(q.id),
-                                                                    className: `flex items-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all text-right ${checked ? "bg-black text-white border-black" : "bg-white text-black border-slate-300 hover:border-slate-400"}`,
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: `shrink-0 w-5 h-5 rounded-md flex items-center justify-center text-[10px] font-black ${checked ? "bg-white text-black" : "bg-slate-100 text-black"}`,
-                                                                            children: i + 1
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 303,
-                                                                            columnNumber: 27
-                                                                        }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "truncate",
-                                                                            children: q.topic
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 306,
-                                                                            columnNumber: 27
-                                                                        }, this)
-                                                                    ]
-                                                                }, q.id, true, {
+                                                            className: "p-5",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "font-bold text-black text-sm mb-3",
+                                                                    children: "זמן מבחן"
+                                                                }, void 0, false, {
                                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 294,
-                                                                    columnNumber: 25
-                                                                }, this);
-                                                            })
-                                                        }, void 0, false, {
+                                                                    lineNumber: 290,
+                                                                    columnNumber: 19
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "flex flex-wrap gap-2",
+                                                                    children: TIME_OPTIONS.map((opt)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                            onClick: ()=>setTimeLimitSeconds(opt.seconds),
+                                                                            className: `px-4 py-2 rounded-lg border text-sm font-medium transition-all ${timeLimitSeconds === opt.seconds ? "bg-black text-white border-black" : "bg-white text-black border-slate-300 hover:border-slate-400"}`,
+                                                                            children: opt.label
+                                                                        }, opt.seconds, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 293,
+                                                                            columnNumber: 23
+                                                                        }, this))
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                                    lineNumber: 291,
+                                                                    columnNumber: 19
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 290,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        selectedIds.size === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-red-500 text-xs mt-2",
-                                                            children: "יש לבחור לפחות שאלה אחת"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 312,
-                                                            columnNumber: 21
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 272,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "p-5",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "font-bold text-black text-sm mb-3",
-                                                            children: "זמן מבחן"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 318,
-                                                            columnNumber: 19
+                                                            lineNumber: 289,
+                                                            columnNumber: 17
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex flex-wrap gap-2",
-                                                            children: TIME_OPTIONS.map((opt)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                    onClick: ()=>setTimeLimitSeconds(opt.seconds),
-                                                                    className: `px-4 py-2 rounded-lg border text-sm font-medium transition-all ${timeLimitSeconds === opt.seconds ? "bg-black text-white border-black" : "bg-white text-black border-slate-300 hover:border-slate-400"}`,
-                                                                    children: opt.label
-                                                                }, opt.seconds, false, {
-                                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 321,
-                                                                    columnNumber: 23
-                                                                }, this))
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 319,
-                                                            columnNumber: 19
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 317,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "p-5",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex items-center justify-between",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "p-5",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "flex items-center justify-between",
                                                                 children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        className: "font-bold text-black text-sm",
-                                                                        children: "מצב תרגול"
-                                                                    }, void 0, false, {
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                className: "font-bold text-black text-sm",
+                                                                                children: "מצב תרגול"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/test/TestClient.tsx",
+                                                                                lineNumber: 312,
+                                                                                columnNumber: 23
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                className: "text-xs text-slate-500 mt-0.5",
+                                                                                children: "הצג פתרונות תוך כדי המבחן"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/test/TestClient.tsx",
+                                                                                lineNumber: 313,
+                                                                                columnNumber: 23
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
                                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                                        lineNumber: 340,
-                                                                        columnNumber: 23
+                                                                        lineNumber: 311,
+                                                                        columnNumber: 21
                                                                     }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                        className: "text-xs text-slate-500 mt-0.5",
-                                                                        children: "הצג פתרונות תוך כדי המבחן"
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                        onClick: ()=>setPracticeMode((p)=>!p),
+                                                                        className: `relative w-12 h-6 rounded-full transition-colors ${practiceMode ? "bg-black" : "bg-slate-300"}`,
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: `absolute top-1 w-4 h-4 rounded-full bg-white transition-all ${practiceMode ? "right-1" : "left-1"}`
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                                            lineNumber: 319,
+                                                                            columnNumber: 23
+                                                                        }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                                        lineNumber: 341,
-                                                                        columnNumber: 23
+                                                                        lineNumber: 315,
+                                                                        columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 339,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                onClick: ()=>setPracticeMode((p)=>!p),
-                                                                className: `relative w-12 h-6 rounded-full transition-colors ${practiceMode ? "bg-black" : "bg-slate-300"}`,
-                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: `absolute top-1 w-4 h-4 rounded-full bg-white transition-all ${practiceMode ? "right-1" : "left-1"}`
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/app/test/TestClient.tsx",
-                                                                    lineNumber: 347,
-                                                                    columnNumber: 23
-                                                                }, this)
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 343,
-                                                                columnNumber: 21
+                                                                lineNumber: 310,
+                                                                columnNumber: 19
                                                             }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 338,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                }, void 0, false, {
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/test/TestClient.tsx",
+                                                            lineNumber: 309,
+                                                            columnNumber: 17
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/test/TestClient.tsx",
-                                                    lineNumber: 337,
-                                                    columnNumber: 17
+                                                    lineNumber: 212,
+                                                    columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 240,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 222,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full max-w-2xl mt-8",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: startTest,
-                                            disabled: !canStart,
-                                            className: "w-full bg-black text-white font-black text-xl py-6 rounded-2xl hover:bg-slate-800 transition-colors tracking-tight disabled:opacity-40 disabled:cursor-not-allowed",
-                                            children: "התחל מבחן ←"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 358,
-                                            columnNumber: 15
+                                            lineNumber: 194,
+                                            columnNumber: 13
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                            href: "/",
-                                            className: "mt-4 text-center text-sm text-black hover:underline transition-colors block",
-                                            children: "חזרה לדף הבית"
-                                        }, void 0, false, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-full max-w-2xl mt-8",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    onClick: startTest,
+                                                    disabled: !canStart,
+                                                    className: "w-full bg-black text-white font-black text-xl py-6 rounded-2xl hover:bg-slate-800 transition-colors tracking-tight disabled:opacity-40 disabled:cursor-not-allowed",
+                                                    children: "התחל מבחן ←"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 330,
+                                                    columnNumber: 15
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    href: "/",
+                                                    className: "mt-4 text-center text-sm text-black hover:underline transition-colors block",
+                                                    children: "חזרה לדף הבית"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/test/TestClient.tsx",
+                                                    lineNumber: 337,
+                                                    columnNumber: 15
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 365,
-                                            columnNumber: 15
+                                            lineNumber: 329,
+                                            columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 357,
-                                    columnNumber: 13
+                                    lineNumber: 193,
+                                    columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 221,
-                            columnNumber: 11
+                            lineNumber: 143,
+                            columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 171,
+                    lineNumber: 141,
                     columnNumber: 9
+                }, this),
+                !isAuthed && showGate && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AuthModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    dismissible: false
+                }, void 0, false, {
+                    fileName: "[project]/app/test/TestClient.tsx",
+                    lineNumber: 344,
+                    columnNumber: 35
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/test/TestClient.tsx",
-            lineNumber: 169,
+            lineNumber: 140,
             columnNumber: 7
         }, this);
     }
@@ -2504,7 +2534,7 @@ function TestClient() {
                                                         strokeWidth: "2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 388,
+                                                        lineNumber: 362,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -2513,13 +2543,13 @@ function TestClient() {
                                                         strokeLinecap: "round"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 389,
+                                                        lineNumber: 363,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 387,
+                                                lineNumber: 361,
                                                 columnNumber: 19
                                             }, this),
                                             formatTime(timeLeft)
@@ -2529,12 +2559,12 @@ function TestClient() {
                                         children: "ללא ספירה"
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 394,
+                                        lineNumber: 368,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 384,
+                                    lineNumber: 358,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2545,7 +2575,7 @@ function TestClient() {
                                             children: studentName
                                         }, void 0, false, {
                                             fileName: "[project]/app/test/TestClient.tsx",
-                                            lineNumber: 398,
+                                            lineNumber: 372,
                                             columnNumber: 31
                                         }, this),
                                         studentName && " · ",
@@ -2553,7 +2583,7 @@ function TestClient() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 397,
+                                    lineNumber: 371,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2562,13 +2592,13 @@ function TestClient() {
                                     children: "סיים מבחן"
                                 }, void 0, false, {
                                     fileName: "[project]/app/test/TestClient.tsx",
-                                    lineNumber: 402,
+                                    lineNumber: 376,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 383,
+                            lineNumber: 357,
                             columnNumber: 11
                         }, this),
                         isLowTime && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2576,13 +2606,13 @@ function TestClient() {
                             children: "פחות מ-10 דקות נותרו!"
                         }, void 0, false, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 410,
+                            lineNumber: 384,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 382,
+                    lineNumber: 356,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2599,7 +2629,7 @@ function TestClient() {
                                                 children: i + 1
                                             }, void 0, false, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 421,
+                                                lineNumber: 395,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2607,13 +2637,13 @@ function TestClient() {
                                                 children: q.topic
                                             }, void 0, false, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 424,
+                                                lineNumber: 398,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 420,
+                                        lineNumber: 394,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2621,7 +2651,7 @@ function TestClient() {
                                         children: q.text
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 428,
+                                        lineNumber: 402,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2637,7 +2667,7 @@ function TestClient() {
                                                         children: sub.label
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 437,
+                                                        lineNumber: 411,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2648,7 +2678,7 @@ function TestClient() {
                                                                 children: sub.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 441,
+                                                                lineNumber: 415,
                                                                 columnNumber: 25
                                                             }, this),
                                                             practiceMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2660,7 +2690,7 @@ function TestClient() {
                                                                         children: isOpen ? "▲ הסתר פתרון" : "▼ הצג פתרון"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                                        lineNumber: 446,
+                                                                        lineNumber: 420,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2670,42 +2700,42 @@ function TestClient() {
                                                                             children: sub.solution
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                                            lineNumber: 458,
+                                                                            lineNumber: 432,
                                                                             columnNumber: 33
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                                        lineNumber: 457,
+                                                                        lineNumber: 431,
                                                                         columnNumber: 31
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 445,
+                                                                lineNumber: 419,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 440,
+                                                        lineNumber: 414,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, sub.label, true, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 436,
+                                                lineNumber: 410,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 431,
+                                        lineNumber: 405,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, q.id, true, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 419,
+                                lineNumber: 393,
                                 columnNumber: 13
                             }, this)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2716,24 +2746,24 @@ function TestClient() {
                                 children: "סיים וראה פתרונות ←"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 474,
+                                lineNumber: 448,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 473,
+                            lineNumber: 447,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/test/TestClient.tsx",
-                    lineNumber: 417,
+                    lineNumber: 391,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/test/TestClient.tsx",
-            lineNumber: 380,
+            lineNumber: 354,
             columnNumber: 7
         }, this);
     }
@@ -2746,7 +2776,7 @@ function TestClient() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(NavBar, {}, void 0, false, {
                 fileName: "[project]/app/test/TestClient.tsx",
-                lineNumber: 491,
+                lineNumber: 465,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2760,7 +2790,7 @@ function TestClient() {
                                 children: "מבחן הסתיים"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 495,
+                                lineNumber: 469,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2768,7 +2798,7 @@ function TestClient() {
                                 children: "מפתח פתרונות"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 496,
+                                lineNumber: 470,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2776,13 +2806,13 @@ function TestClient() {
                                 children: 'לחץ על "הצג פתרון" בכל סעיף לבדיקה עצמית'
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 497,
+                                lineNumber: 471,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/test/TestClient.tsx",
-                        lineNumber: 494,
+                        lineNumber: 468,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2793,12 +2823,12 @@ function TestClient() {
                             children: "הצג את כל הפתרונות"
                         }, void 0, false, {
                             fileName: "[project]/app/test/TestClient.tsx",
-                            lineNumber: 501,
+                            lineNumber: 475,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/test/TestClient.tsx",
-                        lineNumber: 500,
+                        lineNumber: 474,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2817,7 +2847,7 @@ function TestClient() {
                                                         children: i + 1
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 514,
+                                                        lineNumber: 488,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2825,13 +2855,13 @@ function TestClient() {
                                                         children: q.topic
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 517,
+                                                        lineNumber: 491,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 513,
+                                                lineNumber: 487,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2839,13 +2869,13 @@ function TestClient() {
                                                 children: q.text
                                             }, void 0, false, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 521,
+                                                lineNumber: 495,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 512,
+                                        lineNumber: 486,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2864,7 +2894,7 @@ function TestClient() {
                                                                 children: sub.label
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 533,
+                                                                lineNumber: 507,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2872,13 +2902,13 @@ function TestClient() {
                                                                 children: sub.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                                lineNumber: 536,
+                                                                lineNumber: 510,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 532,
+                                                        lineNumber: 506,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2889,12 +2919,12 @@ function TestClient() {
                                                             children: isOpen ? "▲ הסתר פתרון" : "▼ הצג פתרון"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 541,
+                                                            lineNumber: 515,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 540,
+                                                        lineNumber: 514,
                                                         columnNumber: 23
                                                     }, this),
                                                     isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2904,35 +2934,35 @@ function TestClient() {
                                                             children: sub.solution
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/test/TestClient.tsx",
-                                                            lineNumber: 554,
+                                                            lineNumber: 528,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/test/TestClient.tsx",
-                                                        lineNumber: 553,
+                                                        lineNumber: 527,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, sub.label, true, {
                                                 fileName: "[project]/app/test/TestClient.tsx",
-                                                lineNumber: 531,
+                                                lineNumber: 505,
                                                 columnNumber: 21
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/app/test/TestClient.tsx",
-                                        lineNumber: 526,
+                                        lineNumber: 500,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, q.id, true, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 511,
+                                lineNumber: 485,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/test/TestClient.tsx",
-                        lineNumber: 509,
+                        lineNumber: 483,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2944,7 +2974,7 @@ function TestClient() {
                                 children: "מבחן חדש"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 568,
+                                lineNumber: 542,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2953,29 +2983,29 @@ function TestClient() {
                                 children: "חזרה לדף הבית"
                             }, void 0, false, {
                                 fileName: "[project]/app/test/TestClient.tsx",
-                                lineNumber: 574,
+                                lineNumber: 548,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/test/TestClient.tsx",
-                        lineNumber: 567,
+                        lineNumber: 541,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/test/TestClient.tsx",
-                lineNumber: 493,
+                lineNumber: 467,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/test/TestClient.tsx",
-        lineNumber: 490,
+        lineNumber: 464,
         columnNumber: 5
     }, this);
 }
-_s(TestClient, "qttqzI3RDvv+bvHSUs5lAuwZKw8=", false, function() {
+_s(TestClient, "dO98CJfW4jRCahq+CAwM2rZXqEI=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"]
     ];

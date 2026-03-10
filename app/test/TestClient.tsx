@@ -50,7 +50,8 @@ function NavBar() {
 
 export default function TestClient() {
   const { auth } = useAuth();
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showGate, setShowGate] = useState(false);
+  const isAuthed = auth?.type === "user";
   const [phase, setPhase] = useState<Phase>("intro");
   const [timeLeft, setTimeLeft] = useState(3 * 60 * 60);
   const [timerActive, setTimerActive] = useState(false);
@@ -81,6 +82,12 @@ export default function TestClient() {
   useEffect(() => {
     if (timerActive && timeLeft === 0) endTest();
   }, [timeLeft, timerActive, endTest]);
+
+  useEffect(() => {
+    if (isAuthed) { setShowGate(false); return; }
+    const timer = setTimeout(() => setShowGate(true), 1000);
+    return () => clearTimeout(timer);
+  }, [isAuthed]);
 
   function startTest() {
     setTimeLeft(timeLimitSeconds);
@@ -126,47 +133,12 @@ export default function TestClient() {
   const canStart = selectedIds.size > 0;
 
   // ══════════════════════════════════════════════════════════════════════════
-  // AUTH GATE — must be a registered user (not guest)
-  // ══════════════════════════════════════════════════════════════════════════
-  if (auth?.type !== "user") {
-    return (
-      <div className="min-h-screen bg-white flex flex-col" dir="rtl">
-        <Navbar />
-        <div className="flex-1 flex flex-col items-center justify-center px-6 py-20 text-center">
-          <div className="w-16 h-16 rounded-2xl bg-black flex items-center justify-center mb-6">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter mb-3">
-            נדרשת כניסה לחשבון
-          </h2>
-          <p className="text-slate-500 text-base max-w-sm leading-relaxed mb-8">
-            כדי לגשת למבחן המלא יש להירשם או להתחבר עם חשבון. גישת אורח אינה מאפשרת גישה למבחן.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <button
-              onClick={() => setShowAuthModal(true)}
-              className="bg-violet-600 hover:bg-violet-500 text-white font-bold px-8 py-3.5 rounded-xl transition-colors text-sm"
-            >
-              כניסה / הרשמה ←
-            </button>
-            <Link href="/" className="border-2 border-black/10 hover:border-black text-black font-bold px-8 py-3.5 rounded-xl transition-colors text-sm">
-              חזרה לדף הבית
-            </Link>
-          </div>
-        </div>
-        {showAuthModal && <AuthModal onClose={() => setShowAuthModal(false)} />}
-      </div>
-    );
-  }
-
-  // ══════════════════════════════════════════════════════════════════════════
   // INTRO
   // ══════════════════════════════════════════════════════════════════════════
   if (phase === "intro") {
     return (
-      <div className="min-h-screen bg-white flex flex-col" dir="rtl">
+      <div className="min-h-screen bg-white flex flex-col overflow-hidden" dir="rtl">
+        <div className={!isAuthed && showGate ? "pointer-events-none select-none" : ""} style={!isAuthed && showGate ? { filter: "blur(3px)" } : {}}>
         <Navbar />
         <div className="flex-1 flex flex-col">
 
@@ -368,6 +340,8 @@ export default function TestClient() {
             </div>
           </div>
         </div>
+        </div>
+        {!isAuthed && showGate && <AuthModal dismissible={false} />}
       </div>
     );
   }

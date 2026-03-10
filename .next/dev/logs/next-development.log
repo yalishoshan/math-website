@@ -1,44 +1,13 @@
-[00:00:05.012] Server  LOG     ✓ Ready in 3.9s
-[00:00:19.570] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:26.010] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:32.707] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:30:29.840] Server  LOG     ✓ Compiled in 352ms
-[24:37:01.207] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[24:37:20.638] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[24:37:48.374] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[24:38:28.261] Server  LOG     ✓ Compiled in 435ms
-[24:38:31.820] Server  LOG     ✓ Compiled in 216ms
-[24:38:35.392] Server  LOG     ✓ Compiled in 133ms
-[24:40:34.409] Server  LOG     ✓ Compiled in 175ms
-[24:40:41.637] Server  LOG     ✓ Compiled in 99ms
-[24:43:11.110] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[24:43:12.310] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[24:58:15.529] Server  LOG     ✓ Compiled in 467ms
-[24:58:25.825] Server  LOG     ✓ Compiled in 1102ms
-[24:58:27.113] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[24:58:27.885] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[24:58:48.643] Server  LOG     ✓ Compiled in 526ms
-[25:00:32.638] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[25:01:34.519] Server  ERROR   ⨯ ReferenceError: AuthGate is not defined
-[25:01:34.632] Server  LOG     ✓ Compiled in 643ms
-[25:01:34.994] Server  ERROR   ⨯ ReferenceError: AuthGate is not defined
-[25:01:35.246] Server  ERROR   ⨯ ReferenceError: AuthGate is not defined
-[25:01:35.748] Server  ERROR   ⨯ ReferenceError: AuthGate is not defined
-[25:01:35.947] Server  ERROR   ⨯ ReferenceError: AuthGate is not defined
-[25:01:36.573] Server  ERROR   ⨯ ReferenceError: AuthGate is not defined
-[25:01:37.166] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[25:01:37.567] Browser ERROR   uncaughtError: ReferenceError: AuthGate is not defined
-[25:01:38.214] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[25:01:38.990] Browser ERROR   uncaughtError: ReferenceError: AuthGate is not defined
-[25:01:39.948] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[25:01:41.109] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[25:03:52.858] Server  LOG     ✓ Compiled in 457ms
-[25:04:27.945] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[25:04:44.480] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[25:05:10.207] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[25:08:11.738] Server  LOG     ✓ Compiled in 227ms
-[25:08:58.389] Server  LOG     ✓ Compiled in 462ms
-[25:09:41.149] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[25:11:28.685] Server  LOG     ✓ Compiled in 231ms
-[25:11:56.432] Server  LOG     ✓ Compiled in 149ms
-[25:12:25.473] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:11.416] Server  LOG     ✓ Ready in 10s
+[00:00:50.348] Server  LOG     ○ Compiling / ...
+[00:01:12.516] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:26.461] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:02:47.234] Server  LOG     ✓ Compiled in 351ms
+[00:05:25.479] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:51.227] Server  LOG     ✓ Compiled in 187ms
+[00:05:54.001] Server  LOG     ✓ Compiled in 133ms
+[00:06:03.916] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:40:53.984] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:42:19.903] Server  LOG     ✓ Compiled in 297ms
+[03:42:24.702] Server  LOG     ✓ Compiled in 104ms
+[03:42:33.654] Server  LOG     ✓ Compiled in 187ms
