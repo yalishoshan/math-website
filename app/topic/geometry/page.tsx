@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TipsBox from "@/components/TipsBox";
 import FormulaCard from "@/components/FormulaCard";
+import AiTutor from "@/components/AiTutor";
 import { topics } from "@/data/topics";
 
 export const metadata = {
@@ -574,6 +575,7 @@ export default function GeometryPage() {
         {/* ── 4. טיפים ── */}
         <section>
           <TipsBox tips={tips} />
+          <AiTutor topic="גיאומטריה" />
         </section>
 
         {/* ── Navigation ── */}

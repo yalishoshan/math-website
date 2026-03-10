@@ -21,60 +21,82 @@ function AuthProvider({ children }) {
     const [ready, setReady] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AuthProvider.useEffect": ()=>{
-            try {
-                const stored = localStorage.getItem("bagrut_session");
-                if (stored) setAuth(JSON.parse(stored));
-            } catch  {}
-            setReady(true);
+            // Check for existing session cookie via API
+            fetch("/api/auth/me").then({
+                "AuthProvider.useEffect": (r)=>r.json()
+            }["AuthProvider.useEffect"]).then({
+                "AuthProvider.useEffect": ({ user })=>{
+                    if (user) setAuth({
+                        ...user,
+                        type: "user"
+                    });
+                    else {
+                        // Fall back to localStorage guest session
+                        try {
+                            const stored = localStorage.getItem("bagrut_guest");
+                            if (stored) setAuth(JSON.parse(stored));
+                        } catch  {}
+                    }
+                }
+            }["AuthProvider.useEffect"]).catch({
+                "AuthProvider.useEffect": ()=>{}
+            }["AuthProvider.useEffect"]).finally({
+                "AuthProvider.useEffect": ()=>setReady(true)
+            }["AuthProvider.useEffect"]);
         }
     }["AuthProvider.useEffect"], []);
-    function persist(state) {
-        setAuth(state);
-        if (state) localStorage.setItem("bagrut_session", JSON.stringify(state));
-        else localStorage.removeItem("bagrut_session");
-    }
-    function getUsers() {
-        try {
-            return JSON.parse(localStorage.getItem("bagrut_users") || "[]");
-        } catch  {
-            return [];
-        }
-    }
-    function login(email, password) {
-        const users = getUsers();
-        const user = users.find((u)=>u.email.toLowerCase() === email.toLowerCase());
-        if (!user) return "המשתמש לא נמצא";
-        if (user.password !== password) return "סיסמה שגויה";
-        persist({
-            type: "user",
-            name: user.name,
-            email: user.email
+    async function login(email, password) {
+        const res = await fetch("/api/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email,
+                password
+            })
+        });
+        const data = await res.json();
+        if (!res.ok) return data.error ?? "שגיאה בכניסה";
+        setAuth({
+            ...data.user,
+            type: "user"
         });
         return null;
     }
-    function signup(name, email, password) {
-        const users = getUsers();
-        if (users.find((u)=>u.email.toLowerCase() === email.toLowerCase())) return "כתובת המייל כבר רשומה";
-        users.push({
-            name,
-            email,
-            password
+    async function signup(name, email, password) {
+        const res = await fetch("/api/auth/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                password
+            })
         });
-        localStorage.setItem("bagrut_users", JSON.stringify(users));
-        persist({
-            type: "user",
-            name,
-            email
+        const data = await res.json();
+        if (!res.ok) return data.error ?? "שגיאה בהרשמה";
+        setAuth({
+            ...data.user,
+            type: "user"
         });
         return null;
     }
     function loginAsGuest() {
-        persist({
+        const guest = {
             type: "guest"
-        });
+        };
+        setAuth(guest);
+        localStorage.setItem("bagrut_guest", JSON.stringify(guest));
     }
-    function logout() {
-        persist(null);
+    async function logout() {
+        await fetch("/api/auth/logout", {
+            method: "POST"
+        });
+        localStorage.removeItem("bagrut_guest");
+        setAuth(null);
     }
     if (!ready) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AuthContext.Provider, {
@@ -88,7 +110,7 @@ function AuthProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/context/AuthContext.tsx",
-        lineNumber: 82,
+        lineNumber: 81,
         columnNumber: 5
     }, this);
 }

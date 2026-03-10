@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import FormulaCard from "@/components/FormulaCard";
 import ExampleCard from "@/components/ExampleCard";
 import TipsBox from "@/components/TipsBox";
+import AiTutor from "@/components/AiTutor";
 import { topics } from "@/data/topics";
 
 interface Props {
@@ -137,6 +138,7 @@ export default async function TopicPage({ params }: Props) {
         {/* Tips Section */}
         <section>
           <TipsBox tips={topic.tips} />
+          <AiTutor topic={topic.title} />
         </section>
 
         {/* Navigation */}

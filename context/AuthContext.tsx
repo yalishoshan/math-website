@@ -4,21 +4,15 @@ import { createContext, useContext, useState, useEffect, ReactNode } from "react
 
 type AuthState =
   | { type: "guest" }
-  | { type: "user"; name: string; email: string }
+  | { type: "user"; id: string; name: string; email: string }
   | null;
-
-interface StoredUser {
-  name: string;
-  email: string;
-  password: string;
-}
 
 interface AuthContextValue {
   auth: AuthState;
-  login: (email: string, password: string) => string | null;
-  signup: (name: string, email: string, password: string) => string | null;
+  login: (email: string, password: string) => Promise<string | null>;
+  signup: (name: string, email: string, password: string) => Promise<string | null>;
   loginAsGuest: () => void;
-  logout: () => void;
+  logout: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -28,52 +22,57 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem("bagrut_session");
-      if (stored) setAuth(JSON.parse(stored));
-    } catch {}
-    setReady(true);
+    // Check for existing session cookie via API
+    fetch("/api/auth/me")
+      .then((r) => r.json())
+      .then(({ user }) => {
+        if (user) setAuth({ ...user, type: "user" });
+        else {
+          // Fall back to localStorage guest session
+          try {
+            const stored = localStorage.getItem("bagrut_guest");
+            if (stored) setAuth(JSON.parse(stored));
+          } catch {}
+        }
+      })
+      .catch(() => {})
+      .finally(() => setReady(true));
   }, []);
 
-  function persist(state: AuthState) {
-    setAuth(state);
-    if (state) localStorage.setItem("bagrut_session", JSON.stringify(state));
-    else localStorage.removeItem("bagrut_session");
-  }
-
-  function getUsers(): StoredUser[] {
-    try {
-      return JSON.parse(localStorage.getItem("bagrut_users") || "[]");
-    } catch {
-      return [];
-    }
-  }
-
-  function login(email: string, password: string): string | null {
-    const users = getUsers();
-    const user = users.find((u) => u.email.toLowerCase() === email.toLowerCase());
-    if (!user) return "המשתמש לא נמצא";
-    if (user.password !== password) return "סיסמה שגויה";
-    persist({ type: "user", name: user.name, email: user.email });
+  async function login(email: string, password: string): Promise<string | null> {
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await res.json();
+    if (!res.ok) return data.error ?? "שגיאה בכניסה";
+    setAuth({ ...data.user, type: "user" });
     return null;
   }
 
-  function signup(name: string, email: string, password: string): string | null {
-    const users = getUsers();
-    if (users.find((u) => u.email.toLowerCase() === email.toLowerCase()))
-      return "כתובת המייל כבר רשומה";
-    users.push({ name, email, password });
-    localStorage.setItem("bagrut_users", JSON.stringify(users));
-    persist({ type: "user", name, email });
+  async function signup(name: string, email: string, password: string): Promise<string | null> {
+    const res = await fetch("/api/auth/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, password }),
+    });
+    const data = await res.json();
+    if (!res.ok) return data.error ?? "שגיאה בהרשמה";
+    setAuth({ ...data.user, type: "user" });
     return null;
   }
 
   function loginAsGuest() {
-    persist({ type: "guest" });
+    const guest: AuthState = { type: "guest" };
+    setAuth(guest);
+    localStorage.setItem("bagrut_guest", JSON.stringify(guest));
   }
 
-  function logout() {
-    persist(null);
+  async function logout() {
+    await fetch("/api/auth/logout", { method: "POST" });
+    localStorage.removeItem("bagrut_guest");
+    setAuth(null);
   }
 
   if (!ready) return null;

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import FormulaCard from "@/components/FormulaCard";
 import TipsBox from "@/components/TipsBox";
+import AiTutor from "@/components/AiTutor";
 import { topics } from "@/data/topics";
 
 export const metadata = {
@@ -472,6 +473,7 @@ export default function OptimizationPage() {
         {/* ── 5. טיפים ── */}
         <section>
           <TipsBox tips={topic.tips} />
+          <AiTutor topic={topic.title} />
         </section>
 
         {/* ── Navigation ── */}

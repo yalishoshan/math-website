@@ -10,7 +10,24 @@
       "Bash(taskkill:*)",
       "Bash(python3:*)",
       "Bash(node:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Skill(claude-api)",
+      "Bash(ls /c/Users/isc/Desktop/bagrut-math/.env* 2>/dev/null || echo \"no env files\")",
+      "Bash(npx prisma init --datasource-provider sqlite)",
+      "Bash(npx prisma migrate dev --name init 2>&1)",
+      "Bash(ls /c/Users/isc/Desktop/bagrut-math/node_modules/@prisma/client/ 2>/dev/null | head -5 && npx prisma generate 2>&1)",
+      "Bash(for f in motion optimization probability root-functions sequences trig-functions geometry)",
+      "Bash(do echo \"=== $f ===\")",
+      "Read(//c/Users/isc/Desktop/bagrut-math/app/topic/$f/**)",
+      "Bash(done)",
+      "Bash(npm ls prisma @prisma/client @prisma/adapter-better-sqlite3 better-sqlite3 bcryptjs @anthropic-ai/sdk 2>&1 | grep -v \"npm warn\")",
+      "Bash(head -20 /c/Users/isc/Desktop/bagrut-math/app/topic/\\\\[id\\\\]/page.tsx 2>/dev/null | cat)",
+      "Bash(npx prisma generate 2>&1)",
+      "Bash(npx tsc --noEmit 2>&1 | head -50)",
+      "Bash(cd \"C:\\\\Users\\\\isc\\\\Desktop\\\\bagrut-math\" && npx prisma migrate dev --name add-page-visits 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\isc\\\\Desktop\\\\bagrut-math\" && npx tsc --noEmit 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\isc\\\\Desktop\\\\bagrut-math\" && npx prisma generate 2>&1 | tail -5)",
+      "Bash(cd \"C:\\\\Users\\\\isc\\\\Desktop\\\\bagrut-math\" && npx tsc --noEmit 2>&1 | head -40)"
     ]
   }
 }

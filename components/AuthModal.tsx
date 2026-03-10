@@ -6,6 +6,7 @@ import { useAuth } from "@/context/AuthContext";
 export default function AuthModal({ onClose, dismissible = true }: { onClose?: () => void; dismissible?: boolean }) {
   const { login, signup, loginAsGuest } = useAuth();
   const [tab, setTab] = useState<"login" | "signup">("login");
+  const [loading, setLoading] = useState(false);
 
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
@@ -23,23 +24,33 @@ export default function AuthModal({ onClose, dismissible = true }: { onClose?: (
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose, dismissible]);
 
-  function handleLogin(e: FormEvent) {
+  async function handleLogin(e: FormEvent) {
     e.preventDefault();
     setLoginError("");
-    const err = login(loginEmail, loginPassword);
-    if (err) setLoginError(err);
-    else if (onClose) onClose();
+    setLoading(true);
+    try {
+      const err = await login(loginEmail, loginPassword);
+      if (err) setLoginError(err);
+      else if (onClose) onClose();
+    } finally {
+      setLoading(false);
+    }
   }
 
-  function handleSignup(e: FormEvent) {
+  async function handleSignup(e: FormEvent) {
     e.preventDefault();
     setSignupError("");
     if (!signupName.trim()) { setSignupError("נא להזין שם"); return; }
     if (!signupEmail.trim()) { setSignupError("נא להזין מייל"); return; }
     if (signupPassword.length < 6) { setSignupError("הסיסמה חייבת להכיל לפחות 6 תווים"); return; }
-    const err = signup(signupName.trim(), signupEmail.trim(), signupPassword);
-    if (err) setSignupError(err);
-    else if (onClose) onClose();
+    setLoading(true);
+    try {
+      const err = await signup(signupName.trim(), signupEmail.trim(), signupPassword);
+      if (err) setSignupError(err);
+      else if (onClose) onClose();
+    } finally {
+      setLoading(false);
+    }
   }
 
   function handleGuest() { loginAsGuest(); if (onClose) onClose(); }
@@ -133,9 +144,10 @@ export default function AuthModal({ onClose, dismissible = true }: { onClose?: (
                 )}
                 <button
                   type="submit"
-                  className="w-full bg-slate-900 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition-colors text-sm mt-1 tracking-wide"
+                  disabled={loading}
+                  className="w-full bg-slate-900 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition-colors text-sm mt-1 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  כניסה לחשבון ←
+                  {loading ? "מתחבר..." : "כניסה לחשבון ←"}
                 </button>
               </form>
             )}
@@ -178,9 +190,10 @@ export default function AuthModal({ onClose, dismissible = true }: { onClose?: (
                 )}
                 <button
                   type="submit"
-                  className="w-full bg-slate-900 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition-colors text-sm mt-1 tracking-wide"
+                  disabled={loading}
+                  className="w-full bg-slate-900 hover:bg-slate-700 text-white font-bold py-3 rounded-xl transition-colors text-sm mt-1 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  יצירת חשבון ←
+                  {loading ? "נרשם..." : "יצירת חשבון ←"}
                 </button>
               </form>
             )}

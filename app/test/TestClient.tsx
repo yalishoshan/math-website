@@ -6,9 +6,11 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import AuthModal from "@/components/AuthModal";
 import { useAuth } from "@/context/AuthContext";
-import { testQuestions } from "@/data/testQuestions";
+import { CHAPTERS, TOPIC_LABELS, type BankQuestion } from "@/data/questionBank";
+import { generateTest } from "@/lib/testGenerator";
+import TestAiGuide from "@/components/TestAiGuide";
 
-type Phase = "intro" | "test" | "solutions";
+type Phase = "picker" | "intro" | "test" | "solutions";
 
 const TIME_OPTIONS = [
   { label: "3 שעות", seconds: 3 * 60 * 60 },
@@ -48,25 +50,44 @@ function NavBar() {
   );
 }
 
+// All topics enabled by default
+const ALL_TOPIC_IDS = CHAPTERS.flatMap((c) => c.topicIds);
+
 export default function TestClient() {
   const { auth } = useAuth();
   const [showGate, setShowGate] = useState(false);
   const isAuthed = auth?.type === "user";
-  const [phase, setPhase] = useState<Phase>("intro");
+  const [phase, setPhase] = useState<Phase>("picker");
+  const [generatedQuestions, setGeneratedQuestions] = useState<BankQuestion[]>([]);
   const [timeLeft, setTimeLeft] = useState(3 * 60 * 60);
   const [timerActive, setTimerActive] = useState(false);
   const [openSolutions, setOpenSolutions] = useState<Set<string>>(new Set());
 
-  // Settings
-  const [selectedIds, setSelectedIds] = useState<Set<number>>(
-    new Set(testQuestions.map((q) => q.id))
-  );
+  // Generator settings
+  const [enabledTopics, setEnabledTopics] = useState<Set<string>>(new Set(ALL_TOPIC_IDS));
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [timeLimitSeconds, setTimeLimitSeconds] = useState(3 * 60 * 60);
   const [practiceMode, setPracticeMode] = useState(false);
   const [studentName, setStudentName] = useState("");
   const [studentClass, setStudentClass] = useState("");
 
-  const filteredQuestions = testQuestions.filter((q) => selectedIds.has(q.id));
+  const filteredQuestions = generatedQuestions.filter((q) => selectedIds.has(q.bankId));
+
+  function createNewTest() {
+    const questions = generateTest(enabledTopics);
+    setGeneratedQuestions(questions);
+    setSelectedIds(new Set(questions.map((q) => q.bankId)));
+    setPhase("intro");
+  }
+
+  function toggleTopic(topicId: string) {
+    setEnabledTopics((prev) => {
+      const next = new Set(prev);
+      if (next.has(topicId)) next.delete(topicId);
+      else next.add(topicId);
+      return next;
+    });
+  }
 
   const endTest = useCallback(() => {
     setTimerActive(false);
@@ -97,7 +118,8 @@ export default function TestClient() {
   }
 
   function restart() {
-    setPhase("intro");
+    setPhase("picker");
+    setGeneratedQuestions([]);
     setTimeLeft(timeLimitSeconds);
     setTimerActive(false);
     setOpenSolutions(new Set());
@@ -115,22 +137,115 @@ export default function TestClient() {
   function revealAll() {
     const all = new Set<string>();
     filteredQuestions.forEach((q) =>
-      q.subquestions.forEach((sub) => all.add(`${q.id}-${sub.label}`))
+      q.subquestions.forEach((sub) => all.add(`${q.bankId}-${sub.label}`))
     );
     setOpenSolutions(all);
   }
 
-  function toggleQuestion(id: number) {
+  function toggleQuestion(bankId: string) {
     setSelectedIds((prev) => {
       const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
+      if (next.has(bankId)) next.delete(bankId);
+      else next.add(bankId);
       return next;
     });
   }
 
+  function selectAll() { setSelectedIds(new Set(generatedQuestions.map((q) => q.bankId))); }
+  function clearAll()  { setSelectedIds(new Set()); }
+
   const isLowTime = timeLimitSeconds > 0 && timeLeft < 10 * 60;
   const canStart = selectedIds.size > 0;
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // PICKER — test generator
+  // ══════════════════════════════════════════════════════════════════════════
+  if (phase === "picker") {
+    const canGenerate = enabledTopics.size > 0;
+    return (
+      <div className="min-h-screen bg-white flex flex-col overflow-hidden" dir="rtl">
+        <div className={!isAuthed && showGate ? "pointer-events-none select-none" : ""} style={!isAuthed && showGate ? { filter: "blur(3px)" } : {}}>
+          <Navbar />
+          <div className="max-w-3xl mx-auto px-6 py-12">
+
+            {/* Header */}
+            <div className="mb-10">
+              <div className="inline-flex items-center gap-2 bg-black text-white text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+                <span>שאלון 581</span>
+                <span className="w-px h-3 bg-white/30" />
+                <span>5 יחידות לימוד</span>
+                <span className="w-px h-3 bg-white/30" />
+                <span>כיתה י״א</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-black text-black tracking-tighter leading-none mb-3">
+                מחולל מבחן
+              </h1>
+              <p className="text-black/50 text-sm">בחר נושאים ולחץ "צור מבחן" — השאלות יוגרלו אקראית מהבנק</p>
+            </div>
+
+            {/* Chapter + topic toggles */}
+            <div className="space-y-6 mb-10">
+              {CHAPTERS.map((chapter) => (
+                <div key={chapter.id} className="border border-slate-200 rounded-2xl overflow-hidden">
+                  {/* Chapter header */}
+                  <div className="bg-black px-6 py-4">
+                    <div className="flex items-center gap-3">
+                      <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-white font-black text-sm shrink-0">
+                        {chapter.id}
+                      </span>
+                      <p className="text-white font-bold text-sm md:text-base">{chapter.name}</p>
+                    </div>
+                  </div>
+                  {/* Topics */}
+                  <div className="p-4 flex flex-wrap gap-2">
+                    {chapter.topicIds.map((topicId) => {
+                      const active = enabledTopics.has(topicId);
+                      return (
+                        <button
+                          key={topicId}
+                          onClick={() => toggleTopic(topicId)}
+                          className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-semibold transition-all ${
+                            active
+                              ? "bg-black text-white border-black"
+                              : "bg-white text-black/40 border-slate-200 hover:border-slate-400 hover:text-black"
+                          }`}
+                        >
+                          <span className={`w-4 h-4 rounded-sm border-2 flex items-center justify-center shrink-0 transition-all ${active ? "bg-white border-white" : "border-current"}`}>
+                            {active && (
+                              <svg className="w-2.5 h-2.5 text-black" fill="currentColor" viewBox="0 0 12 12">
+                                <path d="M10 3L5 8.5 2 5.5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>
+                            )}
+                          </span>
+                          {TOPIC_LABELS[topicId] ?? topicId}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Generate button */}
+            <button
+              onClick={createNewTest}
+              disabled={!canGenerate}
+              className="w-full bg-black text-white font-black text-xl py-6 rounded-2xl hover:bg-slate-800 transition-colors tracking-tight disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              צור מבחן אקראי ←
+            </button>
+            {!canGenerate && (
+              <p className="text-red-500 text-xs mt-2 text-center">יש לבחור לפחות נושא אחד</p>
+            )}
+            <Link href="/" className="mt-4 text-center text-sm text-black/30 hover:text-black hover:underline transition-colors block">
+              חזרה לדף הבית
+            </Link>
+          </div>
+        </div>
+        {!isAuthed && showGate && <AuthModal dismissible={false} />}
+      </div>
+    );
+  }
 
   // ══════════════════════════════════════════════════════════════════════════
   // INTRO
@@ -177,7 +292,7 @@ export default function TestClient() {
             <div className="relative flex items-center gap-4 w-full mb-4">
               <div className="flex-1 h-px bg-black/30" />
               <p className="text-black text-sm font-semibold tracking-widest uppercase whitespace-nowrap">
-                מבחן פתוח · כיתה י״א
+                שאלון 581 · 5 יחידות לימוד · כיתה י״א
               </p>
               <div className="flex-1 h-px bg-black/30" />
             </div>
@@ -246,13 +361,13 @@ export default function TestClient() {
                     <p className="font-bold text-black text-sm">בחר שאלות</p>
                     <div className="flex gap-3 text-xs text-black/50">
                       <button
-                        onClick={() => setSelectedIds(new Set(testQuestions.map((q) => q.id)))}
+                        onClick={selectAll}
                         className="hover:text-black transition-colors underline underline-offset-2"
                       >
                         בחר הכל
                       </button>
                       <button
-                        onClick={() => setSelectedIds(new Set())}
+                        onClick={clearAll}
                         className="hover:text-black transition-colors underline underline-offset-2"
                       >
                         בטל הכל
@@ -260,12 +375,12 @@ export default function TestClient() {
                     </div>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    {testQuestions.map((q, i) => {
-                      const checked = selectedIds.has(q.id);
+                    {generatedQuestions.map((q, i) => {
+                      const checked = selectedIds.has(q.bankId);
                       return (
                         <button
-                          key={q.id}
-                          onClick={() => toggleQuestion(q.id)}
+                          key={q.bankId}
+                          onClick={() => toggleQuestion(q.bankId)}
                           className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all text-right ${
                             checked
                               ? "bg-black text-white border-black"
@@ -334,7 +449,10 @@ export default function TestClient() {
               >
                 התחל מבחן ←
               </button>
-              <Link href="/" className="mt-4 text-center text-sm text-black hover:underline transition-colors block">
+              <button onClick={() => setPhase("picker")} className="mt-3 text-center text-sm text-black/40 hover:text-black hover:underline transition-colors block w-full">
+                ← חזרה למחולל
+              </button>
+              <Link href="/" className="mt-1 text-center text-sm text-black/30 hover:text-black hover:underline transition-colors block">
                 חזרה לדף הבית
               </Link>
             </div>
@@ -390,7 +508,7 @@ export default function TestClient() {
         {/* Questions */}
         <div className="max-w-4xl mx-auto px-4 py-10 space-y-8">
           {filteredQuestions.map((q, i) => (
-            <div key={q.id} className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+            <div key={q.bankId} className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center font-black text-sm shrink-0">
                   {i + 1}
@@ -404,7 +522,7 @@ export default function TestClient() {
               </p>
               <div className="space-y-4 border-t border-slate-100 pt-5">
                 {q.subquestions.map((sub) => {
-                  const key = `${q.id}-${sub.label}`;
+                  const key = `${q.bankId}-${sub.label}`;
                   const isOpen = openSolutions.has(key);
                   return (
                     <div key={sub.label} className="flex gap-4">
@@ -453,6 +571,8 @@ export default function TestClient() {
             </button>
           </div>
         </div>
+
+        <TestAiGuide questions={filteredQuestions} />
       </div>
     );
   }
@@ -482,7 +602,7 @@ export default function TestClient() {
 
         <div className="space-y-8 mb-10">
           {filteredQuestions.map((q, i) => (
-            <div key={q.id} className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div key={q.bankId} className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
               <div className="p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center font-black text-sm shrink-0">
@@ -499,7 +619,7 @@ export default function TestClient() {
 
               <div className="divide-y divide-slate-100">
                 {q.subquestions.map((sub) => {
-                  const key = `${q.id}-${sub.label}`;
+                  const key = `${q.bankId}-${sub.label}`;
                   const isOpen = openSolutions.has(key);
                   return (
                     <div key={sub.label} className="px-6 md:px-8 py-5">
@@ -543,7 +663,7 @@ export default function TestClient() {
             onClick={restart}
             className="bg-black text-white font-bold px-8 py-3 rounded-xl hover:bg-slate-800 transition-colors"
           >
-            מבחן חדש
+            צור מבחן חדש
           </button>
           <Link
             href="/"

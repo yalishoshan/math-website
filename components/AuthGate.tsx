@@ -6,6 +6,7 @@ import { useAuth } from "@/context/AuthContext";
 export default function AuthGate({ children }: { children: ReactNode }) {
   const { auth, login, signup, loginAsGuest } = useAuth();
   const [tab, setTab] = useState<"login" | "signup">("login");
+  const [loading, setLoading] = useState(false);
 
   // Login state
   const [loginEmail, setLoginEmail] = useState("");
@@ -20,21 +21,31 @@ export default function AuthGate({ children }: { children: ReactNode }) {
 
   if (auth !== null) return <>{children}</>;
 
-  function handleLogin(e: FormEvent) {
+  async function handleLogin(e: FormEvent) {
     e.preventDefault();
     setLoginError("");
-    const err = login(loginEmail, loginPassword);
-    if (err) setLoginError(err);
+    setLoading(true);
+    try {
+      const err = await login(loginEmail, loginPassword);
+      if (err) setLoginError(err);
+    } finally {
+      setLoading(false);
+    }
   }
 
-  function handleSignup(e: FormEvent) {
+  async function handleSignup(e: FormEvent) {
     e.preventDefault();
     setSignupError("");
     if (!signupName.trim()) { setSignupError("נא להזין שם"); return; }
     if (!signupEmail.trim()) { setSignupError("נא להזין מייל"); return; }
     if (signupPassword.length < 6) { setSignupError("הסיסמה חייבת להכיל לפחות 6 תווים"); return; }
-    const err = signup(signupName.trim(), signupEmail.trim(), signupPassword);
-    if (err) setSignupError(err);
+    setLoading(true);
+    try {
+      const err = await signup(signupName.trim(), signupEmail.trim(), signupPassword);
+      if (err) setSignupError(err);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -127,9 +138,10 @@ export default function AuthGate({ children }: { children: ReactNode }) {
               )}
               <button
                 type="submit"
-                className="w-full bg-black text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-colors text-sm mt-2"
+                disabled={loading}
+                className="w-full bg-black text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-colors text-sm mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                כניסה ←
+                {loading ? "מתחבר..." : "כניסה ←"}
               </button>
             </form>
           )}
@@ -178,9 +190,10 @@ export default function AuthGate({ children }: { children: ReactNode }) {
               )}
               <button
                 type="submit"
-                className="w-full bg-black text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-colors text-sm mt-2"
+                disabled={loading}
+                className="w-full bg-black text-white font-bold py-3.5 rounded-xl hover:bg-slate-800 transition-colors text-sm mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                הרשמה ←
+                {loading ? "נרשם..." : "הרשמה ←"}
               </button>
             </form>
           )}

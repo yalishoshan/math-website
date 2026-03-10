@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import FormulaCard from "@/components/FormulaCard";
 import TipsBox from "@/components/TipsBox";
+import AiTutor from "@/components/AiTutor";
 import type { ReactNode } from "react";
 
 /* ─── Types ─────────────────────────────────────────────── */
@@ -364,6 +365,7 @@ export default function TopicPageLayout({
         {/* ── 5. טיפים ── */}
         <section>
           <TipsBox tips={tips} />
+          <AiTutor topic={title} />
         </section>
 
         {/* ── Navigation ── */}
