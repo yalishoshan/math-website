@@ -5,6 +5,7 @@ import Link from "next/link";
 import { topics } from "@/data/topics";
 import { useAuth } from "@/context/AuthContext";
 import AuthModal from "@/components/AuthModal";
+import SearchBar from "@/components/SearchBar";
 
 interface NavbarProps {
   activeTopicId?: string;
@@ -31,10 +32,13 @@ export default function Navbar({ activeTopicId }: NavbarProps) {
               <span className="font-bold text-white text-sm md:text-base">בגרות מתמטיקה 5 יח״ל</span>
             </Link>
 
+            {/* Desktop search */}
+            <SearchBar className="hidden lg:flex w-72 xl:w-96 mx-4" />
+
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-0.5 overflow-x-auto">
-              <Link href="/test" className="text-xs font-semibold whitespace-nowrap transition-colors px-3 py-1.5 bg-teal-500 text-white rounded-md hover:bg-teal-400 ml-1">
-                מבחן
+              <Link href="/test" className="text-xs font-semibold whitespace-nowrap transition-colors px-3 py-1.5 bg-black text-white rounded-md hover:bg-white/10 ml-1 border border-white/40">
+                התחל מבחן מלא ←
               </Link>
               {topics.map((topic) => (
                 <Link key={topic.id} href={`/topic/${topic.id}`}
@@ -65,12 +69,17 @@ export default function Navbar({ activeTopicId }: NavbarProps) {
           </div>
         </div>
 
+        {/* Mobile search row */}
+        <div className="lg:hidden border-t border-white/10 px-4 py-2">
+          <SearchBar className="flex w-full" />
+        </div>
+
         {/* Mobile scroll row */}
         <div className="lg:hidden border-t border-white/20 overflow-x-auto relative">
           <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-black to-transparent z-10" />
           <div className="flex gap-1 px-4 py-2 items-center">
-            <Link href="/test" className="text-xs font-semibold whitespace-nowrap transition-colors px-3 py-1 bg-teal-500 text-white rounded-md hover:bg-teal-400">
-              מבחן
+            <Link href="/test" className="text-xs font-semibold whitespace-nowrap transition-colors px-3 py-1 bg-black text-white rounded-md hover:bg-white/10 border border-white/40">
+              מבחן מלא ←
             </Link>
             {topics.map((topic) => (
               <Link key={topic.id} href={`/topic/${topic.id}`}

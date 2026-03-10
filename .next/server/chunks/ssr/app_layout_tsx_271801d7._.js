@@ -1,3 +1,0 @@
-module.exports=[33290,a=>{"use strict";var b=a.i(7997);function c({children:a}){return(0,b.jsx)("html",{lang:"he",dir:"rtl",children:(0,b.jsx)("body",{className:"min-h-screen bg-gray-50",children:a})})}a.s(["default",()=>c,"metadata",0,{title:"סיכום בגרות מתמטיקה 5 יח״ל – כיתה י״א",description:"סיכום מקיף לבגרות במתמטיקה 5 יחידות לימוד לכיתה י״א: בעיות תנועה, סדרות, הסתברות, גאומטריה, טריגונומטריה, פונקציות טריגונומטריות, פונקציות שורש ובעיות קיצון."}])}];
-
-//# sourceMappingURL=app_layout_tsx_271801d7._.js.map

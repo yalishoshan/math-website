@@ -35,7 +35,7 @@ export default function FormulaCard({
         <span className="flex items-center justify-center w-6 h-6 rounded-full bg-black text-white text-xs font-bold shrink-0">
           {index + 1}
         </span>
-        <h3 className="font-semibold text-black text-sm">{title}</h3>
+        <h3 className="font-semibold text-black text-base">{title}</h3>
       </div>
       <div className="p-4">
         <div

@@ -9,7 +9,7 @@ export default function TipsBox({ tips }: TipsBoxProps) {
         <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/15 text-white text-xs font-bold shrink-0">
           טי
         </span>
-        <h3 className="font-bold text-white text-lg">טיפים לבחינה</h3>
+        <h3 className="font-bold text-white text-xl">טיפים לבחינה</h3>
       </div>
       <ul className="space-y-3">
         {tips.map((tip, i) => (

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import FormulaCard from "@/components/FormulaCard";
 import ExampleCard from "@/components/ExampleCard";
+import ExerciseCard from "@/components/ExerciseCard";
 import TipsBox from "@/components/TipsBox";
 import AiTutor from "@/components/AiTutor";
 import { topics } from "@/data/topics";
@@ -62,7 +63,7 @@ export default async function TopicPage({ params }: Props) {
               <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-1 tracking-tight">
                 {topic.title}
               </h1>
-              <p className="text-white/70 font-medium">{topic.subtitle}</p>
+              <p className="text-base text-white/70 font-medium">{topic.subtitle}</p>
             </div>
           </div>
 
@@ -97,7 +98,7 @@ export default async function TopicPage({ params }: Props) {
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
               <h2 className="text-xl font-bold text-black">נוסחאות מפתח</h2>
-              <p className="text-sm text-black">הנוסחאות החשובות ביותר שצריך לדעת</p>
+              <p className="text-sm text-slate-500">הנוסחאות החשובות ביותר שצריך לדעת</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -119,7 +120,7 @@ export default async function TopicPage({ params }: Props) {
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
               <h2 className="text-xl font-bold text-black">דוגמאות פתורות</h2>
-              <p className="text-sm text-black">שאלות אופייניות עם פתרון שלב-שלב</p>
+              <p className="text-sm text-slate-500">שאלות אופייניות עם פתרון שלב-שלב</p>
             </div>
           </div>
           <div className="space-y-4">
@@ -131,6 +132,22 @@ export default async function TopicPage({ params }: Props) {
                 answer={example.answer}
                 index={index}
               />
+            ))}
+          </div>
+        </section>
+
+        {/* Exercises Section */}
+        <section>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-7 rounded-full bg-black shrink-0" />
+            <div>
+              <h2 className="text-xl font-bold text-black">תרגול מדורג</h2>
+              <p className="text-sm text-slate-500">קל → בינוני → בגרות — נסה לפתור לפני שתסתכל</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {topic.exercises.map((ex, i) => (
+              <ExerciseCard key={i} exercise={ex} index={i} />
             ))}
           </div>
         </section>

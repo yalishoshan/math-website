@@ -6,11 +6,11 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import AuthModal from "@/components/AuthModal";
 import { useAuth } from "@/context/AuthContext";
-import { CHAPTERS, TOPIC_LABELS, type BankQuestion } from "@/data/questionBank";
+import { CHAPTERS, TOPIC_LABELS, questionBank, type BankQuestion } from "@/data/questionBank";
 import { generateTest } from "@/lib/testGenerator";
 import TestAiGuide from "@/components/TestAiGuide";
 
-type Phase = "picker" | "intro" | "test" | "solutions";
+type Phase = "picker" | "intro" | "test" | "solutions" | "topic-practice";
 
 const TIME_OPTIONS = [
   { label: "3 שעות", seconds: 3 * 60 * 60 },
@@ -70,8 +70,11 @@ export default function TestClient() {
   const [practiceMode, setPracticeMode] = useState(false);
   const [studentName, setStudentName] = useState("");
   const [studentClass, setStudentClass] = useState("");
+  const [pickerMode, setPickerMode] = useState<"exam" | "topic">("exam");
+  const [practiceTopicId, setPracticeTopicId] = useState<string>("");
 
   const filteredQuestions = generatedQuestions.filter((q) => selectedIds.has(q.bankId));
+  const topicQuestions = questionBank.filter((q) => q.topicId === practiceTopicId);
 
   function createNewTest() {
     const questions = generateTest(enabledTopics);
@@ -154,6 +157,24 @@ export default function TestClient() {
   function selectAll() { setSelectedIds(new Set(generatedQuestions.map((q) => q.bankId))); }
   function clearAll()  { setSelectedIds(new Set()); }
 
+  function startTopicPractice(topicId: string) {
+    setPracticeTopicId(topicId);
+    setOpenSolutions(new Set());
+    setPhase("topic-practice");
+  }
+
+  function revealAllTopic() {
+    const all = new Set<string>();
+    topicQuestions.forEach((q) =>
+      q.subquestions.forEach((sub) => all.add(`${q.bankId}-${sub.label}`))
+    );
+    setOpenSolutions(all);
+  }
+
+  function hideAllTopic() {
+    setOpenSolutions(new Set());
+  }
+
   const isLowTime = timeLimitSeconds > 0 && timeLeft < 10 * 60;
   const canStart = selectedIds.size > 0;
 
@@ -183,63 +204,124 @@ export default function TestClient() {
               <p className="text-black/50 text-sm">בחר נושאים ולחץ "צור מבחן" — השאלות יוגרלו אקראית מהבנק</p>
             </div>
 
-            {/* Chapter + topic toggles */}
-            <div className="space-y-6 mb-10">
-              {CHAPTERS.map((chapter) => (
-                <div key={chapter.id} className="border border-slate-200 rounded-2xl overflow-hidden">
-                  {/* Chapter header */}
-                  <div className="bg-black px-6 py-4">
-                    <div className="flex items-center gap-3">
-                      <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-white font-black text-sm shrink-0">
-                        {chapter.id}
-                      </span>
-                      <p className="text-white font-bold text-sm md:text-base">{chapter.name}</p>
-                    </div>
-                  </div>
-                  {/* Topics */}
-                  <div className="p-4 flex flex-wrap gap-2">
-                    {chapter.topicIds.map((topicId) => {
-                      const active = enabledTopics.has(topicId);
-                      return (
-                        <button
-                          key={topicId}
-                          onClick={() => toggleTopic(topicId)}
-                          className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-semibold transition-all ${
-                            active
-                              ? "bg-black text-white border-black"
-                              : "bg-white text-black/40 border-slate-200 hover:border-slate-400 hover:text-black"
-                          }`}
-                        >
-                          <span className={`w-4 h-4 rounded-sm border-2 flex items-center justify-center shrink-0 transition-all ${active ? "bg-white border-white" : "border-current"}`}>
-                            {active && (
-                              <svg className="w-2.5 h-2.5 text-black" fill="currentColor" viewBox="0 0 12 12">
-                                <path d="M10 3L5 8.5 2 5.5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                              </svg>
-                            )}
-                          </span>
-                          {TOPIC_LABELS[topicId] ?? topicId}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
+            {/* Mode tabs */}
+            <div className="flex gap-1 p-1 bg-slate-100 rounded-xl mb-8">
+              <button
+                onClick={() => setPickerMode("exam")}
+                className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${pickerMode === "exam" ? "bg-black text-white shadow-sm" : "text-black/50 hover:text-black"}`}
+              >
+                מבחן מלא
+              </button>
+              <button
+                onClick={() => setPickerMode("topic")}
+                className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all ${pickerMode === "topic" ? "bg-black text-white shadow-sm" : "text-black/50 hover:text-black"}`}
+              >
+                תרגול לפי נושא
+              </button>
             </div>
 
-            {/* Generate button */}
-            <button
-              onClick={createNewTest}
-              disabled={!canGenerate}
-              className="w-full bg-black text-white font-black text-xl py-6 rounded-2xl hover:bg-slate-800 transition-colors tracking-tight disabled:opacity-40 disabled:cursor-not-allowed"
-            >
-              צור מבחן אקראי ←
-            </button>
-            {!canGenerate && (
-              <p className="text-red-500 text-xs mt-2 text-center">יש לבחור לפחות נושא אחד</p>
+            {pickerMode === "exam" ? (
+              <>
+                {/* Chapter + topic toggles */}
+                <div className="space-y-6 mb-10">
+                  {CHAPTERS.map((chapter) => (
+                    <div key={chapter.id} className="border border-slate-200 rounded-2xl overflow-hidden">
+                      {/* Chapter header */}
+                      <div className="bg-black px-6 py-4">
+                        <div className="flex items-center gap-3">
+                          <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-white font-black text-sm shrink-0">
+                            {chapter.id}
+                          </span>
+                          <p className="text-white font-bold text-sm md:text-base">{chapter.name}</p>
+                        </div>
+                      </div>
+                      {/* Topics */}
+                      <div className="p-4 flex flex-wrap gap-2">
+                        {chapter.topicIds.map((topicId) => {
+                          const active = enabledTopics.has(topicId);
+                          return (
+                            <button
+                              key={topicId}
+                              onClick={() => toggleTopic(topicId)}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-semibold transition-all ${
+                                active
+                                  ? "bg-black text-white border-black"
+                                  : "bg-white text-black/40 border-slate-200 hover:border-slate-400 hover:text-black"
+                              }`}
+                            >
+                              <span className={`w-4 h-4 rounded-sm border-2 flex items-center justify-center shrink-0 transition-all ${active ? "bg-white border-white" : "border-current"}`}>
+                                {active && (
+                                  <svg className="w-2.5 h-2.5 text-black" fill="currentColor" viewBox="0 0 12 12">
+                                    <path d="M10 3L5 8.5 2 5.5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                                  </svg>
+                                )}
+                              </span>
+                              {TOPIC_LABELS[topicId] ?? topicId}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Generate button */}
+                <button
+                  onClick={createNewTest}
+                  disabled={!canGenerate}
+                  className="w-full bg-black text-white font-black text-xl py-6 rounded-2xl hover:bg-slate-800 transition-colors tracking-tight disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  צור מבחן אקראי ←
+                </button>
+                {!canGenerate && (
+                  <p className="text-red-500 text-xs mt-2 text-center">יש לבחור לפחות נושא אחד</p>
+                )}
+                <Link href="/" className="mt-4 text-center text-sm text-black/30 hover:text-black hover:underline transition-colors block">
+                  חזרה לדף הבית
+                </Link>
+              </>
+            ) : (
+              <>
+                {/* Topic practice grid */}
+                <div className="space-y-6 mb-10">
+                  {CHAPTERS.map((chapter) => (
+                    <div key={chapter.id} className="border border-slate-200 rounded-2xl overflow-hidden">
+                      <div className="bg-black px-6 py-4">
+                        <div className="flex items-center gap-3">
+                          <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-white font-black text-sm shrink-0">
+                            {chapter.id}
+                          </span>
+                          <p className="text-white font-bold text-sm md:text-base">{chapter.name}</p>
+                        </div>
+                      </div>
+                      <div className="p-4 flex flex-wrap gap-2">
+                        {chapter.topicIds.map((topicId) => {
+                          const hasQuestions = questionBank.some((q) => q.topicId === topicId);
+                          return (
+                            <button
+                              key={topicId}
+                              onClick={() => hasQuestions && startTopicPractice(topicId)}
+                              disabled={!hasQuestions}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-semibold transition-all ${
+                                hasQuestions
+                                  ? "bg-black text-white border-black hover:bg-slate-800"
+                                  : "bg-white text-black/30 border-slate-200 cursor-not-allowed"
+                              }`}
+                            >
+                              {TOPIC_LABELS[topicId] ?? topicId}
+                              {hasQuestions && <span className="text-white/60 text-xs">←</span>}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/" className="mt-4 text-center text-sm text-black/30 hover:text-black hover:underline transition-colors block">
+                  חזרה לדף הבית
+                </Link>
+              </>
             )}
-            <Link href="/" className="mt-4 text-center text-sm text-black/30 hover:text-black hover:underline transition-colors block">
-              חזרה לדף הבית
-            </Link>
           </div>
         </div>
         {!isAuthed && showGate && <AuthModal dismissible={false} />}
@@ -573,6 +655,122 @@ export default function TestClient() {
         </div>
 
         <TestAiGuide questions={filteredQuestions} />
+      </div>
+    );
+  }
+
+  // ══════════════════════════════════════════════════════════════════════════
+  // TOPIC PRACTICE
+  // ══════════════════════════════════════════════════════════════════════════
+  if (phase === "topic-practice") {
+    return (
+      <div className="min-h-screen bg-slate-50" dir="rtl">
+        {/* Sticky header */}
+        <div className="sticky top-0 z-50 bg-black border-b border-white/10">
+          <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => { setPhase("picker"); setPickerMode("topic"); }}
+                className="text-white/60 hover:text-white text-sm transition-colors"
+              >
+                ← חזרה
+              </button>
+              <span className="w-px h-5 bg-white/20" />
+              <span className="text-white font-bold text-sm">
+                תרגול: {TOPIC_LABELS[practiceTopicId] ?? practiceTopicId}
+              </span>
+            </div>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={hideAllTopic}
+                className="text-white/60 hover:text-white text-xs transition-colors"
+              >
+                הסתר הכל
+              </button>
+              <span className="text-white/20 text-xs">|</span>
+              <button
+                onClick={revealAllTopic}
+                className="text-white/60 hover:text-white text-xs transition-colors"
+              >
+                הצג הכל
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Questions */}
+        <div className="max-w-4xl mx-auto px-4 py-10 space-y-8">
+          {topicQuestions.length === 0 ? (
+            <div className="text-center py-20">
+              <p className="text-slate-500 text-lg">אין שאלות זמינות לנושא זה עדיין</p>
+              <button
+                onClick={() => { setPhase("picker"); setPickerMode("topic"); }}
+                className="mt-4 text-black font-bold underline underline-offset-2"
+              >
+                ← חזרה
+              </button>
+            </div>
+          ) : (
+            topicQuestions.map((q, i) => (
+              <div key={q.bankId} className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center font-black text-sm shrink-0">
+                      {i + 1}
+                    </div>
+                    <span className="bg-black text-white text-xs font-semibold rounded-full px-3 py-1">
+                      {q.topic}
+                    </span>
+                    {q.source && (
+                      <span className="text-slate-400 text-xs">{q.source}</span>
+                    )}
+                  </div>
+                  <p className="text-black text-base leading-relaxed whitespace-pre-line font-medium">
+                    {q.text}
+                  </p>
+                </div>
+
+                <div className="divide-y divide-slate-100">
+                  {q.subquestions.map((sub) => {
+                    const key = `${q.bankId}-${sub.label}`;
+                    const isOpen = openSolutions.has(key);
+                    return (
+                      <div key={sub.label} className="px-6 md:px-8 py-5">
+                        <div className="flex gap-4 mb-3">
+                          <span className="shrink-0 mt-0.5 w-7 h-7 rounded-lg bg-black flex items-center justify-center text-xs font-bold text-white">
+                            {sub.label}
+                          </span>
+                          <p className="text-black text-sm leading-relaxed whitespace-pre-line flex-1">
+                            {sub.text}
+                          </p>
+                        </div>
+                        <div className="mr-11">
+                          <button
+                            onClick={() => toggleSolution(key)}
+                            className={`text-xs font-bold px-4 py-1.5 rounded-lg border transition-all ${
+                              isOpen
+                                ? "bg-green-50 border-green-300 text-green-700"
+                                : "bg-slate-50 border-slate-300 text-black hover:border-slate-400"
+                            }`}
+                          >
+                            {isOpen ? "▲ הסתר פתרון" : "▼ הצג פתרון"}
+                          </button>
+                        </div>
+                        {isOpen && (
+                          <div className="mr-11 mt-3 bg-green-50 border border-green-200 rounded-xl p-4">
+                            <p className="text-green-900 text-sm leading-loose whitespace-pre-line font-mono">
+                              {sub.solution}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))
+          )}
+        </div>
       </div>
     );
   }

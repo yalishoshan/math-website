@@ -136,7 +136,7 @@ export default function TopicPageLayout({
               <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-1 tracking-tight">
                 {title}
               </h1>
-              <p className="text-white/70 font-medium">{subtitle}</p>
+              <p className="text-base text-white/70 font-medium">{subtitle}</p>
             </div>
           </div>
           <p className="text-white/60 mt-4 leading-relaxed max-w-2xl text-sm">
@@ -164,7 +164,7 @@ export default function TopicPageLayout({
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
               <h2 className="text-xl font-bold text-black">{formulasSectionTitle}</h2>
-              <p className="text-sm text-black">{formulasSectionSubtitle}</p>
+              <p className="text-sm text-slate-500">{formulasSectionSubtitle}</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -187,7 +187,7 @@ export default function TopicPageLayout({
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
               <h2 className="text-xl font-bold text-black">{mainTableSectionTitle}</h2>
-              <p className="text-sm text-black">{mainTableSectionSubtitle}</p>
+              <p className="text-sm text-slate-500">{mainTableSectionSubtitle}</p>
             </div>
           </div>
           <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
@@ -229,7 +229,7 @@ export default function TopicPageLayout({
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
               <h2 className="text-xl font-bold text-black">{sideTablesSectionTitle}</h2>
-              <p className="text-sm text-black">{sideTablesSectionSubtitle}</p>
+              <p className="text-sm text-slate-500">{sideTablesSectionSubtitle}</p>
             </div>
           </div>
 
@@ -338,7 +338,7 @@ export default function TopicPageLayout({
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
               <h2 className="text-xl font-bold text-black">{stepsSectionTitle}</h2>
-              <p className="text-sm text-black">{stepsSectionSubtitle}</p>
+              <p className="text-sm text-slate-500">{stepsSectionSubtitle}</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
