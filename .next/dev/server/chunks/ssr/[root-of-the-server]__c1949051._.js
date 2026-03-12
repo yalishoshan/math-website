@@ -222,7 +222,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                 activeTopicId: topicId
             }, void 0, false, {
                 fileName: "[project]/components/TopicPageLayout.tsx",
-                lineNumber: 113,
+                lineNumber: 114,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -238,7 +238,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                 children: "בית"
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 119,
+                                lineNumber: 120,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -246,7 +246,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                 children: "/"
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 122,
+                                lineNumber: 123,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -254,23 +254,23 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                 children: breadcrumbLabel
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 123,
+                                lineNumber: 124,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/TopicPageLayout.tsx",
-                        lineNumber: 118,
+                        lineNumber: 119,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/TopicPageLayout.tsx",
-                    lineNumber: 117,
+                    lineNumber: 118,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/TopicPageLayout.tsx",
-                lineNumber: 116,
+                lineNumber: 117,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -288,7 +288,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         children: "שאלון 581"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 134,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -296,7 +296,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         children: title
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 137,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -304,18 +304,18 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         children: subtitle
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 139,
+                                        lineNumber: 140,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 132,
+                                lineNumber: 133,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/TopicPageLayout.tsx",
-                            lineNumber: 131,
+                            lineNumber: 132,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -323,7 +323,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                             children: description
                         }, void 0, false, {
                             fileName: "[project]/components/TopicPageLayout.tsx",
-                            lineNumber: 142,
+                            lineNumber: 143,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -333,23 +333,23 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                     children: chip
                                 }, chip, false, {
                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 148,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/TopicPageLayout.tsx",
-                            lineNumber: 145,
+                            lineNumber: 146,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/TopicPageLayout.tsx",
-                    lineNumber: 130,
+                    lineNumber: 131,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/TopicPageLayout.tsx",
-                lineNumber: 129,
+                lineNumber: 130,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -364,7 +364,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         className: "w-1 h-7 rounded-full bg-black shrink-0"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 165,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -374,7 +374,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: formulasSectionTitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 166,
+                                                lineNumber: 167,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -382,19 +382,19 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: formulasSectionSubtitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 168,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 166,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 163,
+                                lineNumber: 164,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -407,18 +407,18 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         svgContent: f.svgContent
                                     }, i, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 173,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 170,
+                                lineNumber: 171,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/TopicPageLayout.tsx",
-                        lineNumber: 162,
+                        lineNumber: 163,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -430,7 +430,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         className: "w-1 h-7 rounded-full bg-black shrink-0"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 187,
+                                        lineNumber: 188,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -440,7 +440,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: mainTableSectionTitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 189,
+                                                lineNumber: 190,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -448,19 +448,19 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: mainTableSectionSubtitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 190,
+                                                lineNumber: 191,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 189,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 186,
+                                lineNumber: 187,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -477,17 +477,17 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                         children: h
                                                     }, h, false, {
                                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                                        lineNumber: 198,
+                                                        lineNumber: 199,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 196,
+                                                lineNumber: 197,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                            lineNumber: 195,
+                                            lineNumber: 196,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -498,34 +498,34 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                             children: cell
                                                         }, j, false, {
                                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                                            lineNumber: 208,
+                                                            lineNumber: 209,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, i, false, {
                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                    lineNumber: 206,
+                                                    lineNumber: 207,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                            lineNumber: 204,
+                                            lineNumber: 205,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                    lineNumber: 194,
+                                    lineNumber: 195,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 193,
+                                lineNumber: 194,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/TopicPageLayout.tsx",
-                        lineNumber: 185,
+                        lineNumber: 186,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -537,7 +537,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         className: "w-1 h-7 rounded-full bg-black shrink-0"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 229,
+                                        lineNumber: 230,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -547,7 +547,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: sideTablesSectionTitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 231,
+                                                lineNumber: 232,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -555,19 +555,19 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: sideTablesSectionSubtitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 232,
+                                                lineNumber: 233,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 230,
+                                        lineNumber: 231,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 228,
+                                lineNumber: 229,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -589,12 +589,12 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                 children: leftTableTitle
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                lineNumber: 242,
+                                                                lineNumber: 243,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                                            lineNumber: 241,
+                                                            lineNumber: 242,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -604,18 +604,18 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                     children: h
                                                                 }, h, false, {
                                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                    lineNumber: 251,
+                                                                    lineNumber: 252,
                                                                     columnNumber: 23
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                                            lineNumber: 249,
+                                                            lineNumber: 250,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                    lineNumber: 240,
+                                                    lineNumber: 241,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -627,7 +627,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                     children: row.cells[0]
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                    lineNumber: 263,
+                                                                    lineNumber: 264,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -635,7 +635,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                     children: row.cells[1]
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                    lineNumber: 266,
+                                                                    lineNumber: 267,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -643,29 +643,29 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                     children: row.cells[2]
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                    lineNumber: 269,
+                                                                    lineNumber: 270,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, i, true, {
                                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                                            lineNumber: 259,
+                                                            lineNumber: 260,
                                                             columnNumber: 21
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                    lineNumber: 257,
+                                                    lineNumber: 258,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                            lineNumber: 239,
+                                            lineNumber: 240,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 238,
+                                        lineNumber: 239,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -684,12 +684,12 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                 children: rightTableTitle
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                lineNumber: 283,
+                                                                lineNumber: 284,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                                            lineNumber: 282,
+                                                            lineNumber: 283,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
@@ -699,18 +699,18 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                     children: h
                                                                 }, h, false, {
                                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                    lineNumber: 292,
+                                                                    lineNumber: 293,
                                                                     columnNumber: 23
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                                            lineNumber: 290,
+                                                            lineNumber: 291,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                    lineNumber: 281,
+                                                    lineNumber: 282,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -722,7 +722,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                     children: row.cells[0]
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                    lineNumber: 304,
+                                                                    lineNumber: 305,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -730,7 +730,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                     children: row.cells[1]
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                    lineNumber: 307,
+                                                                    lineNumber: 308,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -738,35 +738,35 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                                     children: row.cells[2]
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                                    lineNumber: 310,
+                                                                    lineNumber: 311,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, i, true, {
                                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                                            lineNumber: 300,
+                                                            lineNumber: 301,
                                                             columnNumber: 21
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                    lineNumber: 298,
+                                                    lineNumber: 299,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                            lineNumber: 280,
+                                            lineNumber: 281,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 279,
+                                        lineNumber: 280,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 236,
+                                lineNumber: 237,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -778,7 +778,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         children: "!"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 325,
+                                        lineNumber: 326,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -788,7 +788,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: highlightTitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 327,
+                                                lineNumber: 328,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -796,25 +796,25 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: highlightBody
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 328,
+                                                lineNumber: 329,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 326,
+                                        lineNumber: 327,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 321,
+                                lineNumber: 322,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/TopicPageLayout.tsx",
-                        lineNumber: 227,
+                        lineNumber: 228,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -826,7 +826,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         className: "w-1 h-7 rounded-full bg-black shrink-0"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 338,
+                                        lineNumber: 339,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -836,7 +836,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: stepsSectionTitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 340,
+                                                lineNumber: 341,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -844,19 +844,19 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: stepsSectionSubtitle
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 341,
+                                                lineNumber: 342,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 339,
+                                        lineNumber: 340,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 337,
+                                lineNumber: 338,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -873,7 +873,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                         children: i + 1
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                                        lineNumber: 352,
+                                                        lineNumber: 353,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -881,13 +881,13 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                         children: step.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                                        lineNumber: 355,
+                                                        lineNumber: 356,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 351,
+                                                lineNumber: 352,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -895,24 +895,24 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                 children: step.body
                                             }, void 0, false, {
                                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                                lineNumber: 357,
+                                                lineNumber: 358,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, i, true, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 346,
+                                        lineNumber: 347,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 344,
+                                lineNumber: 345,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/TopicPageLayout.tsx",
-                        lineNumber: 336,
+                        lineNumber: 337,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -921,20 +921,20 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                 tips: tips
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 367,
+                                lineNumber: 368,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AiTutor$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 topic: title
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 368,
+                                lineNumber: 369,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/TopicPageLayout.tsx",
-                        lineNumber: 366,
+                        lineNumber: 367,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -949,7 +949,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                             children: "▶"
                                         }, void 0, false, {
                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                            lineNumber: 379,
+                                            lineNumber: 380,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -959,20 +959,20 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                     children: "נושא קודם"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                    lineNumber: 381,
+                                                    lineNumber: 382,
                                                     columnNumber: 19
                                                 }, this),
                                                 prevTopic.title
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                            lineNumber: 380,
+                                            lineNumber: 381,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                    lineNumber: 375,
+                                    lineNumber: 376,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/",
@@ -980,12 +980,12 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                     children: "← חזרה לדף הבית"
                                 }, void 0, false, {
                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                    lineNumber: 386,
+                                    lineNumber: 387,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 373,
+                                lineNumber: 374,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1000,27 +1000,27 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                                     children: "נושא הבא"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                                    lineNumber: 402,
+                                                    lineNumber: 403,
                                                     columnNumber: 19
                                                 }, this),
                                                 nextTopic.title
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                            lineNumber: 401,
+                                            lineNumber: 402,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "◀"
                                         }, void 0, false, {
                                             fileName: "[project]/components/TopicPageLayout.tsx",
-                                            lineNumber: 405,
+                                            lineNumber: 406,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                    lineNumber: 397,
+                                    lineNumber: 398,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/",
@@ -1028,24 +1028,24 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                     children: "← חזרה לדף הבית"
                                 }, void 0, false, {
                                     fileName: "[project]/components/TopicPageLayout.tsx",
-                                    lineNumber: 408,
+                                    lineNumber: 409,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 395,
+                                lineNumber: 396,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/TopicPageLayout.tsx",
-                        lineNumber: 372,
+                        lineNumber: 373,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/TopicPageLayout.tsx",
-                lineNumber: 159,
+                lineNumber: 160,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -1069,7 +1069,7 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         children: "∑"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 424,
+                                        lineNumber: 425,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1077,13 +1077,13 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                         children: "בגרות מתמטיקה 5 יח״ל"
                                     }, void 0, false, {
                                         fileName: "[project]/components/TopicPageLayout.tsx",
-                                        lineNumber: 430,
+                                        lineNumber: 431,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 423,
+                                lineNumber: 424,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1091,29 +1091,29 @@ function TopicPageLayout({ topicId, icon, title, subtitle, description, statsChi
                                 children: "כיתה י״א – בהצלחה בבחינה!"
                             }, void 0, false, {
                                 fileName: "[project]/components/TopicPageLayout.tsx",
-                                lineNumber: 434,
+                                lineNumber: 435,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/TopicPageLayout.tsx",
-                        lineNumber: 422,
+                        lineNumber: 423,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/TopicPageLayout.tsx",
-                    lineNumber: 421,
+                    lineNumber: 422,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/TopicPageLayout.tsx",
-                lineNumber: 420,
+                lineNumber: 421,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/TopicPageLayout.tsx",
-        lineNumber: 112,
+        lineNumber: 113,
         columnNumber: 5
     }, this);
 }

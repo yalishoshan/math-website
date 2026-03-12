@@ -8,6 +8,7 @@ export const metadata = {
 };
 
 const idx = topics.findIndex((t) => t.id === "motion");
+const motionTopic = topics[idx];
 const prev = idx > 0 ? topics[idx - 1] : null;
 const next = idx < topics.length - 1 ? topics[idx + 1] : null;
 
@@ -249,6 +250,8 @@ export default function MotionPage() {
         "מהירות ממוצעת להלוך-חזור: השתמשו ב-d_total ÷ t_total, לא בממוצע המהירויות",
         "הפרש זמן יציאה: אם האחד יצא ראשון בזמן Δt, הוא עשה v₁·Δt ק\"מ לפני שהשני יצא",
       ]}
+
+      exercises={motionTopic.exercises}
 
       prevTopic={prev}
       nextTopic={next}

@@ -2,7 +2,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TipsBox from "@/components/TipsBox";
 import FormulaCard from "@/components/FormulaCard";
+import ExerciseCard from "@/components/ExerciseCard";
 import AiTutor from "@/components/AiTutor";
+import TableOfContents from "@/components/TableOfContents";
 import { topics } from "@/data/topics";
 
 export const metadata = {
@@ -405,6 +407,7 @@ const tips = [
 ];
 
 const idx = topics.findIndex((t) => t.id === "geometry");
+const geometryTopic = topics[idx];
 const prev = idx > 0 ? topics[idx - 1] : null;
 const next = idx < topics.length - 1 ? topics[idx + 1] : null;
 
@@ -445,13 +448,22 @@ export default function GeometryPage() {
               <span key={s} className="text-xs bg-white/10 rounded-full px-3 py-1.5 text-white font-medium">{s}</span>
             ))}
           </div>
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <TableOfContents items={[
+              { id: "formulas", label: "נוסחות מפתח" },
+              { id: "areas", label: "טבלת שטחים" },
+              { id: "theorems", label: "משפטים" },
+              { id: "exercises", label: "תרגול מדורג", count: geometryTopic.exercises.length },
+              { id: "tips", label: "טיפים" },
+            ]} />
+          </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
         {/* ── 1. נוסחות KaTeX ── */}
-        <section>
+        <section id="formulas">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -467,7 +479,7 @@ export default function GeometryPage() {
         </section>
 
         {/* ── 2. טבלת שטחים ── */}
-        <section>
+        <section id="areas">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -496,7 +508,7 @@ export default function GeometryPage() {
         </section>
 
         {/* ── 3. כל 18 הנושאים ── */}
-        <section>
+        <section id="theorems">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -572,8 +584,24 @@ export default function GeometryPage() {
           </div>
         </section>
 
-        {/* ── 4. טיפים ── */}
-        <section>
+        {/* ── 4. תרגול מדורג ── */}
+        <section id="exercises">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-7 rounded-full bg-black shrink-0" />
+            <div>
+              <h2 className="text-xl font-bold text-black">תרגול מדורג</h2>
+              <p className="text-sm text-slate-500">קל → בינוני → בגרות — נסה לפתור לפני שתסתכל</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {geometryTopic.exercises.map((ex, i) => (
+              <ExerciseCard key={i} exercise={ex} index={i} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── 5. טיפים ── */}
+        <section id="tips">
           <TipsBox tips={tips} />
           <AiTutor topic="גיאומטריה" />
         </section>

@@ -30,7 +30,11 @@
       "Bash(cd \"C:\\\\Users\\\\isc\\\\Desktop\\\\bagrut-math\" && npx tsc --noEmit 2>&1 | head -40)",
       "Bash(cd /c/Users/HP/math-website && npx next dev --no-turbopack)",
       "Bash(cd /c/Users/HP/math-website && npx tsc --noEmit 2>&1 | head -30)",
-      "Bash(cd /c/Users/HP/math-website && npx tsc --noEmit 2>&1 | grep -v \"prisma\")"
+      "Bash(cd /c/Users/HP/math-website && npx tsc --noEmit 2>&1 | grep -v \"prisma\")",
+      "Bash(grep -n \"SectionHead\\\\|<section\\\\|title=\" C:/Users/HP/math-website/app/topic/trig-functions/page.tsx | grep -E \"SectionHead|<section\" | head -20\ngrep -n \"SectionHead\\\\|<section\\\\|title=\" C:/Users/HP/math-website/app/topic/root-functions/page.tsx | grep -E \"SectionHead|<section\" | head -20\ngrep -n \"SectionHead\\\\|<section\\\\|title=\" C:/Users/HP/math-website/app/topic/optimization/page.tsx | grep -E \"SectionHead|<section\" | head -20)",
+      "Bash(grep -n \"SectionHead\\\\|<section\\\\|TipsBox\\\\|import\" C:/Users/HP/math-website/app/topic/trig-functions/page.tsx | grep -E \"import|TipsBox|SectionHead\" | head -15\ngrep -n \"SectionHead\\\\|<section\\\\|TipsBox\\\\|import\" C:/Users/HP/math-website/app/topic/root-functions/page.tsx | grep -E \"import|TipsBox|SectionHead\" | head -5\ngrep -n \"SectionHead\\\\|<section\\\\|TipsBox\\\\|import\" C:/Users/HP/math-website/app/topic/optimization/page.tsx | grep -E \"import|TipsBox|SectionHead\" | head -5)",
+      "Bash(grep -n \"bg-black relative overflow\\\\|flex flex-wrap gap-2.5\\\\|max-w-4xl mx-auto px-4 py-10\\\\|<section>\" C:/Users/HP/math-website/app/topic/trig-functions/page.tsx | head -10\ngrep -n \"bg-black relative overflow\\\\|flex flex-wrap gap-2.5\\\\|max-w-4xl mx-auto px-4 py-10\\\\|<section>\" C:/Users/HP/math-website/app/topic/root-functions/page.tsx | head -10\ngrep -n \"bg-black relative overflow\\\\|flex flex-wrap gap-2.5\\\\|max-w-4xl mx-auto px-4 py-10\\\\|<section>\" C:/Users/HP/math-website/app/topic/optimization/page.tsx | head -10)",
+      "Bash(grep -n \"SectionHead\\\\|TipsBox\" C:/Users/HP/math-website/app/topic/optimization/page.tsx\ngrep -n \"SectionHead\\\\|TipsBox\" C:/Users/HP/math-website/app/topic/trig-functions/page.tsx | tail -5\ngrep -n \"SectionHead\\\\|TipsBox\" C:/Users/HP/math-website/app/topic/root-functions/page.tsx | tail -5)"
     ]
   }
 }

@@ -2,7 +2,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TipsBox from "@/components/TipsBox";
 import FormulaCard from "@/components/FormulaCard";
+import ExerciseCard from "@/components/ExerciseCard";
 import AiTutor from "@/components/AiTutor";
+import TableOfContents from "@/components/TableOfContents";
 import { topics } from "@/data/topics";
 
 export const metadata = {
@@ -352,6 +354,7 @@ const tips = [
 /* ─── Navigation ─────────────────────────────────────────── */
 
 const idx = topics.findIndex((t) => t.id === "trig-functions");
+const trigFunctionsTopic = topics[idx];
 const prev = idx > 0 ? topics[idx - 1] : null;
 const next = idx < topics.length - 1 ? topics[idx + 1] : null;
 
@@ -432,13 +435,24 @@ export default function TrigFunctionsPage() {
               <span key={s} className="text-xs bg-white/10 rounded-full px-3 py-1.5 text-white font-medium">{s}</span>
             ))}
           </div>
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <TableOfContents items={[
+              { id: "formulas", label: "נוסחות מפתח" },
+              { id: "func-props", label: "תכונות הפונקציות" },
+              { id: "derivatives", label: "נגזרות" },
+              { id: "integrals", label: "אינטגרלים" },
+              { id: "areas", label: "חישוב שטחים" },
+              { id: "exercises", label: "תרגול מדורג", count: trigFunctionsTopic.exercises.length },
+              { id: "tips", label: "טיפים" },
+            ]} />
+          </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
         {/* ── 1. נוסחות KaTeX ── */}
-        <section>
+        <section id="formulas">
           <SectionHead title="נוסחות מפתח" sub="נגזרות ואינטגרלים בסיסיים" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {keyFormulas.map((f, i) => (
@@ -448,7 +462,7 @@ export default function TrigFunctionsPage() {
         </section>
 
         {/* ── 2. תכונות הפונקציות ── */}
-        <section>
+        <section id="func-props">
           <SectionHead title="תכונות הפונקציות הבסיסיות" />
           <div className="space-y-4">
             {funcProps.map((f, i) => (
@@ -546,7 +560,7 @@ export default function TrigFunctionsPage() {
         </section>
 
         {/* ── 5. נגזרות ── */}
-        <section>
+        <section id="derivatives">
           <SectionHead title="נגזרות" sub="בסיסי, כלל שרשרת ודוגמאות" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <DarkCard id="א" title="נגזרות בסיסיות">
@@ -572,7 +586,7 @@ export default function TrigFunctionsPage() {
         </section>
 
         {/* ── 6. אינטגרלים ── */}
-        <section>
+        <section id="integrals">
           <SectionHead title="אינטגרלים" sub="בסיסי, מורכב וזהויות לאינטגרציה" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <DarkCard id="א" title="אינטגרלים בסיסיים">
@@ -606,7 +620,7 @@ export default function TrigFunctionsPage() {
         </section>
 
         {/* ── 8. שטחים ── */}
-        <section>
+        <section id="areas">
           <SectionHead title="חישוב שטחים" sub="סוגי שטחים ותוצאות נפוצות" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="rounded-xl border border-slate-200 overflow-hidden shadow-sm" dir="rtl">
@@ -698,8 +712,24 @@ export default function TrigFunctionsPage() {
           </div>
         </section>
 
+        {/* ── Exercises ── */}
+        <section id="exercises">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-7 rounded-full bg-black shrink-0" />
+            <div>
+              <h2 className="text-xl font-bold text-black">תרגול מדורג</h2>
+              <p className="text-sm text-slate-500">קל → בינוני → בגרות — נסה לפתור לפני שתסתכל</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {trigFunctionsTopic.exercises.map((ex, i) => (
+              <ExerciseCard key={i} exercise={ex} index={i} />
+            ))}
+          </div>
+        </section>
+
         {/* ── Tips ── */}
-        <section>
+        <section id="tips">
           <TipsBox tips={tips} />
           <AiTutor topic="פונקציות טריגונומטריות" />
         </section>

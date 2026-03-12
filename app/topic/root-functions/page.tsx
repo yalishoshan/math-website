@@ -2,7 +2,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TipsBox from "@/components/TipsBox";
 import FormulaCard from "@/components/FormulaCard";
+import ExerciseCard from "@/components/ExerciseCard";
 import AiTutor from "@/components/AiTutor";
+import TableOfContents from "@/components/TableOfContents";
 import { topics } from "@/data/topics";
 
 export const metadata = {
@@ -425,6 +427,7 @@ const tips = [
 /* ─── Navigation ─────────────────────────────────────────── */
 
 const idx = topics.findIndex((t) => t.id === "root-functions");
+const rootFunctionsTopic = topics[idx];
 const prev = idx > 0 ? topics[idx - 1] : null;
 const next = idx < topics.length - 1 ? topics[idx + 1] : null;
 
@@ -507,13 +510,25 @@ export default function RootFunctionsPage() {
               <span key={s} className="text-xs bg-white/10 rounded-full px-3 py-1.5 text-white font-medium">{s}</span>
             ))}
           </div>
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <TableOfContents items={[
+              { id: "formulas", label: "נוסחות מפתח" },
+              { id: "limits", label: "גבולות" },
+              { id: "derivatives", label: "נגזרות" },
+              { id: "root-func", label: "פונקציית השורש" },
+              { id: "integrals", label: "אינטגרלים" },
+              { id: "areas", label: "שטחים ונפחים" },
+              { id: "exercises", label: "תרגול מדורג", count: rootFunctionsTopic.exercises.length },
+              { id: "tips", label: "טיפים" },
+            ]} />
+          </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
         {/* ── 1. נוסחות KaTeX ── */}
-        <section>
+        <section id="formulas">
           <SectionHead title="נוסחות מפתח" sub="נגזרות, אינטגרלים ומשפטים חשובים" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {keyFormulas.map((f, i) => (
@@ -523,7 +538,7 @@ export default function RootFunctionsPage() {
         </section>
 
         {/* ── 2. גבולות ── */}
-        <section>
+        <section id="limits">
           <SectionHead title="גבולות" sub="כללים, גבולות חשובים וצורות בלתי-קצובות" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <DarkCard id="א" title="כללי גבולות בסיסיים">
@@ -578,7 +593,7 @@ export default function RootFunctionsPage() {
         </section>
 
         {/* ── 3. נגזרות ── */}
-        <section>
+        <section id="derivatives">
           <SectionHead title="נגזרות" sub="טבלת נגזרות, כללי גזירה, שורשים ופונקציות נפוצות" />
 
           {/* Comprehensive derivative table */}
@@ -655,7 +670,7 @@ export default function RootFunctionsPage() {
         </section>
 
         {/* ── 4. פונקציית √x – תכונות ── */}
-        <section>
+        <section id="root-func">
           <SectionHead title="פונקציית השורש הבסיסית – f(x) = √x" />
           <div className="rounded-xl border border-slate-200 overflow-hidden shadow-sm" dir="rtl">
             <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y divide-slate-100">
@@ -720,7 +735,7 @@ export default function RootFunctionsPage() {
         </section>
 
         {/* ── 7. אינטגרלים ── */}
-        <section>
+        <section id="integrals">
           <SectionHead title="אינטגרלים" sub="נוסחות יסוד, מבנים מורכבים ושיטות זיהוי" />
 
           {/* Basic integrals table */}
@@ -819,7 +834,7 @@ export default function RootFunctionsPage() {
         </section>
 
         {/* ── 9. שטחים ונפחים ── */}
-        <section>
+        <section id="areas">
           <SectionHead title="שטחים ונפחי סיבוב" sub="אינטגרל מסוים, שטח בין עקומות ונפח גוף סיבוב" />
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
@@ -929,8 +944,24 @@ export default function RootFunctionsPage() {
           </div>
         </section>
 
+        {/* ── Exercises ── */}
+        <section id="exercises">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-7 rounded-full bg-black shrink-0" />
+            <div>
+              <h2 className="text-xl font-bold text-black">תרגול מדורג</h2>
+              <p className="text-sm text-slate-500">קל → בינוני → בגרות — נסה לפתור לפני שתסתכל</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {rootFunctionsTopic.exercises.map((ex, i) => (
+              <ExerciseCard key={i} exercise={ex} index={i} />
+            ))}
+          </div>
+        </section>
+
         {/* ── Tips ── */}
-        <section>
+        <section id="tips">
           <TipsBox tips={tips} />
           <AiTutor topic="חשבון דיפרנציאלי ואינטגרלי" />
         </section>

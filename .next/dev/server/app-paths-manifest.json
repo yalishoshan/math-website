@@ -2,9 +2,14 @@
   "/api/analytics/track/route": "app/api/analytics/track/route.js",
   "/api/auth/login/route": "app/api/auth/login/route.js",
   "/api/auth/me/route": "app/api/auth/me/route.js",
-  "/api/auth/signup/route": "app/api/auth/signup/route.js",
   "/page": "app/page.js",
   "/test/page": "app/test/page.js",
+  "/topic/geometry/page": "app/topic/geometry/page.js",
   "/topic/motion/page": "app/topic/motion/page.js",
-  "/topic/trig-functions/page": "app/topic/trig-functions/page.js"
+  "/topic/optimization/page": "app/topic/optimization/page.js",
+  "/topic/probability/page": "app/topic/probability/page.js",
+  "/topic/root-functions/page": "app/topic/root-functions/page.js",
+  "/topic/sequences/page": "app/topic/sequences/page.js",
+  "/topic/trig-functions/page": "app/topic/trig-functions/page.js",
+  "/topic/trigonometry/page": "app/topic/trigonometry/page.js"
 }

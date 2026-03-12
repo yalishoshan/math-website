@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import FormulaCard from "@/components/FormulaCard";
+import ExerciseCard from "@/components/ExerciseCard";
 import TipsBox from "@/components/TipsBox";
 import AiTutor from "@/components/AiTutor";
+import TableOfContents from "@/components/TableOfContents";
 import type { ReactNode } from "react";
 
 /* ─── Types ─────────────────────────────────────────────── */
@@ -26,6 +28,14 @@ export interface SideTableRow {
 export interface StepItem {
   title: string;
   body: string;
+}
+
+export interface ExerciseItem {
+  difficulty: "קל" | "בינוני" | "בגרות";
+  problem: string;
+  hint?: string;
+  steps: string[];
+  answer: string;
 }
 
 export interface TopicPageLayoutProps {
@@ -66,6 +76,9 @@ export interface TopicPageLayoutProps {
   stepsSectionSubtitle?: string;
   steps: StepItem[];
 
+  /* section 4.5 – exercises (optional) */
+  exercises?: ExerciseItem[];
+
   /* section 5 – tips */
   tips: string[];
 
@@ -104,6 +117,7 @@ export default function TopicPageLayout({
   stepsSectionTitle = "שלבי פתרון תקניים",
   stepsSectionSubtitle = "עקבו אחרי הסדר הזה בכל שאלה",
   steps,
+  exercises,
   tips,
   prevTopic,
   nextTopic,
@@ -152,6 +166,20 @@ export default function TopicPageLayout({
               </span>
             ))}
           </div>
+
+          {/* Table of Contents */}
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <TableOfContents
+              items={[
+                { id: "formulas", label: formulasSectionTitle },
+                { id: "main-table", label: mainTableSectionTitle },
+                { id: "side-tables", label: sideTablesSectionTitle },
+                { id: "steps", label: stepsSectionTitle },
+                ...(exercises ? [{ id: "exercises", label: "תרגול מדורג", count: exercises.length }] : []),
+                { id: "tips", label: "טיפים" },
+              ]}
+            />
+          </div>
         </div>
       </div>
 
@@ -159,7 +187,7 @@ export default function TopicPageLayout({
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
         {/* ── 1. נוסחות מפתח ── */}
-        <section>
+        <section id="formulas">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -182,7 +210,7 @@ export default function TopicPageLayout({
         </section>
 
         {/* ── 2. טבלת ייחוס ראשית ── */}
-        <section>
+        <section id="main-table">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -224,7 +252,7 @@ export default function TopicPageLayout({
         </section>
 
         {/* ── 3. שתי טבלאות צדדיות + בר הדגשה ── */}
-        <section>
+        <section id="side-tables">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -333,7 +361,7 @@ export default function TopicPageLayout({
         </section>
 
         {/* ── 4. שלבי פתרון ── */}
-        <section>
+        <section id="steps">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -362,8 +390,26 @@ export default function TopicPageLayout({
           </div>
         </section>
 
+        {/* ── 4.5. תרגול מדורג (optional) ── */}
+        {exercises && exercises.length > 0 && (
+          <section id="exercises">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-1 h-7 rounded-full bg-black shrink-0" />
+              <div>
+                <h2 className="text-xl font-bold text-black">תרגול מדורג</h2>
+                <p className="text-sm text-slate-500">קל → בינוני → בגרות — נסה לפתור לפני שתסתכל</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              {exercises.map((ex, i) => (
+                <ExerciseCard key={i} exercise={ex} index={i} />
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* ── 5. טיפים ── */}
-        <section>
+        <section id="tips">
           <TipsBox tips={tips} />
           <AiTutor topic={title} />
         </section>

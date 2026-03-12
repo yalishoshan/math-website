@@ -6,6 +6,7 @@ import ExampleCard from "@/components/ExampleCard";
 import ExerciseCard from "@/components/ExerciseCard";
 import TipsBox from "@/components/TipsBox";
 import AiTutor from "@/components/AiTutor";
+import TableOfContents from "@/components/TableOfContents";
 import { topics } from "@/data/topics";
 
 interface Props {
@@ -86,6 +87,18 @@ export default async function TopicPage({ params }: Props) {
               </span>
             ))}
           </div>
+
+          {/* Table of Contents */}
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <TableOfContents
+              items={[
+                { id: "formulas", label: "נוסחאות מפתח", count: topic.formulas.length },
+                { id: "examples", label: "דוגמאות פתורות", count: topic.examples.length },
+                { id: "exercises", label: "תרגול מדורג", count: topic.exercises.length },
+                { id: "tips", label: "טיפים", count: topic.tips.length },
+              ]}
+            />
+          </div>
         </div>
       </div>
 
@@ -93,7 +106,7 @@ export default async function TopicPage({ params }: Props) {
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
         {/* Formulas Section */}
-        <section>
+        <section id="formulas">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -115,7 +128,7 @@ export default async function TopicPage({ params }: Props) {
         </section>
 
         {/* Examples Section */}
-        <section>
+        <section id="examples">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -137,7 +150,7 @@ export default async function TopicPage({ params }: Props) {
         </section>
 
         {/* Exercises Section */}
-        <section>
+        <section id="exercises">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-7 rounded-full bg-black shrink-0" />
             <div>
@@ -153,7 +166,7 @@ export default async function TopicPage({ params }: Props) {
         </section>
 
         {/* Tips Section */}
-        <section>
+        <section id="tips">
           <TipsBox tips={topic.tips} />
           <AiTutor topic={topic.title} />
         </section>

@@ -2,7 +2,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TipsBox from "@/components/TipsBox";
 import FormulaCard from "@/components/FormulaCard";
+import ExerciseCard from "@/components/ExerciseCard";
 import AiTutor from "@/components/AiTutor";
+import TableOfContents from "@/components/TableOfContents";
 import { topics } from "@/data/topics";
 
 export const metadata = {
@@ -374,6 +376,7 @@ const tips = [
 /* ─── Navigation ─────────────────────────────────────────── */
 
 const idx = topics.findIndex((t) => t.id === "trigonometry");
+const trigonometryTopic = topics[idx];
 const prev = idx > 0 ? topics[idx - 1] : null;
 const next = idx < topics.length - 1 ? topics[idx + 1] : null;
 
@@ -467,13 +470,23 @@ export default function TrigonometryPage() {
               <span key={s} className="text-xs bg-white/10 rounded-full px-3 py-1.5 text-white font-medium">{s}</span>
             ))}
           </div>
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <TableOfContents items={[
+              { id: "formulas", label: "נוסחות מפתח" },
+              { id: "special-values", label: "ערכים מיוחדים" },
+              { id: "identities", label: "זהויות טריגונומטריות" },
+              { id: "trig-graph", label: "תכונות הגרף" },
+              { id: "exercises", label: "תרגול מדורג", count: trigonometryTopic.exercises.length },
+              { id: "tips", label: "טיפים" },
+            ]} />
+          </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
         {/* ── 1. נוסחות KaTeX ── */}
-        <section>
+        <section id="formulas">
           <SectionHead title="נוסחות מפתח" sub="הנוסחאות החיוניות לחישוב" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {keyFormulas.map((f, i) => (
@@ -483,7 +496,7 @@ export default function TrigonometryPage() {
         </section>
 
         {/* ── 2. ערכים מיוחדים ── */}
-        <section>
+        <section id="special-values">
           <SectionHead title="ערכים מיוחדים" sub="חשוב לשנן – מופיעים בכל בחינה" />
           <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
             <table className="w-full text-sm" dir="rtl">
@@ -553,7 +566,7 @@ export default function TrigonometryPage() {
         </section>
 
         {/* ── 4–10. זהויות ── */}
-        <section>
+        <section id="identities">
           <SectionHead title="זהויות טריגונומטריות" sub="לפי קבוצות" />
           <div className="space-y-4">
             {identitySections.map((sec) => (
@@ -597,7 +610,7 @@ export default function TrigonometryPage() {
         </section>
 
         {/* ── 15. תכונות גרף ── */}
-        <section>
+        <section id="trig-graph">
           <SectionHead title="פונקציות טריגונומטריות – תכונות הגרף" />
           <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
             <table className="w-full text-sm" dir="rtl">
@@ -666,8 +679,24 @@ export default function TrigonometryPage() {
           </div>
         </section>
 
+        {/* ── Exercises ── */}
+        <section id="exercises">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-7 rounded-full bg-black shrink-0" />
+            <div>
+              <h2 className="text-xl font-bold text-black">תרגול מדורג</h2>
+              <p className="text-sm text-slate-500">קל → בינוני → בגרות — נסה לפתור לפני שתסתכל</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {trigonometryTopic.exercises.map((ex, i) => (
+              <ExerciseCard key={i} exercise={ex} index={i} />
+            ))}
+          </div>
+        </section>
+
         {/* ── Tips ── */}
-        <section>
+        <section id="tips">
           <TipsBox tips={tips} />
           <AiTutor topic="טריגונומטריה" />
         </section>

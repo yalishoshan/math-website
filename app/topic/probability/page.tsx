@@ -8,6 +8,7 @@ export const metadata = {
 };
 
 const idx = topics.findIndex((t) => t.id === "probability");
+const probabilityTopic = topics[idx];
 const prev = idx > 0 ? topics[idx - 1] : null;
 const next = idx < topics.length - 1 ? topics[idx + 1] : null;
 
@@ -225,6 +226,8 @@ export default function ProbabilityPage() {
         "שאיבה ללא החזרה – המכנה משתנה בכל שלב (n−1, n−2, ...)",
         "בדוק בסוף: סכום כל ההסתברויות בדגימה אחת חייב להיות 1",
       ]}
+
+      exercises={probabilityTopic.exercises}
 
       prevTopic={prev}
       nextTopic={next}

@@ -1253,7 +1253,7 @@ const metadata = {
                     strokeWidth: "0.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 24,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1265,7 +1265,7 @@ const metadata = {
                     strokeWidth: "0.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 25,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1275,7 +1275,7 @@ const metadata = {
                     strokeWidth: "1.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 27,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1286,7 +1286,7 @@ const metadata = {
                     strokeDasharray: "3,2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 30,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1298,7 +1298,7 @@ const metadata = {
                     children: "sin x"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 33,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1309,13 +1309,13 @@ const metadata = {
                     children: "cos x = (sin x)′"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 34,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/topic/trig-functions/page.tsx",
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     },
@@ -1336,7 +1336,7 @@ const metadata = {
                     strokeWidth: "0.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 45,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1348,7 +1348,7 @@ const metadata = {
                     strokeWidth: "0.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 46,
+                    lineNumber: 47,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1358,7 +1358,7 @@ const metadata = {
                     strokeWidth: "1.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 48,
+                    lineNumber: 49,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1369,7 +1369,7 @@ const metadata = {
                     strokeDasharray: "3,2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 51,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1381,7 +1381,7 @@ const metadata = {
                     children: "cos x"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 54,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1392,13 +1392,13 @@ const metadata = {
                     children: "−sin x = (cos x)′"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 55,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/topic/trig-functions/page.tsx",
-            lineNumber: 43,
+            lineNumber: 44,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     },
@@ -1421,7 +1421,7 @@ const metadata = {
                     strokeWidth: "1.2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 67,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1433,7 +1433,7 @@ const metadata = {
                     children: "sin(·)"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 68,
+                    lineNumber: 69,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -1447,7 +1447,7 @@ const metadata = {
                     strokeWidth: "1.2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 70,
+                    lineNumber: 71,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1459,7 +1459,7 @@ const metadata = {
                     children: "u(x)"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 71,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1471,7 +1471,7 @@ const metadata = {
                     strokeWidth: "1"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 73,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("polygon", {
@@ -1479,7 +1479,7 @@ const metadata = {
                     fill: "currentColor"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 74,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1491,7 +1491,7 @@ const metadata = {
                     strokeWidth: "1"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 76,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("polygon", {
@@ -1499,7 +1499,7 @@ const metadata = {
                     fill: "currentColor"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 77,
+                    lineNumber: 78,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1510,7 +1510,7 @@ const metadata = {
                     children: "x"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 78,
+                    lineNumber: 79,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1521,7 +1521,7 @@ const metadata = {
                     children: "[sin u]′ ="
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 80,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1533,7 +1533,7 @@ const metadata = {
                     children: "cos u"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 81,
+                    lineNumber: 82,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1544,7 +1544,7 @@ const metadata = {
                     children: " · "
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 82,
+                    lineNumber: 83,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1556,7 +1556,7 @@ const metadata = {
                     children: "u′"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 83,
+                    lineNumber: 84,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1567,13 +1567,13 @@ const metadata = {
                     children: "כלל שרשרת: חיצוני × פנימי"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 84,
+                    lineNumber: 85,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/topic/trig-functions/page.tsx",
-            lineNumber: 64,
+            lineNumber: 65,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     },
@@ -1596,7 +1596,7 @@ const metadata = {
                     strokeWidth: "1.2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 95,
+                    lineNumber: 96,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1608,7 +1608,7 @@ const metadata = {
                     children: "cos(·)"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 96,
+                    lineNumber: 97,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
@@ -1622,7 +1622,7 @@ const metadata = {
                     strokeWidth: "1.2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 97,
+                    lineNumber: 98,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1634,7 +1634,7 @@ const metadata = {
                     children: "u(x)"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 98,
+                    lineNumber: 99,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1646,7 +1646,7 @@ const metadata = {
                     strokeWidth: "1"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 99,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("polygon", {
@@ -1654,7 +1654,7 @@ const metadata = {
                     fill: "currentColor"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 100,
+                    lineNumber: 101,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1666,7 +1666,7 @@ const metadata = {
                     strokeWidth: "1"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 101,
+                    lineNumber: 102,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("polygon", {
@@ -1674,7 +1674,7 @@ const metadata = {
                     fill: "currentColor"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 102,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1685,7 +1685,7 @@ const metadata = {
                     children: "x"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 103,
+                    lineNumber: 104,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1696,7 +1696,7 @@ const metadata = {
                     children: "[cos u]′ ="
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 105,
+                    lineNumber: 106,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1708,7 +1708,7 @@ const metadata = {
                     children: "−sin u"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 106,
+                    lineNumber: 107,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1719,7 +1719,7 @@ const metadata = {
                     children: " · "
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 107,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1731,7 +1731,7 @@ const metadata = {
                     children: "u′"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 108,
+                    lineNumber: 109,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1742,13 +1742,13 @@ const metadata = {
                     children: "שים לב לסימן המינוס!"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 110,
+                    lineNumber: 111,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/topic/trig-functions/page.tsx",
-            lineNumber: 93,
+            lineNumber: 94,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     },
@@ -1769,7 +1769,7 @@ const metadata = {
                     strokeWidth: "0.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 121,
+                    lineNumber: 122,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1781,7 +1781,7 @@ const metadata = {
                     strokeWidth: "0.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 122,
+                    lineNumber: 123,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1791,7 +1791,7 @@ const metadata = {
                     strokeWidth: "1.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 124,
+                    lineNumber: 125,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1800,7 +1800,7 @@ const metadata = {
                     fillOpacity: "0.15"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 127,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1810,7 +1810,7 @@ const metadata = {
                     strokeWidth: "1.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 128,
+                    lineNumber: 129,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1819,7 +1819,7 @@ const metadata = {
                     fillOpacity: "0.1"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 130,
+                    lineNumber: 131,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1830,7 +1830,7 @@ const metadata = {
                     children: "+2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 132,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1841,7 +1841,7 @@ const metadata = {
                     children: "−2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 133,
+                    lineNumber: 134,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1852,7 +1852,7 @@ const metadata = {
                     children: "∫sin x dx = −cos x + C"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 134,
+                    lineNumber: 135,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1863,13 +1863,13 @@ const metadata = {
                     children: "∫[0→π] sin x = 2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 135,
+                    lineNumber: 136,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/topic/trig-functions/page.tsx",
-            lineNumber: 119,
+            lineNumber: 120,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     },
@@ -1890,7 +1890,7 @@ const metadata = {
                     strokeWidth: "0.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 146,
+                    lineNumber: 147,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1902,7 +1902,7 @@ const metadata = {
                     strokeWidth: "0.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 147,
+                    lineNumber: 148,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1912,7 +1912,7 @@ const metadata = {
                     strokeWidth: "1.8"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 149,
+                    lineNumber: 150,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1921,7 +1921,7 @@ const metadata = {
                     fillOpacity: "0.15"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 152,
+                    lineNumber: 153,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1930,7 +1930,7 @@ const metadata = {
                     fillOpacity: "0.1"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 154,
+                    lineNumber: 155,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1942,7 +1942,7 @@ const metadata = {
                     strokeWidth: "0.9"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 156,
+                    lineNumber: 157,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1954,7 +1954,7 @@ const metadata = {
                     strokeWidth: "0.9"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 157,
+                    lineNumber: 158,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1965,7 +1965,7 @@ const metadata = {
                     children: "π/2"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 158,
+                    lineNumber: 159,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1976,7 +1976,7 @@ const metadata = {
                     children: "π"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 159,
+                    lineNumber: 160,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1987,7 +1987,7 @@ const metadata = {
                     children: "∫cos x dx = sin x + C"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 160,
+                    lineNumber: 161,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("text", {
@@ -1998,13 +1998,13 @@ const metadata = {
                     children: "∫[0→π/2] cos x = 1"
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 161,
+                    lineNumber: 162,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/app/topic/trig-functions/page.tsx",
-            lineNumber: 144,
+            lineNumber: 145,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }
@@ -2397,7 +2397,7 @@ const next = idx < __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$topic
                 className: "w-1 h-7 rounded-full bg-black shrink-0"
             }, void 0, false, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 363,
+                lineNumber: 364,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2407,7 +2407,7 @@ const next = idx < __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$topic
                         children: title
                     }, void 0, false, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 365,
+                        lineNumber: 366,
                         columnNumber: 9
                     }, this),
                     sub && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2415,19 +2415,19 @@ const next = idx < __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$topic
                         children: sub
                     }, void 0, false, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 366,
+                        lineNumber: 367,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 364,
+                lineNumber: 365,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/topic/trig-functions/page.tsx",
-        lineNumber: 362,
+        lineNumber: 363,
         columnNumber: 5
     }, this);
 }
@@ -2444,7 +2444,7 @@ function FRow({ name, formula, note }) {
                         children: name
                     }, void 0, false, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 376,
+                        lineNumber: 377,
                         columnNumber: 9
                     }, this),
                     note && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2452,13 +2452,13 @@ function FRow({ name, formula, note }) {
                         children: note
                     }, void 0, false, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 377,
+                        lineNumber: 378,
                         columnNumber: 18
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 375,
+                lineNumber: 376,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
@@ -2467,13 +2467,13 @@ function FRow({ name, formula, note }) {
                 children: formula
             }, void 0, false, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 379,
+                lineNumber: 380,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/topic/trig-functions/page.tsx",
-        lineNumber: 374,
+        lineNumber: 375,
         columnNumber: 5
     }, this);
 }
@@ -2490,7 +2490,7 @@ function DarkCard({ id, title, note, children }) {
                         children: id
                     }, void 0, false, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 390,
+                        lineNumber: 391,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2500,7 +2500,7 @@ function DarkCard({ id, title, note, children }) {
                                 children: title
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 392,
+                                lineNumber: 393,
                                 columnNumber: 11
                             }, this),
                             note && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2508,26 +2508,26 @@ function DarkCard({ id, title, note, children }) {
                                 children: note
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 393,
+                                lineNumber: 394,
                                 columnNumber: 20
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 391,
+                        lineNumber: 392,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 389,
+                lineNumber: 390,
                 columnNumber: 7
             }, this),
             children
         ]
     }, void 0, true, {
         fileName: "[project]/app/topic/trig-functions/page.tsx",
-        lineNumber: 388,
+        lineNumber: 389,
         columnNumber: 5
     }, this);
 }
@@ -2539,7 +2539,7 @@ function TrigFunctionsPage() {
                 activeTopicId: "trig-functions"
             }, void 0, false, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 406,
+                lineNumber: 407,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2555,7 +2555,7 @@ function TrigFunctionsPage() {
                                 children: "בית"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 412,
+                                lineNumber: 413,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2563,7 +2563,7 @@ function TrigFunctionsPage() {
                                 children: "/"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 413,
+                                lineNumber: 414,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2571,23 +2571,23 @@ function TrigFunctionsPage() {
                                 children: "פונקציות טריגונומטריות"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 414,
+                                lineNumber: 415,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 411,
+                        lineNumber: 412,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 410,
+                    lineNumber: 411,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 409,
+                lineNumber: 410,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2603,7 +2603,7 @@ function TrigFunctionsPage() {
                                     children: "שאלון 581"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 423,
+                                    lineNumber: 424,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -2611,7 +2611,7 @@ function TrigFunctionsPage() {
                                     children: "פונקציות טריגונומטריות"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 424,
+                                    lineNumber: 425,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2619,13 +2619,13 @@ function TrigFunctionsPage() {
                                     children: "נגזרות, אינטגרלים וחקירת פונקציה"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 425,
+                                    lineNumber: 426,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                            lineNumber: 422,
+                            lineNumber: 423,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2633,7 +2633,7 @@ function TrigFunctionsPage() {
                             children: "תכונות גרפים, פונקציות מוזזות, תחומי הגדרה, נגזרות בכלל שרשרת, אינטגרלים, שטחים וחקירת פונקציה מלאה."
                         }, void 0, false, {
                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                            lineNumber: 427,
+                            lineNumber: 428,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2648,23 +2648,23 @@ function TrigFunctionsPage() {
                                     children: s
                                 }, s, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 432,
+                                    lineNumber: 433,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                            lineNumber: 430,
+                            lineNumber: 431,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 421,
+                    lineNumber: 422,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 420,
+                lineNumber: 421,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2677,7 +2677,7 @@ function TrigFunctionsPage() {
                                 sub: "נגזרות ואינטגרלים בסיסיים"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 442,
+                                lineNumber: 443,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2690,18 +2690,18 @@ function TrigFunctionsPage() {
                                         svgContent: f.svgContent
                                     }, i, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 445,
+                                        lineNumber: 446,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 443,
+                                lineNumber: 444,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 441,
+                        lineNumber: 442,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2710,7 +2710,7 @@ function TrigFunctionsPage() {
                                 title: "תכונות הפונקציות הבסיסיות"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 452,
+                                lineNumber: 453,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2726,12 +2726,12 @@ function TrigFunctionsPage() {
                                                     children: f.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 457,
+                                                    lineNumber: 458,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 456,
+                                                lineNumber: 457,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2770,7 +2770,7 @@ function TrigFunctionsPage() {
                                                                     children: label
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                    lineNumber: 469,
+                                                                    lineNumber: 470,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2778,13 +2778,13 @@ function TrigFunctionsPage() {
                                                                     children: value
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                    lineNumber: 470,
+                                                                    lineNumber: 471,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, label, true, {
                                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                            lineNumber: 468,
+                                                            lineNumber: 469,
                                                             columnNumber: 21
                                                         }, this)),
                                                     f.max !== "—" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2795,7 +2795,7 @@ function TrigFunctionsPage() {
                                                                 children: "מקסימום / מינימום"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                lineNumber: 475,
+                                                                lineNumber: 476,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2807,36 +2807,36 @@ function TrigFunctionsPage() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                lineNumber: 476,
+                                                                lineNumber: 477,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 474,
+                                                        lineNumber: 475,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 459,
+                                                lineNumber: 460,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, i, true, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 455,
+                                        lineNumber: 456,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 453,
+                                lineNumber: 454,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 451,
+                        lineNumber: 452,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2845,7 +2845,7 @@ function TrigFunctionsPage() {
                                 title: "פונקציה מוזזת – y = A·sin(Bx + C) + D"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 487,
+                                lineNumber: 488,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2862,12 +2862,12 @@ function TrigFunctionsPage() {
                                                     children: "משמעות הפרמטרים"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 491,
+                                                    lineNumber: 492,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 490,
+                                                lineNumber: 491,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2880,7 +2880,7 @@ function TrigFunctionsPage() {
                                                                 children: p.param
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                lineNumber: 496,
+                                                                lineNumber: 497,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2890,7 +2890,7 @@ function TrigFunctionsPage() {
                                                                         children: p.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                        lineNumber: 498,
+                                                                        lineNumber: 499,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2898,7 +2898,7 @@ function TrigFunctionsPage() {
                                                                         children: p.effect
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                        lineNumber: 499,
+                                                                        lineNumber: 500,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     p.note && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2906,30 +2906,30 @@ function TrigFunctionsPage() {
                                                                         children: p.note
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                        lineNumber: 500,
+                                                                        lineNumber: 501,
                                                                         columnNumber: 34
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                lineNumber: 497,
+                                                                lineNumber: 498,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, p.param, true, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 495,
+                                                        lineNumber: 496,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 493,
+                                                lineNumber: 494,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 489,
+                                        lineNumber: 490,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2943,12 +2943,12 @@ function TrigFunctionsPage() {
                                                     children: "נוסחאות מפתח"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 508,
+                                                    lineNumber: 509,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 507,
+                                                lineNumber: 508,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2957,12 +2957,12 @@ function TrigFunctionsPage() {
                                                         ...f
                                                     }, i, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 511,
+                                                        lineNumber: 512,
                                                         columnNumber: 48
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 510,
+                                                lineNumber: 511,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2975,43 +2975,43 @@ function TrigFunctionsPage() {
                                                             children: "דוגמה:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                            lineNumber: 515,
+                                                            lineNumber: 516,
                                                             columnNumber: 19
                                                         }, this),
                                                         " y = 3·sin(2x − π/2) + 1",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                            lineNumber: 515,
+                                                            lineNumber: 516,
                                                             columnNumber: 88
                                                         }, this),
                                                         "A=3, B=2, C=−π/2, D=1 → T=π, y∈[−2,4], x_start=π/4"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 514,
+                                                    lineNumber: 515,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 513,
+                                                lineNumber: 514,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 506,
+                                        lineNumber: 507,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 488,
+                                lineNumber: 489,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 486,
+                        lineNumber: 487,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3020,7 +3020,7 @@ function TrigFunctionsPage() {
                                 title: "תחום הגדרה – כללים"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 525,
+                                lineNumber: 526,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3038,7 +3038,7 @@ function TrigFunctionsPage() {
                                                         children: "סוג הפונקציה"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 530,
+                                                        lineNumber: 531,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3046,7 +3046,7 @@ function TrigFunctionsPage() {
                                                         children: "תנאי תחום"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 531,
+                                                        lineNumber: 532,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3054,18 +3054,18 @@ function TrigFunctionsPage() {
                                                         children: "הערה"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 532,
+                                                        lineNumber: 533,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 529,
+                                                lineNumber: 530,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 528,
+                                            lineNumber: 529,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -3077,7 +3077,7 @@ function TrigFunctionsPage() {
                                                             children: row.type
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                            lineNumber: 538,
+                                                            lineNumber: 539,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3085,7 +3085,7 @@ function TrigFunctionsPage() {
                                                             children: row.condition
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                            lineNumber: 539,
+                                                            lineNumber: 540,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3093,35 +3093,35 @@ function TrigFunctionsPage() {
                                                             children: row.note
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                            lineNumber: 540,
+                                                            lineNumber: 541,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, i, true, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 537,
+                                                    lineNumber: 538,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 535,
+                                            lineNumber: 536,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 527,
+                                    lineNumber: 528,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 526,
+                                lineNumber: 527,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 524,
+                        lineNumber: 525,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3131,7 +3131,7 @@ function TrigFunctionsPage() {
                                 sub: "בסיסי, כלל שרשרת ודוגמאות"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 550,
+                                lineNumber: 551,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3147,17 +3147,17 @@ function TrigFunctionsPage() {
                                                     formula: f.formula
                                                 }, i, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 554,
+                                                    lineNumber: 555,
                                                     columnNumber: 49
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 553,
+                                            lineNumber: 554,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 552,
+                                        lineNumber: 553,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(DarkCard, {
@@ -3169,23 +3169,23 @@ function TrigFunctionsPage() {
                                                     ...f
                                                 }, i, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 559,
+                                                    lineNumber: 560,
                                                     columnNumber: 49
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 558,
+                                            lineNumber: 559,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 557,
+                                        lineNumber: 558,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 551,
+                                lineNumber: 552,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3200,28 +3200,28 @@ function TrigFunctionsPage() {
                                                 formula: f.formula
                                             }, i, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 567,
+                                                lineNumber: 568,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 565,
+                                        lineNumber: 566,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 564,
+                                    lineNumber: 565,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 563,
+                                lineNumber: 564,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 549,
+                        lineNumber: 550,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3231,7 +3231,7 @@ function TrigFunctionsPage() {
                                 sub: "בסיסי, מורכב וזהויות לאינטגרציה"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 576,
+                                lineNumber: 577,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3246,17 +3246,17 @@ function TrigFunctionsPage() {
                                                     ...f
                                                 }, i, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 580,
+                                                    lineNumber: 581,
                                                     columnNumber: 47
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 579,
+                                            lineNumber: 580,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 578,
+                                        lineNumber: 579,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(DarkCard, {
@@ -3268,23 +3268,23 @@ function TrigFunctionsPage() {
                                                     ...f
                                                 }, i, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 585,
+                                                    lineNumber: 586,
                                                     columnNumber: 51
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 584,
+                                            lineNumber: 585,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 583,
+                                        lineNumber: 584,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 577,
+                                lineNumber: 578,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3298,28 +3298,28 @@ function TrigFunctionsPage() {
                                                 ...f
                                             }, i, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 592,
+                                                lineNumber: 593,
                                                 columnNumber: 54
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 591,
+                                        lineNumber: 592,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 590,
+                                    lineNumber: 591,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 589,
+                                lineNumber: 590,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 575,
+                        lineNumber: 576,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3329,7 +3329,7 @@ function TrigFunctionsPage() {
                                 sub: "לפני גזירה / אינטגרציה"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 600,
+                                lineNumber: 601,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3341,23 +3341,23 @@ function TrigFunctionsPage() {
                                             ...f
                                         }, i, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 603,
+                                            lineNumber: 604,
                                             columnNumber: 47
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 602,
+                                    lineNumber: 603,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 601,
+                                lineNumber: 602,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 599,
+                        lineNumber: 600,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3367,7 +3367,7 @@ function TrigFunctionsPage() {
                                 sub: "סוגי שטחים ותוצאות נפוצות"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 610,
+                                lineNumber: 611,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3384,12 +3384,12 @@ function TrigFunctionsPage() {
                                                     children: "נוסחאות שטח"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 614,
+                                                    lineNumber: 615,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 613,
+                                                lineNumber: 614,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3398,18 +3398,18 @@ function TrigFunctionsPage() {
                                                         ...f
                                                     }, i, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 617,
+                                                        lineNumber: 618,
                                                         columnNumber: 45
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 616,
+                                                lineNumber: 617,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 612,
+                                        lineNumber: 613,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3423,12 +3423,12 @@ function TrigFunctionsPage() {
                                                     children: "תוצאות נפוצות לשינון"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 622,
+                                                    lineNumber: 623,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 621,
+                                                lineNumber: 622,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3442,7 +3442,7 @@ function TrigFunctionsPage() {
                                                                 children: r.integral
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                lineNumber: 627,
+                                                                lineNumber: 628,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3450,18 +3450,18 @@ function TrigFunctionsPage() {
                                                                 children: r.result
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                                lineNumber: 628,
+                                                                lineNumber: 629,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, i, true, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 626,
+                                                        lineNumber: 627,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 624,
+                                                lineNumber: 625,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3473,35 +3473,35 @@ function TrigFunctionsPage() {
                                                         children: "∫[0→2π] sin(x) = 0 כי השטחים מעל ומתחת לציר x מבטלים זה את זה – אל תטעו ותחשבו שזה שטח!"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 634,
+                                                        lineNumber: 635,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 633,
+                                                    lineNumber: 634,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 632,
+                                                lineNumber: 633,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 620,
+                                        lineNumber: 621,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 611,
+                                lineNumber: 612,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 609,
+                        lineNumber: 610,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3510,7 +3510,7 @@ function TrigFunctionsPage() {
                                 title: "קשר בין גרף הפונקציה לגרף הנגזרת"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 645,
+                                lineNumber: 646,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3524,7 +3524,7 @@ function TrigFunctionsPage() {
                                                 children: i + 1
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 649,
+                                                lineNumber: 650,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3532,24 +3532,24 @@ function TrigFunctionsPage() {
                                                 children: item.rule
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 650,
+                                                lineNumber: 651,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, i, true, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 648,
+                                        lineNumber: 649,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 646,
+                                lineNumber: 647,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 644,
+                        lineNumber: 645,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3558,7 +3558,7 @@ function TrigFunctionsPage() {
                                 title: "נגזרת שנייה – בחינת קיצון"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 658,
+                                lineNumber: 659,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3576,7 +3576,7 @@ function TrigFunctionsPage() {
                                                         children: "תנאי"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 663,
+                                                        lineNumber: 664,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3584,18 +3584,18 @@ function TrigFunctionsPage() {
                                                         children: "מסקנה"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 664,
+                                                        lineNumber: 665,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 662,
+                                                lineNumber: 663,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 661,
+                                            lineNumber: 662,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -3607,7 +3607,7 @@ function TrigFunctionsPage() {
                                                             children: row.condition
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                            lineNumber: 670,
+                                                            lineNumber: 671,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3615,35 +3615,35 @@ function TrigFunctionsPage() {
                                                             children: row.conclusion
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                            lineNumber: 671,
+                                                            lineNumber: 672,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, i, true, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 669,
+                                                    lineNumber: 670,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 667,
+                                            lineNumber: 668,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 660,
+                                    lineNumber: 661,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 659,
+                                lineNumber: 660,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 657,
+                        lineNumber: 658,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3652,7 +3652,7 @@ function TrigFunctionsPage() {
                                 title: "חקירת פונקציה טריגונומטרית – שלבי החקירה"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 681,
+                                lineNumber: 682,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3669,7 +3669,7 @@ function TrigFunctionsPage() {
                                                         children: step.n
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 690,
+                                                        lineNumber: 691,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3677,13 +3677,13 @@ function TrigFunctionsPage() {
                                                         children: step.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                        lineNumber: 693,
+                                                        lineNumber: 694,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 689,
+                                                lineNumber: 690,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3691,24 +3691,24 @@ function TrigFunctionsPage() {
                                                 children: step.body
                                             }, void 0, false, {
                                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                lineNumber: 695,
+                                                lineNumber: 696,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, step.n, true, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 684,
+                                        lineNumber: 685,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 682,
+                                lineNumber: 683,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 680,
+                        lineNumber: 681,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3717,20 +3717,20 @@ function TrigFunctionsPage() {
                                 tips: tips
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 703,
+                                lineNumber: 704,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AiTutor$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 topic: "פונקציות טריגונומטריות"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 704,
+                                lineNumber: 705,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 702,
+                        lineNumber: 703,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -3745,7 +3745,7 @@ function TrigFunctionsPage() {
                                             children: "▶"
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 715,
+                                            lineNumber: 716,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3755,20 +3755,20 @@ function TrigFunctionsPage() {
                                                     children: "נושא קודם"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 717,
+                                                    lineNumber: 718,
                                                     columnNumber: 19
                                                 }, this),
                                                 prev.title
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 716,
+                                            lineNumber: 717,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 711,
+                                    lineNumber: 712,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/",
@@ -3776,12 +3776,12 @@ function TrigFunctionsPage() {
                                     children: "← חזרה לדף הבית"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 722,
+                                    lineNumber: 723,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 709,
+                                lineNumber: 710,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3796,27 +3796,27 @@ function TrigFunctionsPage() {
                                                     children: "נושא הבא"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                                    lineNumber: 734,
+                                                    lineNumber: 735,
                                                     columnNumber: 19
                                                 }, this),
                                                 next.title
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 733,
+                                            lineNumber: 734,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: "◀"
                                         }, void 0, false, {
                                             fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                            lineNumber: 737,
+                                            lineNumber: 738,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 729,
+                                    lineNumber: 730,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/",
@@ -3824,24 +3824,24 @@ function TrigFunctionsPage() {
                                     children: "← חזרה לדף הבית"
                                 }, void 0, false, {
                                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                    lineNumber: 740,
+                                    lineNumber: 741,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 727,
+                                lineNumber: 728,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 708,
+                        lineNumber: 709,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 438,
+                lineNumber: 439,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -3865,7 +3865,7 @@ function TrigFunctionsPage() {
                                         children: "∑"
                                     }, void 0, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 753,
+                                        lineNumber: 754,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3873,13 +3873,13 @@ function TrigFunctionsPage() {
                                         children: "בגרות מתמטיקה 5 יח״ל"
                                     }, void 0, false, {
                                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                        lineNumber: 754,
+                                        lineNumber: 755,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 752,
+                                lineNumber: 753,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3887,29 +3887,29 @@ function TrigFunctionsPage() {
                                 children: "כיתה י״א – בהצלחה בבחינה!"
                             }, void 0, false, {
                                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                                lineNumber: 756,
+                                lineNumber: 757,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/topic/trig-functions/page.tsx",
-                        lineNumber: 751,
+                        lineNumber: 752,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/topic/trig-functions/page.tsx",
-                    lineNumber: 750,
+                    lineNumber: 751,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/topic/trig-functions/page.tsx",
-                lineNumber: 749,
+                lineNumber: 750,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/topic/trig-functions/page.tsx",
-        lineNumber: 405,
+        lineNumber: 406,
         columnNumber: 5
     }, this);
 }

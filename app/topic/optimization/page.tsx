@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import FormulaCard from "@/components/FormulaCard";
+import ExerciseCard from "@/components/ExerciseCard";
 import TipsBox from "@/components/TipsBox";
 import AiTutor from "@/components/AiTutor";
+import TableOfContents from "@/components/TableOfContents";
 import { topics } from "@/data/topics";
 
 export const metadata = {
@@ -355,13 +357,23 @@ export default function OptimizationPage() {
               <span key={s} className="text-xs bg-white/10 rounded-full px-3 py-1.5 text-white font-medium">{s}</span>
             ))}
           </div>
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <TableOfContents items={[
+              { id: "formulas", label: "נוסחות מפתח" },
+              { id: "steps", label: "שלבי פתרון" },
+              { id: "area-volume", label: "שטח ונפח" },
+              { id: "am-gm", label: "אי-שוויון AM-GM" },
+              { id: "exercises", label: "תרגול מדורג", count: topic.exercises.length },
+              { id: "tips", label: "טיפים" },
+            ]} />
+          </div>
         </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
         {/* ── 1. נוסחות מפתח ── */}
-        <section>
+        <section id="formulas">
           <SectionHead title="נוסחות מפתח" sub="הנוסחאות החיוניות לבעיות קיצון" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {keyFormulas.map((f, i) => (
@@ -371,7 +383,7 @@ export default function OptimizationPage() {
         </section>
 
         {/* ── 2. שלבי פתרון ── */}
-        <section>
+        <section id="steps">
           <SectionHead title="שלבי פתרון בעיית קיצון" sub="עקבו אחרי הסדר הזה בכל שאלה" />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             {solutionSteps.map((step) => (
@@ -393,7 +405,7 @@ export default function OptimizationPage() {
         </section>
 
         {/* ── 3. טבלאות שטח ונפח ── */}
-        <section>
+        <section id="area-volume">
           <SectionHead title="נוסחאות שטח ונפח" sub="לשימוש בבעיות קיצון הנדסיות" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* area table */}
@@ -449,7 +461,7 @@ export default function OptimizationPage() {
         </section>
 
         {/* ── 4. AM-GM ── */}
-        <section>
+        <section id="am-gm">
           <SectionHead title="אי-שוויון AM-GM" sub="כלי עוצמתי לבעיות קיצון אלגבריות" />
           <DarkCard id="!" title="עיקרון AM-GM" note="ממוצע חשבוני ≥ ממוצע גיאומטרי">
             <div className="px-4 py-1">
@@ -470,8 +482,24 @@ export default function OptimizationPage() {
           </div>
         </section>
 
-        {/* ── 5. טיפים ── */}
-        <section>
+        {/* ── 5. תרגול מדורג ── */}
+        <section id="exercises">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-7 rounded-full bg-black shrink-0" />
+            <div>
+              <h2 className="text-xl font-bold text-black">תרגול מדורג</h2>
+              <p className="text-sm text-slate-500">קל → בינוני → בגרות — נסה לפתור לפני שתסתכל</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            {topic.exercises.map((ex, i) => (
+              <ExerciseCard key={i} exercise={ex} index={i} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── 6. טיפים ── */}
+        <section id="tips">
           <TipsBox tips={topic.tips} />
           <AiTutor topic={topic.title} />
         </section>

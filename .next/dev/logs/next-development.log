@@ -1,585 +1,67 @@
-[00:00:00.943] Server  LOG     ✓ Ready in 685ms
-[00:01:09.671] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:26.610] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:05:26.953] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:05:47.159] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:05:49.259] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:05:51.253] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:05:56.575] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:05:56.871] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:06:05.977] Server  LOG     ✓ Compiled in 154ms
-[00:06:10.573] Server  LOG     ✓ Compiled in 106ms
-[00:06:11.628] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:06:14.120] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:06:15.271] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:06:15.873] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:06:16.445] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:06:18.041] Server  LOG     ✓ Compiled in 207ms
-[00:06:23.758] Server  LOG     ✓ Compiled in 58ms
-[00:07:47.034] Server  LOG     ✓ Compiled in 58ms
-[00:07:57.849] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:08:05.795] Server  LOG     ✓ Compiled in 132ms
-[00:08:09.722] Server  LOG     ✓ Compiled in 66ms
-[00:08:54.585] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:13.183] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:14.162] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:32.040] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:32.946] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:33.312] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:33.521] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:33.670] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:35.474] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:35.646] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:35.817] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:35.997] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:36.661] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:09:40.702] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:15:44.646] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:50.929] Server  LOG     ✓ Compiled in 51ms
-[00:16:10.885] Server  LOG     ✓ Compiled in 54ms
-[00:16:14.781] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:16:14.802] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:16:38.640] Server  LOG     ✓ Compiled in 53ms
-[00:17:02.197] Server  LOG     ✓ Compiled in 79ms
-[00:17:26.401] Server  LOG     ✓ Compiled in 37ms
-[00:17:45.202] Server  LOG     ✓ Compiled in 61ms
-[00:18:06.278] Server  LOG     ✓ Compiled in 64ms
-[00:18:35.184] Server  LOG     ✓ Compiled in 47ms
-[00:19:09.811] Server  LOG     ✓ Compiled in 62ms
-[00:19:27.711] Server  LOG     ✓ Compiled in 89ms
-[00:21:34.550] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:21:37.211] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:21:53.658] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:21:54.752] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:22:06.411] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:22:06.431] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:22:26.145] Server  LOG     ✓ Compiled in 56ms
-[00:22:29.576] Server  LOG     ✓ Compiled in 55ms
-[00:23:55.033] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:23:59.512] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:23:59.760] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:24:05.603] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:24:05.605] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:24:13.955] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:29:19.844] Server  LOG     ✓ Compiled in 89ms
-[00:29:43.119] Server  LOG     ✓ Compiled in 84ms
-[00:30:51.063] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
-[00:45:33.670] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-2c3a283f134fdcb6: Error: Cannot find module '.prisma/client/default'
-Require stack:
-- C:\Users\HP\math-website\node_modules\@prisma\client\default.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[root-of-the-server]__d170b924._.js
-- C:\Users\HP\math-website\.next\dev\server\chunks\[turbopack]_runtime.js
-- C:\Users\HP\math-website\.next\dev\server\app\api\auth\me\route.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\require.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\load-components.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\utils.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\options.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\swc\index.js
-- C:\Users\HP\math-website\node_modules\next\dist\build\next-config-ts\transpile-config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\config.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\next.js
-- C:\Users\HP\math-website\node_modules\next\dist\server\lib\start-server.js
+[00:00:02.009] Server  LOG     ✓ Ready in 1514ms
+[00:00:20.262] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:25.112] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:01:46.665] Server  LOG     ✓ Compiled in 181ms
+[00:02:35.036] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:00.156] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:04:25.994] Server  LOG     ✓ Compiled in 137ms
+[00:04:41.120] Server  LOG     ✓ Compiled in 60ms
+[00:08:24.587] Server  LOG     ✓ Compiled in 117ms
+[00:09:51.835] Server  LOG     ✓ Compiled in 132ms
+[00:14:05.840] Server  LOG     ✓ Compiled in 35ms
+[00:14:16.339] Server  LOG     ✓ Compiled in 46ms
+[00:14:20.228] Server  LOG     ✓ Compiled in 34ms
+[00:14:37.175] Server  LOG     ✓ Compiled in 39ms
+[00:14:41.051] Server  LOG     ✓ Compiled in 38ms
+[00:14:44.146] Server  LOG     ✓ Compiled in 45ms
+[00:14:49.226] Server  LOG     ✓ Compiled in 56ms
+[00:14:59.226] Server  LOG     ✓ Compiled in 61ms
+[00:15:29.430] Server  LOG     ✓ Compiled in 33ms
+[00:15:32.922] Server  LOG     ✓ Compiled in 36ms
+[00:15:36.463] Server  LOG     ✓ Compiled in 39ms
+[00:15:41.342] Server  LOG     ✓ Compiled in 37ms
+[00:15:44.682] Server  LOG     ✓ Compiled in 40ms
+[00:15:51.190] Server  LOG     ✓ Compiled in 40ms
+[00:16:01.698] Server  LOG     ✓ Compiled in 51ms
+[00:16:13.309] Server  LOG     ✓ Compiled in 45ms
+[00:16:17.772] Server  LOG     ✓ Compiled in 40ms
+[00:16:21.389] Server  LOG     ✓ Compiled in 50ms
+[00:16:24.928] Server  LOG     ✓ Compiled in 53ms
+[00:16:28.581] Server  LOG     ✓ Compiled in 42ms
+[00:16:38.871] Server  LOG     ✓ Compiled in 42ms
+[00:18:16.986] Server  LOG     ✓ Compiled in 55ms
+[00:18:23.642] Server  LOG     ✓ Compiled in 47ms
+[00:18:29.309] Server  LOG     ✓ Compiled in 73ms
+[00:18:39.579] Server  LOG     ✓ Compiled in 80ms
+[00:18:47.644] Server  LOG     ✓ Compiled in 58ms
+[00:18:56.507] Server  LOG     ✓ Compiled in 179ms
+[00:19:08.079] Server  LOG     ✓ Compiled in 72ms
+[00:19:22.267] Server  LOG     ✓ Compiled in 46ms
+[00:20:40.515] Server  LOG     ✓ Compiled in 63ms
+[00:20:45.196] Server  LOG     ✓ Compiled in 60ms
+[00:21:29.955] Server  LOG     ✓ Compiled in 33ms
+[00:21:41.422] Server  LOG     ✓ Compiled in 80ms
+[00:23:32.404] Server  LOG     ✓ Compiled in 37ms
+[00:23:37.161] Server  LOG     ✓ Compiled in 38ms
+[00:23:48.572] Server  LOG     ✓ Compiled in 48ms
+[00:23:52.091] Server  LOG     ✓ Compiled in 42ms
+[00:23:56.229] Server  LOG     ✓ Compiled in 41ms
+[00:24:07.155] Server  LOG     ✓ Compiled in 90ms
+[00:25:52.315] Server  LOG     ✓ Compiled in 36ms
+[00:25:57.547] Server  LOG     ✓ Compiled in 73ms
+[00:26:05.208] Server  LOG     ✓ Compiled in 77ms
+[00:26:15.033] Server  LOG     ✓ Compiled in 77ms
+[00:26:55.900] Server  LOG     ✓ Compiled in 99ms
+[00:27:01.207] Server  LOG     ✓ Compiled in 81ms
+[00:27:06.263] Server  LOG     ✓ Compiled in 90ms
+[00:27:17.968] Server  LOG     ✓ Compiled in 81ms
+[00:29:33.953] Server  LOG     ✓ Compiled in 79ms
+[00:29:41.280] Server  LOG     ✓ Compiled in 118ms
+[00:29:47.406] Server  LOG     ✓ Compiled in 77ms
+[00:29:56.751] Server  LOG     ✓ Compiled in 55ms
+[00:31:04.811] Server  LOG     ✓ Compiled in 44ms
+[00:31:10.935] Server  LOG     ✓ Compiled in 34ms
+[00:31:22.040] Server  LOG     ✓ Compiled in 50ms
+[00:35:24.066] Server  LOG     ✓ Compiled in 65ms
+[00:39:01.704] Server  LOG     ✓ Compiled in 72ms
+[00:41:31.846] Server  LOG     ✓ Compiled in 36ms

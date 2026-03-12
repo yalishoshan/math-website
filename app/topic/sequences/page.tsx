@@ -8,6 +8,7 @@ export const metadata = {
 };
 
 const idx = topics.findIndex((t) => t.id === "sequences");
+const sequencesTopic = topics[idx];
 const prev = idx > 0 ? topics[idx - 1] : null;
 const next = idx < topics.length - 1 ? topics[idx + 1] : null;
 
@@ -253,6 +254,8 @@ export default function SequencesPage() {
         "שים לב לסימן q: אם q < 0 – האיברים מתחלפים בסימן (חיובי/שלילי/חיובי...)",
         "טור אינסופי מתכנס רק אם |q| < 1 – אחרת אין סכום אינסופי",
       ]}
+
+      exercises={sequencesTopic.exercises}
 
       prevTopic={prev}
       nextTopic={next}
